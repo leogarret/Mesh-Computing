@@ -11,14 +11,10 @@ int main(int argc, char **argv)
 	Mesh mesh;
 	vcg::tri::io::ImporterOBJ<Mesh>::Info mesh_info;
 
-	std::cout << obj::loader(mesh, "../../obj/BARLAM_L.obj", mesh_info) << std::endl;
-
-	//Mesh::PerVertexAttributeHandle<float> named_hv = vcg::tri::Allocator<Mesh>::GetPerVertexAttribute<float>(mesh, std::string("Irradiance"));
-	
+	obj::loader(mesh, "../../obj/cube.obj", mesh_info);
 
 	obj::displayInfo(mesh, mesh_info);
 	
-
 	std::getchar();
 	return 0;
 }

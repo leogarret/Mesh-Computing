@@ -25,9 +25,6 @@ long obj::loader(Mesh &mesh, char *path, vcg::tri::io::ImporterOBJ<Mesh>::Info &
 	return endTime - startTime;
 }
 
-/*
-Display obj infos (faces, normals and vertices).
-*/
 void obj::displayInfo(Mesh &mesh, vcg::tri::io::ImporterOBJ<Mesh>::Info mesh_info)
 {
 	std::cout << "******* MESH INFOS *******" << std::endl;

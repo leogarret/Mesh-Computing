@@ -5,10 +5,6 @@
 
 #endif // !_OBJ_SURFACE_C
 
-/*
-Return the polygone surface.
-If error, return -1.
-*/
 long obj::surface::getPolygoneSurface(Mesh &mesh)
 {
 	if (mesh.IsEmpty()) return -1;
