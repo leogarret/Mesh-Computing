@@ -8,10 +8,6 @@
 
 #endif // !_OBJ_C
 
-/*
-Load an obj file.
-Return -1 if error and time in milliseconds (long) to load obj if success.
-*/
 long obj::loader(Mesh &mesh, char *path, vcg::tri::io::ImporterOBJ<Mesh>::Info &mesh_info)
 {
 	int startTime = std::clock();
