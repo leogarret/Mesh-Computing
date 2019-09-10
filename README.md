@@ -1,8 +1,8 @@
 # Mesh-Computing
 A Mesh computing library in development using MVC
 
-#Organized by modules
+## Organized by modules
 
-#MC Base
+### MC Base
 
-#MC UI
+### MC UI
