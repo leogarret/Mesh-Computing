@@ -3,6 +3,9 @@
 
 #include <iostream>
 #include <obj.h>
+#include <ui.h>
+
+#include <gtk-2.0\gtk\gtk.h>
 
 #endif // !_MAIN_C
 
@@ -14,7 +17,7 @@ int main(int argc, char **argv)
 	obj::loader(mesh, "../../obj/cube.obj", mesh_info);
 
 	obj::displayInfo(mesh, mesh_info);
-	
+
 	std::getchar();
 	return 0;
 }

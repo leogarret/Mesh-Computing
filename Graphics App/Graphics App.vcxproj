@@ -19,8 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{05F8737B-7353-483E-BD92-AA392291E5DD}</ProjectGuid>
-    <RootNamespace>App</RootNamespace>
+    <ProjectGuid>{226FD579-19D6-427A-820E-37E5F1420A66}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>GraphicsApp</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -28,27 +29,27 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -68,51 +69,99 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>F:\Mesh Intersection\Mesh Intersection;$(IncludePath);F:\Mesh Intersection\External library;F:\Mesh Intersection\External library\vcglib-1.0.1;F:\Mesh Intersection\MC UI;$(GTKDIR)\lib\gtk-2.0\include;F:\Mesh Intersection\External library\glew-2.1.0\include;$(GTKDIR)\include;$(GTKDIR)\lib\glib-2.0\include;F:\Mesh Intersection\UI;F:\Mesh Intersection\External library\gtk\include\atk-1.0;F:\Mesh Intersection\External library\gtk\include\gdk-pixbuf-2.0;F:\Mesh Intersection\External library\gtk\include\pango-1.0;F:\Mesh Intersection\External library\gtk\include\cairo;F:\Mesh Intersection\External library\gtk\include\glib-2.0;F:\Mesh Intersection\External library\gtk\include\gtk-2.0;F:\Mesh Intersection\External library\gtk\lib\gtk-2.0\include;F:\Mesh Intersection\External library\gtk\lib\glib-2.0\include;$(IncludePath);F:\Mesh Intersection\External library\gtk\include</IncludePath>
-    <LibraryPath>F:\Mesh Intersection\x64\Release;$(LibraryPath)</LibraryPath>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);F:\Mesh Intersection\Mesh Intersection;$(IncludePath);F:\Mesh Intersection\External library;F:\Mesh Intersection\External library\vcglib-1.0.1;F:\Mesh Intersection\MC UI;$(GTKDIR)\lib\gtk-2.0\include;F:\Mesh Intersection\External library\glew-2.1.0\include;$(GTKDIR)\include;$(GTKDIR)\lib\glib-2.0\include;F:\Mesh;F:\Mesh Intersection\External library\gtk\include\atk-1.0;F:\Mesh Intersection\External library\gtk\include\gdk-pixbuf-2.0;F:\Mesh Intersection\External library\gtk\include\pango-1.0;F:\Mesh Intersection\External library\gtk\include\cairo;F:\Mesh Intersection\External library\gtk\include\glib-2.0;F:\Mesh Intersection\External library\gtk\include\gtk-2.0;F:\Mesh Intersection\External library\gtk\lib\gtk-2.0\include;F:\Mesh Intersection\External library\gtk\lib\glib-2.0\include;$(IncludePath);F:\Mesh Intersection\External library\gtk\include</IncludePath>
+    <LibraryPath>$(GTKDIR)\lib;$(LibraryPath);;F:\Mesh Intersection\External library\gtk\bin</LibraryPath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalOptions>-IF:/dev/gtk/include/gtk-2.0 -IF:/dev/gtk/lib/gtk-2.0/include -IF:/dev/gtk/include/atk-1.0 -IF:/dev/gtk/include/cairo -IF:/dev/gtk/include/gdk-pixbuf-2.0 -IF:/dev/gtk/include/pango-1.0 -IF:/dev/gtk/include/glib-2.0 -IF:/dev/gtk/lib/glib-2.0/include -IF:/dev/gtk/include -IF:/dev/gtk/include/freetype2 -IF:/dev/gtk/include/libpng14 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>MI Base.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalOptions>/libpath:F:/dev/gtk/lib gtk-win32-2.0.lib gdk-win32-2.0.lib atk-1.0.lib gio-2.0.lib pangowin32-1.0.lib gdi32.lib pangocairo-1.0.lib gdk_pixbuf-2.0.lib pango-1.0.lib cairo.lib gobject-2.0.lib gmodule-2.0.lib gthread-2.0.lib glib-2.0.lib intl.lib /ENTRY:mainCRTStartup %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="C:\Users\leo\Documents\GTKTest\GTKTest\test.glade" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MC UI\MC UI.vcxproj">
+      <Project>{ead54fb9-a65b-48b1-9918-76a42d22ba82}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Mesh Intersection\Mesh Intersection.vcxproj">
+      <Project>{01342707-1ca4-4c07-a938-b465874e2f1a}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
   </ItemGroup>

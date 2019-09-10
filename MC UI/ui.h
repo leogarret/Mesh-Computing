@@ -6,6 +6,8 @@
 
 namespace ui {
 
+	void start_graphics(int ac, char **av);
+
 	namespace window {
 
 		/*!
