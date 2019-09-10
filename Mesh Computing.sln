@@ -3,12 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MI Base", "Mesh Intersection\Mesh Intersection.vcxproj", "{01342707-1CA4-4C07-A938-B465874E2F1A}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MC Base", "Mesh Intersection\Mesh Intersection.vcxproj", "{01342707-1CA4-4C07-A938-B465874E2F1A}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "App", "App\App.vcxproj", "{05F8737B-7353-483E-BD92-AA392291E5DD}"
 	ProjectSection(ProjectDependencies) = postProject
 		{01342707-1CA4-4C07-A938-B465874E2F1A} = {01342707-1CA4-4C07-A938-B465874E2F1A}
+		{EAD54FB9-A65B-48B1-9918-76A42D22BA82} = {EAD54FB9-A65B-48B1-9918-76A42D22BA82}
 	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MC UI", "MC UI\MC UI.vcxproj", "{EAD54FB9-A65B-48B1-9918-76A42D22BA82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +37,14 @@ Global
 		{05F8737B-7353-483E-BD92-AA392291E5DD}.Release|x64.Build.0 = Release|x64
 		{05F8737B-7353-483E-BD92-AA392291E5DD}.Release|x86.ActiveCfg = Release|Win32
 		{05F8737B-7353-483E-BD92-AA392291E5DD}.Release|x86.Build.0 = Release|Win32
+		{EAD54FB9-A65B-48B1-9918-76A42D22BA82}.Debug|x64.ActiveCfg = Debug|x64
+		{EAD54FB9-A65B-48B1-9918-76A42D22BA82}.Debug|x64.Build.0 = Debug|x64
+		{EAD54FB9-A65B-48B1-9918-76A42D22BA82}.Debug|x86.ActiveCfg = Debug|Win32
+		{EAD54FB9-A65B-48B1-9918-76A42D22BA82}.Debug|x86.Build.0 = Debug|Win32
+		{EAD54FB9-A65B-48B1-9918-76A42D22BA82}.Release|x64.ActiveCfg = Release|x64
+		{EAD54FB9-A65B-48B1-9918-76A42D22BA82}.Release|x64.Build.0 = Release|x64
+		{EAD54FB9-A65B-48B1-9918-76A42D22BA82}.Release|x86.ActiveCfg = Release|Win32
+		{EAD54FB9-A65B-48B1-9918-76A42D22BA82}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
