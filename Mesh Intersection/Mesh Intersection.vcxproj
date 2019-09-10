@@ -22,7 +22,7 @@
     <ProjectGuid>{01342707-1CA4-4C07-A938-B465874E2F1A}</ProjectGuid>
     <RootNamespace>MeshIntersection</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>MI Base</ProjectName>
+    <ProjectName>MC Base</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
