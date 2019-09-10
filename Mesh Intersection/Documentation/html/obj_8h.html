@@ -109,16 +109,82 @@ Fonctions</h2></td></tr>
 <tr class="memitem:a3cde18bf6050872b9d1ec23a056d5657"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obj_8h.html#a3cde18bf6050872b9d1ec23a056d5657">obj::loader</a> (<a class="el" href="class_mesh.html">Mesh</a> &amp;mesh, char *path, vcg::tri::io::ImporterOBJ&lt; <a class="el" href="class_mesh.html">Mesh</a> &gt;::Info &amp;mesh_info)</td></tr>
 <tr class="memdesc:a3cde18bf6050872b9d1ec23a056d5657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Charger un obj.  <a href="obj_8h.html#a3cde18bf6050872b9d1ec23a056d5657">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a3cde18bf6050872b9d1ec23a056d5657"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adaeacb76384e093413fc6e5700206775"><td class="memItemLeft" align="right" valign="top"><a id="adaeacb76384e093413fc6e5700206775"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>obj::displayInfo</b> (<a class="el" href="class_mesh.html">Mesh</a> &amp;mesh, vcg::tri::io::ImporterOBJ&lt; <a class="el" href="class_mesh.html">Mesh</a> &gt;::Info mesh_info)</td></tr>
+<tr class="memitem:adaeacb76384e093413fc6e5700206775"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obj_8h.html#adaeacb76384e093413fc6e5700206775">obj::displayInfo</a> (<a class="el" href="class_mesh.html">Mesh</a> &amp;mesh, vcg::tri::io::ImporterOBJ&lt; <a class="el" href="class_mesh.html">Mesh</a> &gt;::Info mesh_info)</td></tr>
+<tr class="memdesc:adaeacb76384e093413fc6e5700206775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Afficher les informations d'un mesh.  <a href="obj_8h.html#adaeacb76384e093413fc6e5700206775">Plus de détails...</a><br /></td></tr>
 <tr class="separator:adaeacb76384e093413fc6e5700206775"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3672d9b67012f555ba9653454ba47336"><td class="memItemLeft" align="right" valign="top"><a id="a3672d9b67012f555ba9653454ba47336"></a>
-long&#160;</td><td class="memItemRight" valign="bottom"><b>obj::surface::getPolygoneSurface</b> (<a class="el" href="class_mesh.html">Mesh</a> &amp;mesh)</td></tr>
+<tr class="memitem:a3672d9b67012f555ba9653454ba47336"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obj_8h.html#a3672d9b67012f555ba9653454ba47336">obj::surface::getPolygoneSurface</a> (<a class="el" href="class_mesh.html">Mesh</a> &amp;mesh)</td></tr>
+<tr class="memdesc:a3672d9b67012f555ba9653454ba47336"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtenir l'air total de la surface d'un mesh.  <a href="obj_8h.html#a3672d9b67012f555ba9653454ba47336">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a3672d9b67012f555ba9653454ba47336"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Module pour le format obj. </p>
 </div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="file_adaeacb76384e093413fc6e5700206775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_adaeacb76384e093413fc6e5700206775">&#9670;&nbsp;</a></span>displayInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void obj::displayInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_mesh.html">Mesh</a> &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vcg::tri::io::ImporterOBJ&lt; <a class="el" href="class_mesh.html">Mesh</a> &gt;::Info&#160;</td>
+          <td class="paramname"><em>mesh_info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Afficher les informations d'un mesh. </p>
+<p>Fonction qui permet d'afficher les informations d'un mesh au format obj : nombres de sommets, de faces, d'ar�tes et l'air du polygone.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>: Le mesh sur lequel nous voulons les informations. </td></tr>
+    <tr><td class="paramname">path</td><td>: Le mesh_info du mesh en question. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="file_a3672d9b67012f555ba9653454ba47336"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a3672d9b67012f555ba9653454ba47336">&#9670;&nbsp;</a></span>getPolygoneSurface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long obj::surface::getPolygoneSurface </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_mesh.html">Mesh</a> &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtenir l'air total de la surface d'un mesh. </p>
+<p>Fonction qui permet d'obtenir l'air total de la surface d'un mesh au format obj.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>: Le mesh sur lequel nous voulons r�cup�rer l'air.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>L'air du mesh dans un long. </dd></dl>
+
+</div>
+</div>
 <a id="file_a3cde18bf6050872b9d1ec23a056d5657"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#file_a3cde18bf6050872b9d1ec23a056d5657">&#9670;&nbsp;</a></span>loader()</h2>
 
