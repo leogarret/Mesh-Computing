@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="GtkWindow" id="window">
+    <property name="default_width">1280</property>
+    <property name="default_height">720</property>
+  </object>
+</interface>

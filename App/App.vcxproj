@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{05F8737B-7353-483E-BD92-AA392291E5DD}</ProjectGuid>
+    <ProjectGuid>{6AB4A8F2-C154-4C8B-9CF4-AF7323104026}</ProjectGuid>
     <RootNamespace>App</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -69,7 +69,6 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>F:\Mesh Intersection\Mesh Intersection;$(IncludePath);F:\Mesh Intersection\External library;F:\Mesh Intersection\External library\vcglib-1.0.1;$(GTKDIR)\lib\gtk-2.0\include;F:\Mesh Intersection\External library\glew-2.1.0\include;$(GTKDIR)\include;$(GTKDIR)\lib\glib-2.0\include;$(IncludePath);F:\Mesh Intersection\UI</IncludePath>
     <LibraryPath>F:\Mesh Intersection\x64\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -106,11 +105,12 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>F:\Mesh Intersection\External library\libigl\include;F:\Mesh Intersection\;F:\Mesh Intersection\External library;F:\Mesh Intersection\External library\vcglib-1.0.1;$(GTKDIR)\lib\gtk-2.0\include;F:\Mesh Intersection\External library\glew-2.1.0\include;$(GTKDIR)\include;$(GTKDIR)\lib\glib-2.0\include;$(IncludePath)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>MI Base.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>MC Base.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

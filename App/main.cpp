@@ -1,12 +1,7 @@
-#ifndef _MAIN_C
-#define _MAIN_C
+#include <Mesh Intersection\obj.h>
+#include <Mesh Intersection\Mesh.h>
 
-#include <iostream>
-#include <obj.h>
-
-#endif // !_MAIN_C
-
-int main(int argc, char **argv)
+int main()
 {
 	Mesh mesh;
 	vcg::tri::io::ImporterOBJ<Mesh>::Info mesh_info;
@@ -14,7 +9,7 @@ int main(int argc, char **argv)
 	obj::loader(mesh, "../../obj/cube.obj", mesh_info);
 
 	obj::displayInfo(mesh, mesh_info);
-	
+
 	std::getchar();
 	return 0;
 }
