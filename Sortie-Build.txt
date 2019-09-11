@@ -1,0 +1,2 @@
+﻿1>------ Début du nettoyage : Projet : Graphics App, Configuration : Release x64 ------
+========== Nettoyage : 1 a réussi, 0 a échoué, 0 a été ignoré ==========

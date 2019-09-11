@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "App", "App\App.vcxproj", "{
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MC UI", "MC UI\MC UI.vcxproj", "{EAD54FB9-A65B-48B1-9918-76A42D22BA82}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Graphics App", "Graphics App\Graphics App.vcxproj", "{36721FFB-F128-47B9-9414-9C779B7E6FAC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -45,6 +47,14 @@ Global
 		{EAD54FB9-A65B-48B1-9918-76A42D22BA82}.Release|x64.Build.0 = Release|x64
 		{EAD54FB9-A65B-48B1-9918-76A42D22BA82}.Release|x86.ActiveCfg = Release|Win32
 		{EAD54FB9-A65B-48B1-9918-76A42D22BA82}.Release|x86.Build.0 = Release|Win32
+		{36721FFB-F128-47B9-9414-9C779B7E6FAC}.Debug|x64.ActiveCfg = Debug|x64
+		{36721FFB-F128-47B9-9414-9C779B7E6FAC}.Debug|x64.Build.0 = Debug|x64
+		{36721FFB-F128-47B9-9414-9C779B7E6FAC}.Debug|x86.ActiveCfg = Debug|Win32
+		{36721FFB-F128-47B9-9414-9C779B7E6FAC}.Debug|x86.Build.0 = Debug|Win32
+		{36721FFB-F128-47B9-9414-9C779B7E6FAC}.Release|x64.ActiveCfg = Release|x64
+		{36721FFB-F128-47B9-9414-9C779B7E6FAC}.Release|x64.Build.0 = Release|x64
+		{36721FFB-F128-47B9-9414-9C779B7E6FAC}.Release|x86.ActiveCfg = Release|Win32
+		{36721FFB-F128-47B9-9414-9C779B7E6FAC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

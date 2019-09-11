@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{226FD579-19D6-427A-820E-37E5F1420A66}</ProjectGuid>
+    <ProjectGuid>{36721FFB-F128-47B9-9414-9C779B7E6FAC}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>GraphicsApp</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
@@ -80,9 +80,9 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);F:\Mesh Intersection\Mesh Intersection;$(IncludePath);F:\Mesh Intersection\External library;F:\Mesh Intersection\External library\vcglib-1.0.1;F:\Mesh Intersection\MC UI;$(GTKDIR)\lib\gtk-2.0\include;F:\Mesh Intersection\External library\glew-2.1.0\include;$(GTKDIR)\include;$(GTKDIR)\lib\glib-2.0\include;F:\Mesh;F:\Mesh Intersection\External library\gtk\include\atk-1.0;F:\Mesh Intersection\External library\gtk\include\gdk-pixbuf-2.0;F:\Mesh Intersection\External library\gtk\include\pango-1.0;F:\Mesh Intersection\External library\gtk\include\cairo;F:\Mesh Intersection\External library\gtk\include\glib-2.0;F:\Mesh Intersection\External library\gtk\include\gtk-2.0;F:\Mesh Intersection\External library\gtk\lib\gtk-2.0\include;F:\Mesh Intersection\External library\gtk\lib\glib-2.0\include;$(IncludePath);F:\Mesh Intersection\External library\gtk\include</IncludePath>
-    <LibraryPath>$(GTKDIR)\lib;$(LibraryPath);;F:\Mesh Intersection\External library\gtk\bin</LibraryPath>
+    <IncludePath>F:\Mesh Intersection\Mesh Intersection;$(IncludePath);F:\Mesh Intersection\External library\vcglib-1.0.1;F:\Mesh Intersection\MC UI;$(GTKDIR)\lib\gtk-2.0\include;F:\Mesh Intersection\External library\glew-2.1.0\include;$(GTKDIR)\include;$(GTKDIR)\lib\glib-2.0\include;F:\Mesh Intersection\UI;F:\Mesh Intersection\External library\gtk\include\atk-1.0;F:\Mesh Intersection\External library\gtk\include\gdk-pixbuf-2.0;F:\Mesh Intersection\External library\gtk\include\pango-1.0;F:\Mesh Intersection\External library\gtk\include\cairo;F:\Mesh Intersection\External library\gtk\include\glib-2.0;F:\Mesh Intersection\External library\gtk\include\gtk-2.0;F:\Mesh Intersection\External library\gtk\lib\gtk-2.0\include;F:\Mesh Intersection\External library\gtk\lib\glib-2.0\include;F:\Mesh Intersection\External library\gtk\include</IncludePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>F:\Mesh Intersection\External library\gtk\lib;F:\Mesh Intersection\External library\SDL2-2.0.10\lib\x64;F:\Mesh Intersection\x64\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -140,28 +140,17 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalOptions>-IF:/dev/gtk/include/gtk-2.0 -IF:/dev/gtk/lib/gtk-2.0/include -IF:/dev/gtk/include/atk-1.0 -IF:/dev/gtk/include/cairo -IF:/dev/gtk/include/gdk-pixbuf-2.0 -IF:/dev/gtk/include/pango-1.0 -IF:/dev/gtk/include/glib-2.0 -IF:/dev/gtk/lib/glib-2.0/include -IF:/dev/gtk/include -IF:/dev/gtk/include/freetype2 -IF:/dev/gtk/include/libpng14 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>Intersection/External library/gtk/include/gtk-2.0 -mms-bitfields library/gtk/lib/gtk-2.0/include library/gtk/include/atk-1.0 library/gtk/include/cairo library/gtk/include/gdk-pixbuf-2.0 library/gtk/include/pango-1.0 library/gtk/include/glib-2.0 library/gtk/lib/glib-2.0/include library/gtk/include library/gtk/include/freetype2 library/gtk/include/libpng14 -IF:/Mesh %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalOptions>/libpath:F:/dev/gtk/lib gtk-win32-2.0.lib gdk-win32-2.0.lib atk-1.0.lib gio-2.0.lib pangowin32-1.0.lib gdi32.lib pangocairo-1.0.lib gdk_pixbuf-2.0.lib pango-1.0.lib cairo.lib gobject-2.0.lib gmodule-2.0.lib gthread-2.0.lib glib-2.0.lib intl.lib /ENTRY:mainCRTStartup %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>MI Base.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>Intersection/External library/gtk/lib /libpath:F:/Mesh gtk-win32-2.0.lib gdk-win32-2.0.lib atk-1.0.lib gio-2.0.lib pangowin32-1.0.lib gdi32.lib pangocairo-1.0.lib gdk_pixbuf-2.0.lib pango-1.0.lib cairo.lib gobject-2.0.lib gmodule-2.0.lib gthread-2.0.lib glib-2.0.lib intl.lib /ENTRY:mainCRTStartup %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <None Include="C:\Users\leo\Documents\GTKTest\GTKTest\test.glade" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MC UI\MC UI.vcxproj">
-      <Project>{ead54fb9-a65b-48b1-9918-76a42d22ba82}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Mesh Intersection\Mesh Intersection.vcxproj">
-      <Project>{01342707-1ca4-4c07-a938-b465874e2f1a}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
   </ItemGroup>
