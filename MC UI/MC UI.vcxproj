@@ -31,7 +31,7 @@
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -72,6 +72,10 @@
     <IncludePath>F:\Mesh Intersection\External library\gtk\include\atk-1.0;F:\Mesh Intersection\External library\gtk\include\gdk-pixbuf-2.0;F:\Mesh Intersection\External library\gtk\include\pango-1.0;F:\Mesh Intersection\External library\gtk\include\cairo;F:\Mesh Intersection\External library\gtk\include\glib-2.0;F:\Mesh Intersection\External library\gtk\include\gtk-2.0;F:\Mesh Intersection\External library\gtk\lib\gtk-2.0\include;F:\Mesh Intersection\External library\gtk\lib\glib-2.0\include;$(IncludePath);F:\Mesh Intersection\External library\gtk\include</IncludePath>
     <LibraryPath>F:\Mesh Intersection\External library\gtk\lib;$(LibraryPath)</LibraryPath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>F:\Mesh Intersection\External library\gtk\include\atk-1.0;F:\Mesh Intersection\External library\gtk\include\gdk-pixbuf-2.0;F:\Mesh Intersection\External library\gtk\include\pango-1.0;F:\Mesh Intersection\External library\gtk\include\cairo;F:\Mesh Intersection\External library\gtk\include\glib-2.0;F:\Mesh Intersection\External library\gtk\include\gtk-2.0;F:\Mesh Intersection\External library\gtk\lib\gtk-2.0\include;F:\Mesh Intersection\External library\gtk\lib\glib-2.0\include;$(IncludePath);F:\Mesh Intersection\External library\gtk\include</IncludePath>
+    <LibraryPath>F:\Mesh Intersection\External library\gtk\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
