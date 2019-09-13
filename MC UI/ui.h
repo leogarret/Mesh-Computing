@@ -2,9 +2,12 @@
 #define _UI_H
 
 #include <iostream>
-#include <gtk-2.0\gtk\gtk.h>
+#include <gtk\gtk.h>
+#include <obj.h>
 
 namespace ui {
+
+	void MeshDisplayInfo(GtkWindow *window, Mesh &mesh, vcg::tri::io::ImporterOBJ<Mesh>::Info mesh_info);
 
 	namespace window {
 

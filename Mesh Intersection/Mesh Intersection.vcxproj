@@ -70,7 +70,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>F:\Mesh Intersection\External library;F:\Mesh Intersection\External library\vcglib-1.0.1;$(GTKDIR)\lib\gtk-2.0\include;F:\Mesh Intersection\External library\glew-2.1.0\include;$(GTKDIR)\include;$(GTKDIR)\lib\glib-2.0\include;$(IncludePath)</IncludePath>
+    <IncludePath>F:\Mesh-Intersection\External-library;F:\Mesh-Intersection\External-library\vcglib-1.0.1;$(GTKDIR)\lib\gtk-2.0\include;F:\Mesh-Intersection\External-library\glew-2.1.0\include;$(GTKDIR)\include;$(GTKDIR)\lib\glib-2.0\include;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)bin</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>F:\Mesh Intersection\External library;F:\Mesh Intersection\External library\vcglib-1.0.1;$(GTKDIR)\lib\gtk-2.0\include;F:\Mesh Intersection\External library\glew-2.1.0\include;$(GTKDIR)\include;$(GTKDIR)\lib\glib-2.0\include;$(IncludePath)</IncludePath>
@@ -101,6 +102,9 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>

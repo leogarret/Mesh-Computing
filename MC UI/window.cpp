@@ -14,10 +14,10 @@ GtkWidget *ui::window::createWindowFromBuilder(char *builderPath, char *windowCo
 	gtk_builder_add_from_file(builder, filename, &error);
 	g_free(error);
 
-	if (error != NULL) {
-		std::cout << error->message << "[" << error->code << "]" << std::endl;
+	if (error) {
+		gint code = error->code;
+		g_printerr("%s\n", error->message);
 		g_error_free(error);
-		std::getchar();
 		exit(-1);
 	}
 
