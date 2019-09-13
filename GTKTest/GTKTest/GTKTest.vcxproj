@@ -79,9 +79,10 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>F:\Mesh Intersection\Mesh Intersection;F:\Mesh Intersection\MC UI;$(GTKDIR)\lib\gtk-2.0\include;$(GTKDIR)\lib\glib-2.0\include;$(IncludePath);$(GTKDIR)\include</IncludePath>
-    <LibraryPath>F:\Mesh Intersection\External library\glew-2.1.0\lib\Release\Win32;$(GTKDIR)\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>F:\Mesh-Intersection\External-library\gtk\include\gtk-3.0;F:\Mesh-Intersection\External-library\vcglib-1.0.1;F:\Mesh-Intersection\Mesh Intersection;F:\Mesh-Intersection\MC UI;$(GTKDIR)\lib\gtk-3.0\include;$(GTKDIR)\lib\glib-2.0\include;$(IncludePath);$(GTKDIR)\include</IncludePath>
+    <LibraryPath>F:\Mesh-Intersection\External-library\glew-2.1.0\lib\Release\Win32;F:/Mesh-Intersection/External-library/gtk/lib;$(LibraryPath)</LibraryPath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
+    <OutDir>$(SolutionDir)bin</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -127,14 +128,14 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalOptions>-IF:/dev/gtk/include/gtk-2.0 -IF:/dev/gtk/lib/gtk-2.0/include -IF:/dev/gtk/include/atk-1.0 -IF:/dev/gtk/include/cairo -IF:/dev/gtk/include/gdk-pixbuf-2.0 -IF:/dev/gtk/include/pango-1.0 -IF:/dev/gtk/include/glib-2.0 -IF:/dev/gtk/lib/glib-2.0/include -IF:/dev/gtk/include -IF:/dev/gtk/include/freetype2 -IF:/dev/gtk/include/libpng14 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-IF:/Mesh-Intersection/External-library/gtk/include/gtk-3.0 -IF:/Mesh-Intersection/External-library/gtk/include/atk-1.0 -IF:/Mesh-Intersection/External-library/gtk/include/cairo -IF:/Mesh-Intersection/External-library/gtk/include/gdk-pixbuf-2.0 -IF:/Mesh-Intersection/External-library/gtk/include/glib-2.0 -IF:/Mesh-Intersection/External-library/gtk/lib/glib-2.0/include -IF:/Mesh-Intersection/External-library/gtk/include/pango-1.0 -IF:/Mesh-Intersection/External-library/gtk/include/pixman-1 -IF:/Mesh-Intersection/External-library/gtk/include -IF:/Mesh-Intersection/External-library/gtk/include/freetype2 -IF:/Mesh-Intersection/External-library/gtk/include/libpng15 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalOptions>/libpath:F:/dev/gtk/lib gtk-win32-2.0.lib gdk-win32-2.0.lib atk-1.0.lib gio-2.0.lib pangowin32-1.0.lib gdi32.lib pangocairo-1.0.lib gdk_pixbuf-2.0.lib pango-1.0.lib cairo.lib gobject-2.0.lib gmodule-2.0.lib gthread-2.0.lib glib-2.0.lib intl.lib /ENTRY:mainCRTStartup %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>gtk-win32-3.0.lib gdk-win32-3.0.lib atk-1.0.lib gio-2.0.lib pangowin32-1.0.lib gdi32.lib pangocairo-1.0.lib gdk_pixbuf-2.0.lib pango-1.0.lib cairo.lib gobject-2.0.lib glib-2.0.lib /ENTRY:mainCRTStartup %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>opengl32.lib;glew32.lib;%(AdditionalDependencies);</AdditionalDependencies>
       <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
@@ -167,9 +168,6 @@
     <None Include="window.ui">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="graph_app.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\MC UI\MC UI.vcxproj">
