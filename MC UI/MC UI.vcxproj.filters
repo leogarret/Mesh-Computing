@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers sources\File-UI">
+      <UniqueIdentifier>{8c13ac9d-3b21-434d-86c1-344e886afd1d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="window.cpp">
@@ -20,6 +23,9 @@
     </ClCompile>
     <ClCompile Include="ui.cpp">
       <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="open_file.cpp">
+      <Filter>Fichiers sources\File-UI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

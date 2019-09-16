@@ -4,10 +4,23 @@
 #include <iostream>
 #include <gtk\gtk.h>
 #include <obj.h>
+#include <pango\pango.h>
+#include <windows.h>
+
+typedef struct
+{
+	GtkBuilder *builder;
+	gpointer user_data;
+} SGlobalData;
+
+extern SGlobalData data;
+
 
 namespace ui {
 
-	void MeshDisplayInfo(GtkWindow *window, Mesh &mesh, vcg::tri::io::ImporterOBJ<Mesh>::Info mesh_info);
+	void MeshDisplayInfo(GtkLabel *label, Mesh &mesh, vcg::tri::io::ImporterOBJ<Mesh>::Info mesh_info);
+
+	void callback_open_file_dialog();
 
 	namespace window {
 
@@ -17,12 +30,11 @@ namespace ui {
 		*  Fonction qui permet de créer une fenêtre principale à partir
 		*  d'un builder XML qui peut être généré avec Glade.
 		*
-		*  \param builderPath : chemin d'accès du fichier XML.
+		*  \param builder : Adresse du builder non initialisé.
 		*  \param windowComponentName : nom du composant de la fenêtre dans le fichier XML.
 		*  \return Le widget contenant les propriétés de la fenêtre.
 		*/
-		GtkWidget *createWindowFromBuilder(char *builderPath, char *windowComponentName);
-
+		GtkWidget *createWindowFromBuilder(SGlobalData *data, char *windowComponentName);
 	};
 
 };
