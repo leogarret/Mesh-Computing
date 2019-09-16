@@ -5,6 +5,7 @@
 #include <gtk\gtk.h>
 #include <obj.h>
 #include <pango\pango.h>
+#include <windows.h>
 
 typedef struct
 {

@@ -1,1 +1,0 @@
--mms-bitfields -IF:/dev/GTK3/include/gtk-3.0 -IF:/dev/GTK3/include/atk-1.0 -IF:/dev/GTK3/include/cairo -IF:/dev/GTK3/include/gdk-pixbuf-2.0 -IF:/dev/GTK3/include/glib-2.0 -IF:/dev/GTK3/lib/glib-2.0/include -IF:/dev/GTK3/include/pango-1.0 -IF:/dev/GTK3/include/pixman-1 -IF:/dev/GTK3/include -IF:/dev/GTK3/include/freetype2 -IF:/dev/GTK3/include/libpng15  

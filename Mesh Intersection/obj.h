@@ -7,6 +7,7 @@
 */
 
 #include "Mesh.h"
+#include <Windows.h>
 
 namespace obj {
 

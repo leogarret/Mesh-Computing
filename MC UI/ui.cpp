@@ -8,7 +8,9 @@
 void ui::MeshDisplayInfo(GtkLabel *label, Mesh &mesh, vcg::tri::io::ImporterOBJ<Mesh>::Info mesh_info)
 {
 	std::string mesh_info_ui;
-	char buff[10];
+	char buff[100];
+
+	OutputDebugString("INJ\n");
 
 	mesh_info_ui.append("<b><u>Mesh Informations</u>\n\nNumber of faces: </b>");
 	_itoa_s(mesh_info.numFaces, buff, 10);
