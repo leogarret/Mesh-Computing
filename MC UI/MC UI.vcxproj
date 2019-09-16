@@ -124,6 +124,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="open_file.cpp" />
     <ClCompile Include="ui.cpp" />
     <ClCompile Include="window.cpp" />
   </ItemGroup>

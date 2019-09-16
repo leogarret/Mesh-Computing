@@ -20,7 +20,7 @@ namespace obj {
 	*  \return Le temps de chargement en milliseconde si l'obj a été chargé.
 	*  -1 si l'obj n'a pas chargé.
 	*/
-	long loader(Mesh &mesh, char *path, vcg::tri::io::ImporterOBJ<Mesh>::Info &mesh_info);
+	int loader(Mesh &mesh, char *path, vcg::tri::io::ImporterOBJ<Mesh>::Info &mesh_info);
 	/*!
 	*  \brief Afficher les informations d'un mesh.
 	*

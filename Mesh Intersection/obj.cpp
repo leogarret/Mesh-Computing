@@ -3,16 +3,15 @@
 
 #include <iostream>
 #include <ctime>
-
 #include "obj.h"
 
 #endif // !_OBJ_C
 
-long obj::loader(Mesh &mesh, char *path, vcg::tri::io::ImporterOBJ<Mesh>::Info &mesh_info)
+int obj::loader(Mesh &mesh, char *path, vcg::tri::io::ImporterOBJ<Mesh>::Info &mesh_info)
 {
-	int startTime = std::clock();
+	//int startTime = std::clock();
 	int errorCode = vcg::tri::io::ImporterOBJ<Mesh>::Open(mesh, path, mesh_info);
-	int endTime = std::clock();
+	//int endTime = std::clock();
 
 	if (errorCode != 0 && errorCode != 5) {
 		std::cerr << vcg::tri::io::ImporterOBJ<Mesh>::ErrorMsg(errorCode) << std::endl;
@@ -22,7 +21,7 @@ long obj::loader(Mesh &mesh, char *path, vcg::tri::io::ImporterOBJ<Mesh>::Info &
 	else if (errorCode == 5)
 		std::cerr << vcg::tri::io::ImporterOBJ<Mesh>::ErrorMsg(errorCode) << std::endl;
 
-	return endTime - startTime;
+	return 1;
 }
 
 void obj::displayInfo(Mesh &mesh, vcg::tri::io::ImporterOBJ<Mesh>::Info mesh_info)
