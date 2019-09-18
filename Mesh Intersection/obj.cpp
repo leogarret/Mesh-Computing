@@ -9,21 +9,24 @@
 
 int obj::loader(Mesh &mesh, char *path, vcg::tri::io::ImporterOBJ<Mesh>::Info &mesh_info)
 {
-	OutputDebugString("[obj::loader] Avant Open()\n");
+	OutputDebugString("OBJ en cours de chargement...\n");
 	OutputDebugString(path); OutputDebugString("\n");
 	int errorCode = vcg::tri::io::ImporterOBJ<Mesh>::Open(mesh, path, mesh_info);
-	OutputDebugString("\n[obj::loader] Apres Open()\n");
 	
 	if (errorCode != 0 && errorCode != 5)
 	{
-		std::cerr << vcg::tri::io::ImporterOBJ<Mesh>::ErrorMsg(errorCode) << std::endl;
-		std::getchar();
+		OutputDebugString("\nErreur lors du chargement de l'OBJ : ");
+		OutputDebugString(vcg::tri::io::ImporterOBJ<Mesh>::ErrorMsg(errorCode));
+		OutputDebugString("\n");
 		return -1;
 	}
 	else if (errorCode == 5)
 	{
-		std::cerr << vcg::tri::io::ImporterOBJ<Mesh>::ErrorMsg(errorCode) << std::endl;
+		OutputDebugString(vcg::tri::io::ImporterOBJ<Mesh>::ErrorMsg(errorCode));
+		OutputDebugString("\n");
 	}
+
+	OutputDebugString("OBJ charge avec succes.\n");
 
 	return 1;
 }
