@@ -242,4 +242,4 @@ ModelManifest.xml
 .fake/
 
 # Doxygen documentation
-Mesh Intersection\Documentation
+*.html
