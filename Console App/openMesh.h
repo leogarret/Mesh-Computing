@@ -17,7 +17,7 @@ namespace om {
 
 	bool open_mesh(Mesh &mesh, char *path);
 	bool create_cube(Mesh &mesh);
-
+	bool export_mesh(Mesh const mesh, char *output);
 }
 
 #endif //!_OPENMESH_H

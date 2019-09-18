@@ -4,6 +4,7 @@
 
 #include<vcg/complex/complex.h>
 #include <wrap\io_trimesh\import_obj.h>
+#include <wrap\io_trimesh/export_obj.h>
 
 class MyVertex; class MyEdge; class MyFace;
 
