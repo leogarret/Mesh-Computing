@@ -7,6 +7,7 @@
 namespace vc {
 
 	bool open_mesh(Mesh &mesh, char *path);
+	bool create_cube(Mesh &mesh);
 
 }
 

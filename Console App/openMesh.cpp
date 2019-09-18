@@ -38,6 +38,7 @@ bool om::create_cube(Mesh &mesh)
 {
 	Mesh::VertexHandle vertexHandle[8];
 
+	// Listes des vertices
 	vertexHandle[0] = mesh.add_vertex(Mesh::Point(-1, -1, 1));
 	vertexHandle[1] = mesh.add_vertex(Mesh::Point(1, -1, 1));
 	vertexHandle[2] = mesh.add_vertex(Mesh::Point(1, 1, 1));
@@ -49,6 +50,8 @@ bool om::create_cube(Mesh &mesh)
 
 	std::vector<Mesh::VertexHandle> faceVertexHandles;
 
+	// Ajout des 6 faces du cube
+
 	faceVertexHandles.clear();
 	faceVertexHandles.push_back(vertexHandle[0]);
 	faceVertexHandles.push_back(vertexHandle[1]);
@@ -91,11 +94,17 @@ bool om::create_cube(Mesh &mesh)
 	faceVertexHandles.push_back(vertexHandle[4]);
 	mesh.add_face(faceVertexHandles);
 
+	return true;
+}
+
+bool om::export_mesh(Mesh const mesh, char *output)
+{
 	try
 	{
-		if (!OpenMesh::IO::write_mesh(mesh, "output.obj"))
+		if (!OpenMesh::IO::write_mesh(mesh, output))
 		{
-			OutputDebugString("Cannot write mesh to file 'output.obj'.\n");
+			OutputDebugString("Cannot write mesh to file ");
+			OutputDebugString(output); NEXT_LINE_DEBUG;
 			return false;
 		}
 	}
