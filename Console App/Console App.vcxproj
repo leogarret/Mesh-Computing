@@ -93,7 +93,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_USE_MATH_DEFINES</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -116,6 +116,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="openMesh.cpp" />
+    <ClCompile Include="vcg.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MC UI\MC UI.vcxproj">
@@ -124,6 +126,11 @@
     <ProjectReference Include="..\Mesh Intersection\Mesh Intersection.vcxproj">
       <Project>{01342707-1ca4-4c07-a938-b465874e2f1a}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h" />
+    <ClInclude Include="openMesh.h" />
+    <ClInclude Include="vcg.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
