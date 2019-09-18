@@ -69,8 +69,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>F:\Mesh-Intersection\External-library\gtk\include\gtk-3.0;F:\Mesh-Intersection\External-library\vcglib-1.0.1;F:\Mesh-Intersection\Mesh Intersection;F:\Mesh-Intersection\MC UI;$(GTKDIR)\lib\gtk-3.0\include;$(GTKDIR)\lib\glib-2.0\include;$(IncludePath);$(GTKDIR)\include</IncludePath>
-    <LibraryPath>F:\Mesh-Intersection\External-library\glew-2.1.0\lib\Release\Win32;F:/Mesh-Intersection/External-library/gtk/lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>F:\Mesh-Intersection\External-library\Assimp\include;F:\Mesh-Intersection\External-library\OpenMesh 8.0\include;F:\Mesh-Intersection\External-library\gtk\include\gtk-3.0;F:\Mesh-Intersection\External-library\vcglib-1.0.1;F:\Mesh-Intersection\Mesh Intersection;F:\Mesh-Intersection\MC UI;$(GTKDIR)\lib\gtk-3.0\include;$(GTKDIR)\lib\glib-2.0\include;$(IncludePath);$(GTKDIR)\include</IncludePath>
+    <LibraryPath>F:\Mesh-Intersection\External-library\Assimp\lib\x64;F:\Mesh-Intersection\External-library\OpenMesh 8.0\lib;F:\Mesh-Intersection\External-library\glew-2.1.0\lib\Release\Win32;F:/Mesh-Intersection/External-library/gtk/lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -93,10 +93,12 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_USE_MATH_DEFINES</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>OpenMeshCore.lib;OpenMeshCored.lib;OpenMeshTools.lib;OpenMeshToolsd.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
