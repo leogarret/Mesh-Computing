@@ -50,49 +50,65 @@ bool om::create_cube(Mesh &mesh)
 
 	std::vector<Mesh::VertexHandle> faceVertexHandles;
 
-	// Ajout des 6 faces du cube
+	// Face 1 
+	{
+		faceVertexHandles.clear();
+		faceVertexHandles.push_back(vertexHandle[0]);
+		faceVertexHandles.push_back(vertexHandle[1]);
+		faceVertexHandles.push_back(vertexHandle[2]);
+		faceVertexHandles.push_back(vertexHandle[3]);
+		mesh.add_face(faceVertexHandles);
+	}
 
-	faceVertexHandles.clear();
-	faceVertexHandles.push_back(vertexHandle[0]);
-	faceVertexHandles.push_back(vertexHandle[1]);
-	faceVertexHandles.push_back(vertexHandle[2]);
-	faceVertexHandles.push_back(vertexHandle[3]);
-	mesh.add_face(faceVertexHandles);
+	// Face 2
+	{
+		faceVertexHandles.clear();
+		faceVertexHandles.push_back(vertexHandle[7]);
+		faceVertexHandles.push_back(vertexHandle[6]);
+		faceVertexHandles.push_back(vertexHandle[5]);
+		faceVertexHandles.push_back(vertexHandle[4]);
+		mesh.add_face(faceVertexHandles);
+	}
 
-	faceVertexHandles.clear();
-	faceVertexHandles.push_back(vertexHandle[7]);
-	faceVertexHandles.push_back(vertexHandle[6]);
-	faceVertexHandles.push_back(vertexHandle[5]);
-	faceVertexHandles.push_back(vertexHandle[4]);
-	mesh.add_face(faceVertexHandles);
+	// Face 3
+	{
+		faceVertexHandles.clear();
+		faceVertexHandles.push_back(vertexHandle[1]);
+		faceVertexHandles.push_back(vertexHandle[0]);
+		faceVertexHandles.push_back(vertexHandle[4]);
+		faceVertexHandles.push_back(vertexHandle[5]);
+		mesh.add_face(faceVertexHandles);
+	}
 
-	faceVertexHandles.clear();
-	faceVertexHandles.push_back(vertexHandle[1]);
-	faceVertexHandles.push_back(vertexHandle[0]);
-	faceVertexHandles.push_back(vertexHandle[4]);
-	faceVertexHandles.push_back(vertexHandle[5]);
-	mesh.add_face(faceVertexHandles);
+	// Face 4
+	{
+		faceVertexHandles.clear();
+		faceVertexHandles.push_back(vertexHandle[2]);
+		faceVertexHandles.push_back(vertexHandle[1]);
+		faceVertexHandles.push_back(vertexHandle[5]);
+		faceVertexHandles.push_back(vertexHandle[6]);
+		mesh.add_face(faceVertexHandles);
+	}
 
-	faceVertexHandles.clear();
-	faceVertexHandles.push_back(vertexHandle[2]);
-	faceVertexHandles.push_back(vertexHandle[1]);
-	faceVertexHandles.push_back(vertexHandle[5]);
-	faceVertexHandles.push_back(vertexHandle[6]);
-	mesh.add_face(faceVertexHandles);
+	// Face 5
+	{
+		faceVertexHandles.clear();
+		faceVertexHandles.push_back(vertexHandle[3]);
+		faceVertexHandles.push_back(vertexHandle[2]);
+		faceVertexHandles.push_back(vertexHandle[6]);
+		faceVertexHandles.push_back(vertexHandle[7]);
+		mesh.add_face(faceVertexHandles);
+	}
 
-	faceVertexHandles.clear();
-	faceVertexHandles.push_back(vertexHandle[3]);
-	faceVertexHandles.push_back(vertexHandle[2]);
-	faceVertexHandles.push_back(vertexHandle[6]);
-	faceVertexHandles.push_back(vertexHandle[7]);
-	mesh.add_face(faceVertexHandles);
-
-	faceVertexHandles.clear();
-	faceVertexHandles.push_back(vertexHandle[0]);
-	faceVertexHandles.push_back(vertexHandle[3]);
-	faceVertexHandles.push_back(vertexHandle[7]);
-	faceVertexHandles.push_back(vertexHandle[4]);
-	mesh.add_face(faceVertexHandles);
+	// Face 6
+	{
+		faceVertexHandles.clear();
+		faceVertexHandles.push_back(vertexHandle[0]);
+		faceVertexHandles.push_back(vertexHandle[3]);
+		faceVertexHandles.push_back(vertexHandle[7]);
+		faceVertexHandles.push_back(vertexHandle[4]);
+		mesh.add_face(faceVertexHandles);
+	}
 
 	return true;
 }
