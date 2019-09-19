@@ -3,42 +3,65 @@
 #include "openMesh.h"
 #include "vcg.h"
 
-// VCG_MY if using VCG and OPEN_MESH_MY if using OpenMesh
-#define VCG_MY
+#include <tchar.h>
+#include <strsafe.h>
+
+typedef struct MyData {
+	int val1;
+	int val2;
+} MYDATA, *PMYDATA;
+
+DWORD WINAPI start_vcg(LPVOID lpParam)
+{
+	DWORD error;
+
+	/* Le HANDLE ACTUEL EST INVALIDE (CODE 6) */
+	if (!SetThreadPriority(GetCurrentThread(), THREAD_PRIORITY_HIGHEST)) {
+		error = GetLastError();
+		if (error == ERROR_THREAD_MODE_ALREADY_BACKGROUND)
+		{
+			std::cout << "This thread is arleady in this mode.\n" << std::endl;
+		}
+		else
+		{
+			std::cout << "Failed to enter background mode (" << HRESULT_FROM_WIN32(error) << ")" << std::endl;
+		}
+	}
+
+	Mesh mesh;
+	vcg::tri::io::ImporterOBJ<Mesh>::Info mesh_info;
+
+	vc::open_mesh(mesh, "../../obj/M5.obj");
+	return 0;
+}
 
 int main(void)
 {
-#ifdef OPENMESH_MY
-	om::Mesh mesh;
+	PMYDATA pData;
+	DWORD   dwThreadId;
+	HANDLE  hThread;
 
-	if (!om::open_mesh(mesh, "../../obj/M5.obj"))
-		return -1;
+	pData = (PMYDATA)HeapAlloc(GetProcessHeap(), HEAP_ZERO_MEMORY, sizeof(MYDATA));
 
-	om::Mesh::VertexIter vertexIterator = mesh.vertices_begin();
-	
-	int i = 1;
-	std::clock_t start = std::clock();
-	for (; vertexIterator != mesh.vertices_end(); ++vertexIterator, ++i);
-	std::clock_t end = std::clock();
+	if (pData == NULL)
+		ExitProcess(2);
 
-	std::cout << i << "\n" << "Iterate in " << end - start << "ms" << std::endl;
-#endif
+	pData->val1 = 0;
+	pData->val2 = 100;
 
-#ifdef VCG_MY
-	Mesh mesh;
-	vcg::tri::io::ImporterOBJ<Mesh>::Info mesh_info;
-	vc::create_cube(mesh);
-	vcg::tri::io::ImporterOBJ<Mesh>::VertexIterator vertexIterator = mesh.vert.begin();
+	hThread = CreateThread(NULL, 0, start_vcg, pData, 0, &dwThreadId);
 
+	if (hThread == NULL)
+		ExitProcess(3);
 
-	vcg::tri::io::ExporterOBJ<Mesh>::Save(mesh, "cube_vcg.obj", NULL, NULL);
-	/*int i = 1;
-	std::clock_t start = std::clock();
-	for (; vertexIterator != mesh.vert.end(); ++vertexIterator, ++i);
-	std::clock_t end = std::clock();
-	std::cout << i << "\n" << "Iterate in " << end - start << "ms" << std::endl;*/
+	WaitForSingleObject(hThread, INFINITE);
 
-#endif
-	std::getchar();
+	CloseHandle(hThread);
+	if (pData != NULL)
+	{
+		HeapFree(GetProcessHeap(), 0, pData);
+		pData = NULL;
+	}
+
 	return 0;
 }

@@ -18,6 +18,7 @@ bool vc::open_mesh(Mesh &mesh, char *path)
 	}
 	else
 	{
+		end = std::clock();
 		char buff[10];
 		_itoa(end - start, buff, 10);
 		OutputDebugString("OBJ read in ");
@@ -31,7 +32,7 @@ bool vc::open_mesh(Mesh &mesh, char *path)
 bool vc::create_cube(Mesh &mesh)
 {
 	Mesh::VertexIterator vertexIt = vcg::tri::Allocator<Mesh>::AddVertices(mesh, 8);
-	Mesh::FaceIterator faceIt = vcg::tri::Allocator<Mesh>::AddFaces(mesh, 12);
+	Mesh::FaceIterator faceIt = vcg::tri::Allocator<Mesh>::AddFaces(mesh, 11);
 
 	vcg::Point3f vertexContainer[8];
 	vertexContainer[0] = { -1, -1, 1 };
@@ -51,69 +52,81 @@ bool vc::create_cube(Mesh &mesh)
 	}
 
 	// Face 1
-	faceIt->V(0) = vertexPtr[0];
-	faceIt->V(1) = vertexPtr[1];
-	faceIt->V(2) = vertexPtr[2];
-	/**************************/
-	++faceIt;
-	faceIt->V(0) = vertexPtr[2];
-	faceIt->V(1) = vertexPtr[3];
-	faceIt->V(2) = vertexPtr[0];
+	{
+		faceIt->V(0) = vertexPtr[0];
+		faceIt->V(1) = vertexPtr[1];
+		faceIt->V(2) = vertexPtr[2];
+		/**************************/
+		++faceIt;
+		faceIt->V(0) = vertexPtr[2];
+		faceIt->V(1) = vertexPtr[3];
+		faceIt->V(2) = vertexPtr[0];
+	}
 
 	// Face 2
-	++faceIt;
-	faceIt->V(0) = vertexPtr[7];
-	faceIt->V(1) = vertexPtr[6];
-	faceIt->V(2) = vertexPtr[5];
-	/**************************/
-	++faceIt;
-	faceIt->V(0) = vertexPtr[5];
-	faceIt->V(1) = vertexPtr[4];
-	faceIt->V(2) = vertexPtr[7];
+	{
+		++faceIt;
+		faceIt->V(0) = vertexPtr[7];
+		faceIt->V(1) = vertexPtr[6];
+		faceIt->V(2) = vertexPtr[5];
+		/**************************/
+		++faceIt;
+		faceIt->V(0) = vertexPtr[5];
+		faceIt->V(1) = vertexPtr[4];
+		faceIt->V(2) = vertexPtr[7];
+	}
 
 	// Face 3
-	++faceIt;
-	faceIt->V(0) = vertexPtr[1];
-	faceIt->V(1) = vertexPtr[0];
-	faceIt->V(2) = vertexPtr[4];
-	/**************************/
-	++faceIt;
-	faceIt->V(0) = vertexPtr[4];
-	faceIt->V(1) = vertexPtr[5];
-	faceIt->V(2) = vertexPtr[1];
+	{
+		++faceIt;
+		faceIt->V(0) = vertexPtr[1];
+		faceIt->V(1) = vertexPtr[0];
+		faceIt->V(2) = vertexPtr[4];
+		/**************************/
+		++faceIt;
+		faceIt->V(0) = vertexPtr[4];
+		faceIt->V(1) = vertexPtr[5];
+		faceIt->V(2) = vertexPtr[1];
+	}
 
 	// Face 4
-	++faceIt;
-	faceIt->V(0) = vertexPtr[2];
-	faceIt->V(1) = vertexPtr[1];
-	faceIt->V(2) = vertexPtr[5];
-	/**************************/
-	++faceIt;
-	faceIt->V(0) = vertexPtr[5];
-	faceIt->V(1) = vertexPtr[6];
-	faceIt->V(2) = vertexPtr[2];
+	{
+		++faceIt;
+		faceIt->V(0) = vertexPtr[2];
+		faceIt->V(1) = vertexPtr[1];
+		faceIt->V(2) = vertexPtr[5];
+		/**************************/
+		++faceIt;
+		faceIt->V(0) = vertexPtr[5];
+		faceIt->V(1) = vertexPtr[6];
+		faceIt->V(2) = vertexPtr[2];
+	}
 
 	// Face 5
-	++faceIt;
-	faceIt->V(0) = vertexPtr[3];
-	faceIt->V(1) = vertexPtr[2];
-	faceIt->V(2) = vertexPtr[6];
-	/**************************/
-	++faceIt;
-	faceIt->V(0) = vertexPtr[6];
-	faceIt->V(1) = vertexPtr[7];
-	faceIt->V(2) = vertexPtr[3];
+	{
+		++faceIt;
+		faceIt->V(0) = vertexPtr[3];
+		faceIt->V(1) = vertexPtr[2];
+		faceIt->V(2) = vertexPtr[6];
+		/**************************/
+		++faceIt;
+		faceIt->V(0) = vertexPtr[6];
+		faceIt->V(1) = vertexPtr[7];
+		faceIt->V(2) = vertexPtr[3];
+	}
 
 	// Face 6
-	++faceIt;
-	faceIt->V(0) = vertexPtr[0];
-	faceIt->V(1) = vertexPtr[3];
-	faceIt->V(2) = vertexPtr[7];
-	/**************************/
-	++faceIt;
-	faceIt->V(0) = vertexPtr[7];
-	faceIt->V(1) = vertexPtr[4];
-	faceIt->V(2) = vertexPtr[0];
+	{
+		++faceIt;
+		faceIt->V(0) = vertexPtr[0];
+		faceIt->V(1) = vertexPtr[3];
+		faceIt->V(2) = vertexPtr[7];
+		/**************************/
+		++faceIt;
+		faceIt->V(0) = vertexPtr[7];
+		faceIt->V(1) = vertexPtr[4];
+		faceIt->V(2) = vertexPtr[0];
+	}
 
 	return true;
 }
