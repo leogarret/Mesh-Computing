@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+
+  <Type Name="cm2::vector_fixed&lt;*,*&gt;">
+      <DisplayString>{{ size = {$T2} }}</DisplayString>
+      <Expand>
+          <ArrayItems>
+              <Size>$T2</Size>
+              <ValuePointer>d</ValuePointer>
+          </ArrayItems>
+      </Expand>
+  </Type>
+
+  <Type Name="cm2::vector_fixed&lt;*,2&gt;">
+      <DisplayString>{{ {d[0]}, {d[1]} }}</DisplayString>
+  </Type>
+
+  <Type Name="cm2::vector_fixed&lt;*,3&gt;">
+      <DisplayString>{{ {d[0]}, {d[1]}, {d[2]} }}</DisplayString>
+  </Type>
+
+  <Type Name="cm2::vector_fixed&lt;*,4&gt;">
+      <DisplayString>{{ {d[0]}, {d[1]}, {d[2]}, {d[3]} }}</DisplayString>
+  </Type>
+
+  <Type Name="cm2::vector_fixed&lt;*,5&gt;">
+      <DisplayString>{{ {d[0]}, {d[1]}, {d[2]}, {d[3]}, {d[4]} }}</DisplayString>
+  </Type>
+
+  <Type Name="cm2::vector_fixed&lt;*,6&gt;">
+      <DisplayString>{{ {d[0]}, {d[1]}, {d[2]}, {d[3]}, {d[4]}, {d[5]} }}</DisplayString>
+  </Type>
+  
+  <Type Name="cm2::vector_fixed&lt;*,8&gt;">
+      <DisplayString>{{ {d[0]}, {d[1]}, {d[2]}, {d[3]}, {d[4]}, {d[5]}, {d[6]}, {d[7]} }}</DisplayString>
+  </Type>
+
+  
+  <Type Name="cm2::matrix_fixed&lt;*,*,*&gt;">
+      <DisplayString>{{ rows = {$T2}, cols = {$T3} }}</DisplayString>
+      <Expand>
+          <ArrayItems>
+              <Direction>Backward</Direction>
+              <Rank>2</Rank>
+              <Size>$i == 0 ? $T2 : $T3</Size>
+              <ValuePointer>d</ValuePointer>
+          </ArrayItems>
+      </Expand>
+  </Type>
+
+  <Type Name="cm2::symmetric_fixed&lt;*,*&gt;">
+      <DisplayString>{{ dim = {$T2} }}</DisplayString>
+  </Type>
+
+ 
+  <Type Name="cm2::vector_num&lt;*,*&gt;">
+      <Expand>
+          <Item Name="[capacity]">_sz</Item>
+          <ArrayItems ExcludeView="simple">
+              <Size>_sz</Size>
+              <ValuePointer>_p</ValuePointer>
+          </ArrayItems>
+      </Expand>
+  </Type>
+
+  <Type Name="cm2::dense1D&lt;*,*&gt;">
+      <DisplayString >{{ size = {_size} }}</DisplayString>
+      <Expand>
+          <ArrayItems Condition="_rep._p->_p != nullptr">
+              <Size>_size</Size>
+              <ValuePointer>_rep._p->_p + _shift</ValuePointer>
+          </ArrayItems>
+      </Expand>
+  </Type>
+
+  <Type Name="cm2::dense2D&lt;*&gt;">
+      <DisplayString>{{ rows = {_rows}, cols = {_cols}, ld = {_ld} }}</DisplayString>
+      <Expand>
+          <ArrayItems>
+              <Direction>Backward</Direction>
+              <Rank>2</Rank>
+              <Size>$i == 0 ? _ld : _cols</Size>
+              <ValuePointer>_rep._p->_p + _shift</ValuePointer>
+          </ArrayItems>
+      </Expand>
+  </Type>
+
+  <Type Name="cm2::symmetric_full&lt;*&gt;">
+      <DisplayString>{{ dim = {_dim} }}</DisplayString>
+  </Type>
+
+</AutoVisualizer>

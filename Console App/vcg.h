@@ -6,6 +6,12 @@
 
 namespace vc {
 
+	typedef struct MyData {
+		int val1;
+		int val2;
+	} MYDATA, *PMYDATA;
+
+	void start_vcg(void);
 	bool open_mesh(Mesh &mesh, char *path);
 	bool create_cube(Mesh &mesh);
 

@@ -2,6 +2,49 @@
 #include "main.h"
 #include "vcg.h"
 
+/******************** MAIN DE VCG **********************/
+
+DWORD WINAPI vcg_main(LPVOID lpParam)
+{
+	Mesh mesh;
+	vcg::tri::io::ImporterOBJ<Mesh>::Info mesh_info;
+
+	vc::open_mesh(mesh, "../../obj/M5.obj");
+
+	return 0;
+}
+
+/*****************************************************/
+
+void vc::start_vcg(void)
+{
+	vc::PMYDATA pData;
+	DWORD   dwThreadId;
+	HANDLE  hThread;
+
+	pData = (vc::PMYDATA)HeapAlloc(GetProcessHeap(), HEAP_ZERO_MEMORY, sizeof(vc::MYDATA));
+
+	if (pData == NULL)
+		ExitProcess(2);
+
+	pData->val1 = 0;
+	pData->val2 = 100;
+
+	hThread = CreateThread(NULL, 0, vcg_main, pData, 0, &dwThreadId);
+
+	if (hThread == NULL)
+		ExitProcess(3);
+
+	WaitForSingleObject(hThread, INFINITE);
+
+	CloseHandle(hThread);
+	if (pData != NULL)
+	{
+		HeapFree(GetProcessHeap(), 0, pData);
+		pData = NULL;
+	}
+}
+
 bool vc::open_mesh(Mesh &mesh, char *path)
 {
 	vcg::tri::io::ImporterOBJ<Mesh>::Info mesh_info;
