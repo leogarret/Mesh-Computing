@@ -4,8 +4,5 @@
 /**** STANDARD ****/
 #include <iostream>
 #include <ctime>
-#include <Windows.h>
-
-#define NEXT_LINE_DEBUG OutputDebugString("\n")
 
 #endif // !_MAIN_H

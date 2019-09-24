@@ -13,25 +13,11 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Fichiers d%27en-tête\obj">
-      <UniqueIdentifier>{25e470fe-e406-46b6-8d6a-d4988db6b8c0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Fichiers sources\VCG">
       <UniqueIdentifier>{9d2b04bc-5fa4-495a-95bb-ceedaaf346ed}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Mesh.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="obj.h">
-      <Filter>Fichiers d%27en-tête\obj</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="obj.cpp">
-      <Filter>Fichiers sources\VCG</Filter>
-    </ClCompile>
     <ClCompile Include="surface.cpp">
       <Filter>Fichiers sources\VCG</Filter>
     </ClCompile>

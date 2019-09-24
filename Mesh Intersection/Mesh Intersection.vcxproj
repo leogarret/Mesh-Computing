@@ -70,7 +70,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>F:\Mesh-Intersection\External-library\Assimp\include\;F:\Mesh-Intersection\External-library;F:\Mesh-Intersection\External-library\vcglib-1.0.1;$(GTKDIR)\lib\gtk-2.0\include;F:\Mesh-Intersection\External-library\glew-2.1.0\include;$(GTKDIR)\include;$(IncludePath);$(GTKDIR)\lib\glib-2.0\include</IncludePath>
+    <IncludePath>F:\Mesh-Intersection\MC IO;F:\Mesh-Intersection\External-library;F:\Mesh-Intersection\External-library\vcglib-1.0.1;$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)bin</OutDir>
     <LibraryPath>F:\Mesh-Intersection\External-library\Assimp\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
@@ -121,12 +121,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="obj.cpp" />
     <ClCompile Include="surface.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Mesh.h" />
-    <ClInclude Include="obj.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
