@@ -2,10 +2,12 @@
 #define _UI_H
 
 #include <iostream>
-#include <gtk\gtk.h>
-#include <obj.h>
-#include <pango\pango.h>
 #include <windows.h>
+
+#include <gtk\gtk.h>
+#include <pango\pango.h>
+
+#include <mc_vcg_mesh.h>
 
 typedef struct
 {
@@ -18,7 +20,7 @@ extern SGlobalData data;
 
 namespace ui {
 
-	void MeshDisplayInfo(GtkLabel *label, Mesh &mesh, vcg::tri::io::ImporterOBJ<Mesh>::Info mesh_info);
+	void MeshDisplayInfo(GtkLabel *label, mc::mvcg::Mesh &mesh, vcg::tri::io::ImporterOBJ<mc::mvcg::Mesh>::Info mesh_info);
 
 	void callback_open_file_dialog();
 

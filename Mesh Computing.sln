@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Graphics App", "GTKTest\GTK
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Console App", "Console App\Console App.vcxproj", "{44F67C2C-3459-4727-B5FA-E4E7A5B5941D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MC IO", "MC IO\MC IO.vcxproj", "{D21C1EB8-892D-40C8-A45F-08C6F2A38A11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{44F67C2C-3459-4727-B5FA-E4E7A5B5941D}.Release|x64.Build.0 = Release|x64
 		{44F67C2C-3459-4727-B5FA-E4E7A5B5941D}.Release|x86.ActiveCfg = Release|Win32
 		{44F67C2C-3459-4727-B5FA-E4E7A5B5941D}.Release|x86.Build.0 = Release|Win32
+		{D21C1EB8-892D-40C8-A45F-08C6F2A38A11}.Debug|x64.ActiveCfg = Debug|x64
+		{D21C1EB8-892D-40C8-A45F-08C6F2A38A11}.Debug|x64.Build.0 = Debug|x64
+		{D21C1EB8-892D-40C8-A45F-08C6F2A38A11}.Debug|x86.ActiveCfg = Debug|Win32
+		{D21C1EB8-892D-40C8-A45F-08C6F2A38A11}.Debug|x86.Build.0 = Debug|Win32
+		{D21C1EB8-892D-40C8-A45F-08C6F2A38A11}.Release|x64.ActiveCfg = Release|x64
+		{D21C1EB8-892D-40C8-A45F-08C6F2A38A11}.Release|x64.Build.0 = Release|x64
+		{D21C1EB8-892D-40C8-A45F-08C6F2A38A11}.Release|x86.ActiveCfg = Release|Win32
+		{D21C1EB8-892D-40C8-A45F-08C6F2A38A11}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -74,7 +74,7 @@
     <ReferencePath>$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>F:\Mesh-Intersection\Mesh Intersection;F:\Mesh-Intersection\External-library\gtk\lib\glib-2.0\include;F:\Mesh-Intersection\External-library\gtk\include\gtk-3.0;F:\Mesh-Intersection\External-library\vcglib-1.0.1;F:\Mesh-Intersection\External-library\;F:\Mesh-Intersection\External-library\gtk\include\atk-1.0;F:\Mesh-Intersection\External-library\gtk\include\gdk-pixbuf-2.0;F:\Mesh-Intersection\External-library\gtk\include\pango-1.0;F:\Mesh-Intersection\External-library\gtk\include\cairo;F:\Mesh-Intersection\External-library\gtk\include\glib-2.0;F:\Mesh-Intersection\External-library\gtk\include\gtk-2.0;F:\Mesh-Intersection\External-library\gtk\lib\gtk-3.0\include;$(IncludePath);F:\Mesh-Intersection\External-library\gtk\include</IncludePath>
+    <IncludePath>F:\Mesh-Intersection\MC IO;F:\Mesh-Intersection\Mesh Intersection;F:\Mesh-Intersection\External-library\gtk\lib\glib-2.0\include;F:\Mesh-Intersection\External-library\gtk\include\gtk-3.0;F:\Mesh-Intersection\External-library\vcglib-1.0.1;F:\Mesh-Intersection\External-library\;F:\Mesh-Intersection\External-library\gtk\include\atk-1.0;F:\Mesh-Intersection\External-library\gtk\include\gdk-pixbuf-2.0;F:\Mesh-Intersection\External-library\gtk\include\pango-1.0;F:\Mesh-Intersection\External-library\gtk\include\cairo;F:\Mesh-Intersection\External-library\gtk\include\glib-2.0;F:\Mesh-Intersection\External-library\gtk\include\gtk-2.0;F:\Mesh-Intersection\External-library\gtk\lib\gtk-3.0\include;$(IncludePath);F:\Mesh-Intersection\External-library\gtk\include</IncludePath>
     <LibraryPath>F:\Mesh-Intersection\External-library\gtk\lib;$(LibraryPath)</LibraryPath>
     <ExecutablePath>F:\Mesh-Intersection\Mesh Intersection;$(ExecutablePath)</ExecutablePath>
     <OutDir>$(SolutionDir)bin</OutDir>
@@ -100,6 +100,8 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_USE_MATH_DEFINES</PreprocessorDefinitions>
+      <AdditionalOptions>/std:c++latest %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
