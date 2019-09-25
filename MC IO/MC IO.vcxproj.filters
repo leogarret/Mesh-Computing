@@ -30,9 +30,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="mc_vcg_mesh.h">
-      <Filter>VCG</Filter>
-    </ClInclude>
     <ClInclude Include="mc_vcg_obj_importer.hpp">
       <Filter>VCG</Filter>
     </ClInclude>
@@ -51,8 +48,31 @@
     <ClInclude Include="mc_om_primitives.hpp">
       <Filter>OpenMesh</Filter>
     </ClInclude>
-    <ClInclude Include="mc_om_mesh.h">
+    <ClInclude Include="mc_vcg_mesh.hpp">
+      <Filter>VCG</Filter>
+    </ClInclude>
+    <ClInclude Include="mc_cm2_mesh.hpp">
+      <Filter>ReMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mc_om_mesh.hpp">
       <Filter>OpenMesh</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="mc_vcg_primitives.cpp">
+      <Filter>VCG</Filter>
+    </ClCompile>
+    <ClCompile Include="mc_vcg_obj_importer.cpp">
+      <Filter>VCG</Filter>
+    </ClCompile>
+    <ClCompile Include="mc_cm2_obj_importer.cpp">
+      <Filter>ReMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mc_om_primitives.cpp">
+      <Filter>OpenMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mc_om_obj_importer.cpp">
+      <Filter>OpenMesh</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

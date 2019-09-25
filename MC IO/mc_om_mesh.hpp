@@ -7,6 +7,6 @@ namespace mc::om {
 
 	typedef OpenMesh::PolyMesh_ArrayKernelT<> Mesh;
 
-}
+};
 
 #endif // !MC_OM_MESH_H

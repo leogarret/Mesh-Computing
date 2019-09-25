@@ -22,6 +22,6 @@ namespace mc::mvcg {
 	public: vcg::tri::io::ImporterOBJ<mc::mvcg::Mesh>::Info info;
 	};
 
-}
+};
 
 #endif // !MC_VCG_MESH_H
