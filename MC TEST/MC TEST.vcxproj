@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{44F67C2C-3459-4727-B5FA-E4E7A5B5941D}</ProjectGuid>
-    <RootNamespace>ConsoleApp</RootNamespace>
+    <ProjectGuid>{D79B94BD-C4D1-4AC0-B64F-621AE2DC8244}</ProjectGuid>
+    <RootNamespace>MCTEST</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -31,7 +31,7 @@
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -69,10 +69,9 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>F:\Mesh-Intersection\MC TEST;F:\Mesh-Intersection\External-library\CGAL\include;F:\Mesh-Intersection\MC IO;F:\Mesh-Intersection\External-library\MeshTools;F:\Mesh-Intersection\External-library\OpenMesh 8.0\include;F:\Mesh-Intersection\External-library\vcglib-1.0.1;F:\Mesh-Intersection\Mesh Intersection;F:\Mesh-Intersection\MC UI;$(IncludePath)</IncludePath>
+    <IncludePath>F:\Mesh-Intersection\External-library\CGAL\include;F:\Mesh-Intersection\MC IO;F:\Mesh-Intersection\External-library\MeshTools;F:\Mesh-Intersection\External-library\OpenMesh 8.0\include;F:\Mesh-Intersection\External-library\vcglib-1.0.1;F:\Mesh-Intersection\Mesh Intersection;F:\Mesh-Intersection\MC UI;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)bin</OutDir>
     <LibraryPath>F:\Mesh-Intersection\External-library\vcglib-1.0.1;F:\Mesh-Intersection\External-library\OpenMesh 8.0\lib;F:\Mesh-Intersection\External-library\MeshTools\libs\ReleaseWin32;F:\Mesh-Intersection\bin;$(LibraryPath)</LibraryPath>
-    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
-    <ReferencePath>$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -95,13 +94,12 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_USE_MATH_DEFINES;__IN_TEST_MODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_USE_MATH_DEFINES;</PreprocessorDefinitions>
       <AdditionalOptions>/std:c++latest %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>OpenMeshCore.lib;OpenMeshCored.lib;OpenMeshTools.lib;OpenMeshToolsd.lib;cm2math1_win32_49.lib;cm2meshtools_win32_49.lib;cm2meshtools1d_win32_49.lib;cm2meshtools2d_win32_49.lib;cm2meshtools3d_win32_49.lib;cm2misc_win32_49.lib;cm2surf_remesh_t3_win32_49.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -118,15 +116,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mc_tests.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MC IO\MC IO.vcxproj">
-      <Project>{d21c1eb8-892d-40c8-a45f-08c6f2a38a11}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\MC TEST\MC TEST.vcxproj">
-      <Project>{d79b94bd-c4d1-4ac0-b64f-621ae2dc8244}</Project>
-    </ProjectReference>
+    <ClInclude Include="mc_tests.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
