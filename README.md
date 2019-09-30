@@ -11,5 +11,8 @@ A Mesh computing library in development based on MVC.
 Based on **OpenGL**
 * VCG
 * GTK
+* OpenMesh
+* CGAL
+* ReMesh
 
 XML builders generated with Glade.
