@@ -1,21 +1,31 @@
-#ifndef _MAIN_CCX
-#define _MAIN_CCX
-
-/**** STANDARD ****/
-#include <iostream>
-#include <ctime>
+#ifndef _MAIN_C
+#define _MAIN_C
 
 #include <mc_tests.h>
+#include <mc_vcg_algorithms.hpp>
+#include <wrap\io_trimesh\export_obj.h>
 
-using namespace mc::tests;
+#include <logger.hpp>
+using namespace logger;
 
-#endif // !_MAIN_CCX
+#include <vcg/complex/algorithms/hole.h>
+
+#include <ctime>
+
+#endif // !_MAIN_C
 
 int main(int ac, char **av)
 {
-	//launchTests(ALL_TEST, ALL_LIBS);
+	mc::mvcg::Mesh m1;
 
-	std::cerr << (3 & 4) << std::endl;
+	mc::mvcg::obj::loader(m1, "../../obj/cube.obj");
+
+	vcg::tri::io::ImporterOBJ<mc::mvcg::Mesh>::VertexIterator vit = m1.vert.begin();
+	vcg::tri::io::ImporterOBJ<mc::mvcg::Mesh>::VertexIterator vit_end = m1.vert.end();
+	for (; vit != vit_end; ++vit)
+	{
+		mcLog(logStream, "[%.2f][%.2f][%.2f]\n", vit[0].P()[0], vit[0].P()[1], vit[0].P()[2]);
+	}
 
 	std::getchar();
 

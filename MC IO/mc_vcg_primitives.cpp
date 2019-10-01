@@ -3,19 +3,15 @@
 
 #include "mc_vcg_primitives.hpp"
 
+using namespace logger;
+
 #endif //!MC_VCG_PRIMITIVES_C
 
 int mc::mvcg::primitives::createCube(mc::mvcg::Mesh &mesh)
 {
-	OutputDebugString("Cube en cours de creation...\n");
-
-#ifdef __IN_TEST_MODE
-	std::cout << "Cube en cours de création...\n" << std::endl;
-#endif // __IN_TEST_MODE
-
 	std::clock_t start = std::clock();
 	Mesh::VertexIterator vertexIt = vcg::tri::Allocator<Mesh>::AddVertices(mesh, 8);
-	Mesh::FaceIterator faceIt = vcg::tri::Allocator<Mesh>::AddFaces(mesh, 11);
+	Mesh::FaceIterator faceIt = vcg::tri::Allocator<Mesh>::AddFaces(mesh, 12);
 
 	vcg::Point3f vertexContainer[8];
 	vertexContainer[0] = { -1, -1, 1 };
@@ -112,10 +108,6 @@ int mc::mvcg::primitives::createCube(mc::mvcg::Mesh &mesh)
 	}
 
 	std::clock_t end = std::clock();
-
-#ifdef __IN_TEST_MODE
-	std::cout << "OBJ chargé avec succès en " << end - start << "ms." << std::endl;
-#endif // __IN_TEST_MODE
 
 	return 1;
 }

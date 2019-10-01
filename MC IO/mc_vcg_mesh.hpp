@@ -3,7 +3,8 @@
 
 #include<vcg/complex/complex.h>
 #include <wrap\io_trimesh\import_obj.h>
-#include <wrap\io_trimesh/export_obj.h>
+#include <wrap\io_trimesh\import_stl.h>
+#include <wrap/callback.h>
 
 class MyVertex; class MyEdge; class MyFace;
 
@@ -17,9 +18,33 @@ class MyEdge : public vcg::Edge<MyUsedTypes> {};
 
 namespace mc::mvcg {
 
+	class MeshInfo;
+
 	class Mesh : public vcg::tri::TriMesh<std::vector<MyVertex>, std::vector<MyFace>, std::vector<MyEdge>>
 	{
-	public: vcg::tri::io::ImporterOBJ<mc::mvcg::Mesh>::Info info;
+	public:mc::mvcg::MeshInfo *infos;
+
+	public:vcg::tri::io::ImporterOBJ<Mesh>::Info mesh_info_buff;
+	};
+
+	class MeshInfo
+	{
+	public:
+		/***** OBJ *****/
+		MeshInfo(vcg::tri::io::ImporterOBJ<mc::mvcg::Mesh>::Info info);
+
+		/***** STL *****/
+		MeshInfo(mc::mvcg::Mesh &mesh);
+
+		/***** GENERAL *****/
+		int mask = 0;
+		vcg::CallBackPos *cb;
+		int numVertices = 0;
+		int numEdges = 0;
+		int numFaces = 0;
+		int numTexCoords = 0;
+		int numNormals = 0;
+
 	};
 
 };

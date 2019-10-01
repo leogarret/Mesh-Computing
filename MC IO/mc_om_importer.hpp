@@ -12,7 +12,13 @@
 
 namespace mc::om::obj {
 
-	bool loader(mc::om::Mesh &mesh, char *path);
+	bool loader(mc::om::Mesh &mesh, const char *path);
+
+};
+
+namespace mc::om::stl {
+
+	bool loader(mc::om::Mesh &mesh, const char *path);
 
 };
 

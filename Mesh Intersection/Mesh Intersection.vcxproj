@@ -18,6 +18,14 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="logger.hpp" />
+    <ClInclude Include="mc_vcg_algorithms.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="logger.cpp" />
+    <ClCompile Include="mc_vcg_surface.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{01342707-1CA4-4C07-A938-B465874E2F1A}</ProjectGuid>
     <RootNamespace>MeshIntersection</RootNamespace>
@@ -98,6 +106,8 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <AdditionalOptions>/std:c++latest %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>

@@ -2,21 +2,24 @@
 #define MC_VCG_OBJ_IMPORTER_C
 
 #include "mc_vcg_obj_importer.hpp"
+#include "mc_utils.hpp"
+#include <logger.hpp>
 
 #endif //!MC_VCG_OBJ_IMPORTER_C
 
-int mc::mvcg::obj::loader(mc::mvcg::Mesh &mesh, char *path)
+int mc::mvcg::obj::loader(mc::mvcg::Mesh &mesh, const char *path)
 {
-	OutputDebugString("OBJ en cours de chargement...\n");
-	OutputDebugString(path); OutputDebugString("\n");
-
-#ifdef __IN_TEST_MODE
-	std::cout << "OBJ en cours de chargement...\n" << std::endl;
-#endif // __IN_TEST_MODE
+	if (mc::utils::extensionCompare(path, "obj") == false)
+	{
+		logger::mcLog(logger::errorStream, "%s is not an obj file.\n", path);
+		return -1;
+	}
 
 	std::clock_t start = std::clock();
-	int errorCode = vcg::tri::io::ImporterOBJ<mc::mvcg::Mesh>::Open(mesh, path, mesh.info);
+	int errorCode = vcg::tri::io::ImporterOBJ<mc::mvcg::Mesh>::Open(mesh, path, mesh.mesh_info_buff);
+	mesh.infos = new mc::mvcg::MeshInfo(mesh.mesh_info_buff);
 	std::clock_t end = std::clock();
+
 	if (errorCode != 0 && errorCode != 5)
 	{
 		OutputDebugString("\nErreur lors du chargement de l'OBJ : ");
@@ -35,10 +38,6 @@ int mc::mvcg::obj::loader(mc::mvcg::Mesh &mesh, char *path)
 	OutputDebugString("OBJ charge avec succes [");
 	OutputDebugString((buff != NULL) ? buff : "?");
 	OutputDebugString("ms]\n");
-
-#ifdef __IN_TEST_MODE
-	std::cout << "OBJ chargé avec succès en " << end - start << "ms." << std::endl;
-#endif // __IN_TEST_MODE
 
 	return 1;
 }
