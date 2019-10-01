@@ -1,15 +1,14 @@
 #ifndef MC_TESTS_H
 #define MC_TESTS_H
 
-#include <iostream>
-
 #include <mc_vcg_mesh.hpp>
 #include <mc_vcg_primitives.hpp>
 #include <mc_vcg_obj_importer.hpp>
+#include <mc_vcg_stl_importer.hpp>
 
 #include <mc_om_mesh.hpp>
 #include <mc_om_primitives.hpp>
-#include <mc_om_obj_importer.hpp>
+#include <mc_om_importer.hpp>
 
 #include <mc_cm2_obj_importer.hpp>
 
@@ -32,8 +31,10 @@ namespace mc::tests {
 
 	enum TEST_NAME {
 		CUBE_CREATE_TEST			= 0b0001,
-		FIVE_MILLIONS_LOADING_TEST	= 0b0010,
-		ALL_TEST					= 0b0011
+		M5_OBJ_LOADING_TEST			= 0b0010,
+		M5BIN_STL_LOADING_TEST		= 0b0100,
+		M5ASCII_STL_LOADING_TEST	= 0b1000,
+		ALL_TEST					= 0b1111
 	};
 
 	enum LIB_NAME {

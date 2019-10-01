@@ -25,7 +25,7 @@
 #ifndef CGAL_CFG_NO_CPP0X_ARRAY
 #  include <array>
 #else
-#  include <boost/array.hpp>
+#include <boost/array.hpp>
 #endif
 
 namespace CGAL {

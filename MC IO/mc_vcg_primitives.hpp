@@ -5,6 +5,8 @@
 #include <Windows.h>
 #include <ctime>
 
+#include <logger.hpp>
+
 namespace mc::mvcg::primitives {
 
 	int createCube(mc::mvcg::Mesh &mesh);

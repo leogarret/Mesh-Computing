@@ -33,10 +33,15 @@
 
 namespace vcg{
 
-
+	template<class ArgumentType, class ResultType>
+	struct unary_function
+	{
+		typedef ArgumentType argument_type;
+		typedef ResultType result_type;
+	};
 
     // hashing function
-    struct HashFunctor : public std::unary_function<Point3i, size_t>
+    struct HashFunctor : public vcg::unary_function<Point3i, size_t>
     {
         enum
           { // parameters for hash table

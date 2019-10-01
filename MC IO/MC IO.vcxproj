@@ -19,22 +19,27 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="mc_cg_obj_importer.h" />
+    <ClInclude Include="mc_cg_obj_importer.hpp" />
     <ClInclude Include="mc_cm2_mesh.hpp" />
     <ClInclude Include="mc_cm2_obj_importer.hpp" />
     <ClInclude Include="mc_om_mesh.hpp" />
-    <ClInclude Include="mc_om_obj_importer.hpp" />
+    <ClInclude Include="mc_om_importer.hpp" />
     <ClInclude Include="mc_om_primitives.hpp" />
+    <ClInclude Include="mc_utils.hpp" />
     <ClInclude Include="mc_vcg_mesh.hpp" />
     <ClInclude Include="mc_vcg_obj_importer.hpp" />
     <ClInclude Include="mc_vcg_primitives.hpp" />
+    <ClInclude Include="mc_vcg_stl_importer.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="mc_extension.cpp" />
     <ClCompile Include="mc_cm2_obj_importer.cpp" />
-    <ClCompile Include="mc_om_obj_importer.cpp" />
+    <ClCompile Include="mc_om_importer.cpp" />
     <ClCompile Include="mc_om_primitives.cpp" />
+    <ClCompile Include="mc_vcg_mesh.cpp" />
     <ClCompile Include="mc_vcg_obj_importer.cpp" />
     <ClCompile Include="mc_vcg_primitives.cpp" />
+    <ClCompile Include="mc_vcg_stl_importer.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D21C1EB8-892D-40C8-A45F-08C6F2A38A11}</ProjectGuid>
@@ -114,7 +119,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;__IN_TEST_MODE</PreprocessorDefinitions>
-      <AdditionalOptions>/std:c++latest %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/std:c++latest /c %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>

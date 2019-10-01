@@ -11,7 +11,7 @@
 
 namespace mc::mcm2::obj {
 
-	int loader(mc::mcm2::Mesh &mesh, char *path);
+	int loader(mc::mcm2::Mesh &mesh, const char *path);
 
 }
 

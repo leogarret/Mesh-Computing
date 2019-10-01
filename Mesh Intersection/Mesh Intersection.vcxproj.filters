@@ -13,5 +13,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers sources\Logger">
+      <UniqueIdentifier>{01afe62d-a5cb-4710-b0e8-e24501877c36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\algorithms">
+      <UniqueIdentifier>{80bec4a7-d996-400a-95ca-32aea7c9c68a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="logger.hpp">
+      <Filter>Fichiers sources\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="mc_vcg_algorithms.hpp">
+      <Filter>Fichiers sources\algorithms</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="logger.cpp">
+      <Filter>Fichiers sources\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="mc_vcg_surface.cpp">
+      <Filter>Fichiers sources\algorithms</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -10,15 +10,8 @@ inline static void display_hdl(void*, unsigned, const char* msg)
 	std::cout << msg << std::endl;
 }
 
-int mc::mcm2::obj::loader(mc::mcm2::Mesh &mesh, char *path)
+int mc::mcm2::obj::loader(mc::mcm2::Mesh &mesh, const char *path)
 {
-	OutputDebugString("OBJ en cours de chargement...\n");
-	OutputDebugString(path); OutputDebugString("\n");
-
-#ifdef __IN_TEST_MODE
-	std::cout << "OBJ en cours de chargement...\n" << std::endl;
-#endif // __IN_TEST_MODE
-
 	std::clock_t start = std::clock();
 	if (cm2::meshtools::WavefrontOBJ_input("../../obj/M5.obj", mesh.data.pos, mesh.mat, mesh.tex, mesh.connectIt, mesh.connectQ) != 0)
 	{
@@ -33,10 +26,6 @@ int mc::mcm2::obj::loader(mc::mcm2::Mesh &mesh, char *path)
 	OutputDebugString("OBJ charge avec succes [");
 	OutputDebugString((buff != NULL) ? buff : "?");
 	OutputDebugString("ms]\n");
-
-#ifdef __IN_TEST_MODE
-	std::cout << "OBJ chargé avec succès en " << end - start << "ms." << std::endl;
-#endif // __IN_TEST_MODE
 
 	return 0;
 }

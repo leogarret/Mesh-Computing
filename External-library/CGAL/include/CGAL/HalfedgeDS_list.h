@@ -714,27 +714,27 @@ public:
 };
 
 
-//  #ifndef CGAL_CFG_NO_TMPL_IN_TMPL_PARAM
-//  #define CGAL__HDS_IP_List HalfedgeDS_list
-//  #else
-//  #define CGAL__HDS_IP_List HalfedgeDS_list::HDS
-//  #endif
+  #ifndef CGAL_CFG_NO_TMPL_IN_TMPL_PARAM
+  #define CGAL__HDS_IP_List HalfedgeDS_list
+  #else
+  #define CGAL__HDS_IP_List HalfedgeDS_list::HDS
+  #endif
 
-// init static member allocator objects (no longer static)
-//template < class Traits_, class HalfedgeDSItems, class Alloc>
-//typename CGAL__HDS_IP_List<Traits_, HalfedgeDSItems, Alloc>::Vertex_allocator
-//CGAL__HDS_IP_List<Traits_, HalfedgeDSItems, Alloc>::vertex_allocator;
-//
-//template < class Traits_, class HalfedgeDSItems, class Alloc>
-//typename CGAL__HDS_IP_List<Traits_, HalfedgeDSItems, Alloc>::Edge_allocator
-//CGAL__HDS_IP_List<Traits_, HalfedgeDSItems, Alloc>::edge_allocator;
-//
-//template < class Traits_, class HalfedgeDSItems, class Alloc>
-//typename CGAL__HDS_IP_List<Traits_, HalfedgeDSItems, Alloc>::Face_allocator
-//CGAL__HDS_IP_List<Traits_, HalfedgeDSItems, Alloc>::face_allocator;
+ init static member allocator objects (no longer static)
+template < class Traits_, class HalfedgeDSItems, class Alloc>
+typename CGAL__HDS_IP_List<Traits_, HalfedgeDSItems, Alloc>::Vertex_allocator
+CGAL__HDS_IP_List<Traits_, HalfedgeDSItems, Alloc>::vertex_allocator;
+
+template < class Traits_, class HalfedgeDSItems, class Alloc>
+typename CGAL__HDS_IP_List<Traits_, HalfedgeDSItems, Alloc>::Edge_allocator
+CGAL__HDS_IP_List<Traits_, HalfedgeDSItems, Alloc>::edge_allocator;
+
+template < class Traits_, class HalfedgeDSItems, class Alloc>
+typename CGAL__HDS_IP_List<Traits_, HalfedgeDSItems, Alloc>::Face_allocator
+CGAL__HDS_IP_List<Traits_, HalfedgeDSItems, Alloc>::face_allocator;
 
 
-//  #undef CGAL__HDS_IP_List
+  #undef CGAL__HDS_IP_List
 
 } //namespace CGAL
 #endif // CGAL_HALFEDGEDS_LIST_H //

@@ -3,16 +3,13 @@
 
 #include "mc_om_primitives.hpp"
 
+#include <logger.hpp>
+using namespace logger;
+
 #endif //!MC_OM_PRIMITIVES_C
 
 int mc::om::primitives::createCube(Mesh &mesh)
 {
-	OutputDebugString("Cube en cours de creation...\n");
-
-#ifdef __IN_TEST_MODE
-	std::cout << "Cube en cours de création...\n" << std::endl;
-#endif // __IN_TEST_MODE
-
 	std::clock_t start = std::clock();
 	mc::om::Mesh::VertexHandle vertexHandle[8];
 
@@ -89,10 +86,6 @@ int mc::om::primitives::createCube(Mesh &mesh)
 	}
 
 	std::clock_t end = std::clock();
-
-#ifdef __IN_TEST_MODE
-	std::cout << "OBJ chargé avec succès en " << end - start << "ms." << std::endl;
-#endif // __IN_TEST_MODE
 
 	return 1;
 }

@@ -226,6 +226,7 @@ static int OpenBinary( OpenMeshType &m, const char * filename, int &loadMask, Ca
     {
       return E_CANTOPEN;
     }
+
         long currentPos = ftell(fp);
         fseek(fp,0L,SEEK_END);
         long fileLen = ftell(fp);
