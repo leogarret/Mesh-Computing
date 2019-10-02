@@ -66,6 +66,9 @@
     <ClInclude Include="mc_utils.hpp">
       <Filter>Utils</Filter>
     </ClInclude>
+    <ClInclude Include="mc_vcg_edge.hpp">
+      <Filter>VCG</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mc_vcg_primitives.cpp">
@@ -91,6 +94,9 @@
     </ClCompile>
     <ClCompile Include="mc_extension.cpp">
       <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="mc_vcg_edge.cpp">
+      <Filter>VCG</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

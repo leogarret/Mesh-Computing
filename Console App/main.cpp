@@ -11,22 +11,30 @@ using namespace logger;
 #include <vcg/complex/algorithms/hole.h>
 
 #include <ctime>
+#include <assert.h>
+#include <limits.h>
+#include <mc_vcg_edge.hpp>
 
 #endif // !_MAIN_C
 
 int main(int ac, char **av)
 {
-	mc::mvcg::Mesh m1;
-
+	/*mc::mvcg::Mesh m1;
 	mc::mvcg::obj::loader(m1, "../../obj/cube.obj");
 
-	vcg::tri::io::ImporterOBJ<mc::mvcg::Mesh>::VertexIterator vit = m1.vert.begin();
-	vcg::tri::io::ImporterOBJ<mc::mvcg::Mesh>::VertexIterator vit_end = m1.vert.end();
-	for (; vit != vit_end; ++vit)
+	MyFace *f = m1.vert.at(0).VFp();
+
+	if (m1.vert[0].HasVFAdjacency())
 	{
-		mcLog(logStream, "[%.2f][%.2f][%.2f]\n", vit[0].P()[0], vit[0].P()[1], vit[0].P()[2]);
+		std::cout << "Adj\n" << std::endl;
 	}
 
+	std::cout << f[0].P(0)[0] << std::endl;
+	
+	mc::mvcg::edge::Edge_t *edges = mc::mvcg::edge::getEdges(m1.face[0]);
+	mc::mvcg::edge::printFaceEdgeInfos(m1.face[3]);*/
+
+	std::cout << ((.0)- 1) << std::endl;
 	std::getchar();
 
 	return 0;
