@@ -1,3 +1,4 @@
+#pragma once
 #ifndef MC_VCG_MESH_H
 #define MC_VCG_MESH_H
 
@@ -12,8 +13,8 @@ struct MyUsedTypes : public vcg::UsedTypes<vcg::Use<MyVertex>::AsVertexType,
 	vcg::Use<MyEdge>::AsEdgeType,
 	vcg::Use<MyFace>::AsFaceType> {};
 
-class MyVertex : public vcg::Vertex<MyUsedTypes, vcg::vertex::Coord3f, vcg::vertex::Normal3f, vcg::vertex::BitFlags> {};
-class MyFace : public vcg::Face<MyUsedTypes, vcg::face::FFAdj, vcg::face::VertexRef, vcg::face::BitFlags> {};
+class MyVertex : public vcg::Vertex<MyUsedTypes, vcg::vertex::Coord3f, vcg::vertex::Normal3f, vcg::vertex::BitFlags, vcg::vertex::VFAdj> {};
+class MyFace : public vcg::Face<MyUsedTypes, vcg::face::FFAdj, vcg::face::VertexRef, vcg::face::BitFlags, vcg::face::VFAdj> {};
 class MyEdge : public vcg::Edge<MyUsedTypes> {};
 
 namespace mc::mvcg {
