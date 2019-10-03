@@ -1,41 +1,46 @@
 #ifndef _MAIN_C
 #define _MAIN_C
 
-#include <mc_tests.h>
+// MC (Mesh Computing)
 #include <mc_vcg_algorithms.hpp>
+#include <mc_vcg_edge.hpp>
+#include <mc_vcg_primitives.hpp>
+
+
+// VCG
+#include <vcg/complex/algorithms/hole.h>
 #include <wrap\io_trimesh\export_obj.h>
 
+
+// LOGGER
 #include <logger.hpp>
 using namespace logger;
 
-#include <vcg/complex/algorithms/hole.h>
-
-#include <ctime>
-#include <assert.h>
-#include <limits.h>
-#include <mc_vcg_edge.hpp>
 
 #endif // !_MAIN_C
 
 int main(int ac, char **av)
 {
-	/*mc::mvcg::Mesh m1;
-	mc::mvcg::obj::loader(m1, "../../obj/cube.obj");
+	mc::mvcg::Mesh m1;
+	mc::mvcg::primitives::createCube(m1);
+	
+	MyFace *f0 = &m1.face[0];
+	MyFace *f1 = &m1.face[1];
 
-	MyFace *f = m1.vert.at(0).VFp();
+	vcg::tri::UpdateTopology<mc::mvcg::Mesh>::FaceFace(m1);
 
-	if (m1.vert[0].HasVFAdjacency())
+	if (f0->FFp(2) == f1)
 	{
-		std::cout << "Adj\n" << std::endl;
+		std::cout << "F0 and F1 share the same edge.\n" << std::endl;
+	}
+	else
+	{
+		mc::mvcg::edge::printFaceEdgeInfos(*f0);
+		std::cout << std::endl;
+		mc::mvcg::edge::printFaceEdgeInfos(*f1);
 	}
 
-	std::cout << f[0].P(0)[0] << std::endl;
-	
-	mc::mvcg::edge::Edge_t *edges = mc::mvcg::edge::getEdges(m1.face[0]);
-	mc::mvcg::edge::printFaceEdgeInfos(m1.face[3]);*/
 
-	std::cout << ((.0)- 1) << std::endl;
 	std::getchar();
-
 	return 0;
 }
