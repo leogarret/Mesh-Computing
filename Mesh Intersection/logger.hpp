@@ -2,7 +2,6 @@
 #define _LOGGER_HPP
 
 #include <iostream>
-#include <windows.h>
 #include <fstream>
 #include <stdarg.h>
 

@@ -2,7 +2,6 @@
 #define MC_VCG_PRIMITIVES_H
 
 #include "mc_vcg_mesh.hpp"
-#include <Windows.h>
 #include <ctime>
 
 #include <logger.hpp>

@@ -2,6 +2,9 @@
 #define _LOGGER_CPP
 
 #include "logger.hpp"
+#define WIN32_LEAN_AND_MEAN
+#define NOMINMAX
+#include <windows.h>
 using namespace logger;
 
 void logger::setColor(COLOR text, COLOR background)

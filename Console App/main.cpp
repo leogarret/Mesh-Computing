@@ -2,45 +2,41 @@
 #define _MAIN_C
 
 // MC (Mesh Computing)
-#include <mc_vcg_algorithms.hpp>
-#include <mc_vcg_edge.hpp>
+#include <mc_vcg_obj_importer.hpp>
 #include <mc_vcg_primitives.hpp>
 
-
 // VCG
-#include <vcg/complex/algorithms/hole.h>
 #include <wrap\io_trimesh\export_obj.h>
+#include <vcg/complex/algorithms/intersection.h>
 
+#include <vcg/space/distance3.h>
+#include <vcg/space/index/aabb_binary_tree/ray.h>
+#include <vcg/space/index/aabb_binary_tree/base.h>
+#include <vcg/space/index/aabb_binary_tree/aabb_binary_tree.h>
+
+#include <vcg/complex/algorithms/clean.h>
+#include <vcg/complex/algorithms/update/bounding.h>
 
 // LOGGER
 #include <logger.hpp>
 using namespace logger;
+using namespace vcg;
 
+typedef vcg::AABBBinaryTree<mc::mvcg::Mesh, mc::mvcg::Mesh::ScalarType, int> tType;
 
 #endif // !_MAIN_C
 
-int main(int ac, char **av)
+int main()
 {
-	mc::mvcg::Mesh m1;
-	mc::mvcg::primitives::createCube(m1);
-	
-	MyFace *f0 = &m1.face[0];
-	MyFace *f1 = &m1.face[1];
+	mc::mvcg::Mesh m;
+	mc::mvcg::primitives::createCube(m);
 
-	vcg::tri::UpdateTopology<mc::mvcg::Mesh>::FaceFace(m1);
+	vcg::AABBBinaryTreeRay<tType> tRay;
 
-	if (f0->FFp(2) == f1)
-	{
-		std::cout << "F0 and F1 share the same edge.\n" << std::endl;
-	}
-	else
-	{
-		mc::mvcg::edge::printFaceEdgeInfos(*f0);
-		std::cout << std::endl;
-		mc::mvcg::edge::printFaceEdgeInfos(*f1);
-	}
+start:static int i = 0;
+	std::cout << i << std::endl;
+if (!(++i <= 5)) goto end;goto start;end:
 
-
-	std::getchar();
+	getchar();
 	return 0;
 }

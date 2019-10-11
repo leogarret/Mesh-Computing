@@ -13,9 +13,11 @@ struct MyUsedTypes : public vcg::UsedTypes<vcg::Use<MyVertex>::AsVertexType,
 	vcg::Use<MyEdge>::AsEdgeType,
 	vcg::Use<MyFace>::AsFaceType> {};
 
-class MyVertex : public vcg::Vertex<MyUsedTypes, vcg::vertex::Coord3f, vcg::vertex::Normal3f, vcg::vertex::BitFlags, vcg::vertex::VFAdj> {};
-class MyFace : public vcg::Face<MyUsedTypes, vcg::face::FFAdj, vcg::face::VertexRef, vcg::face::BitFlags, vcg::face::VFAdj> {};
-class MyEdge : public vcg::Edge<MyUsedTypes> {};
+class MyVertex : public vcg::Vertex<MyUsedTypes, vcg::vertex::Coord3f, vcg::vertex::Normal3f, vcg::vertex::BitFlags, vcg::vertex::VFAdj, vcg::vertex::Qualityf> {};
+class MyFace : public vcg::Face<MyUsedTypes, vcg::face::FFAdj, vcg::face::VertexRef, vcg::face::BitFlags, vcg::face::VFAdj, vcg::face::Normal3f, vcg::face::Mark> {};
+class MyEdge : public vcg::Edge < MyUsedTypes, vcg::edge::EEAdj > {};
+
+class MyEdgeMesh : public vcg::tri::TriMesh< std::vector<MyVertex>, std::vector<MyEdge> > {};
 
 namespace mc::mvcg {
 

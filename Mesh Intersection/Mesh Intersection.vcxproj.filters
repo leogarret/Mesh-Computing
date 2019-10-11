@@ -1,39 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Fichiers sources">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Fichiers d%27en-tête">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="Fichiers de ressources">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Fichiers sources\Logger">
+    <Filter Include="algorithms">
+      <UniqueIdentifier>{80bec4a7-d996-400a-95ca-32aea7c9c68a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logger">
       <UniqueIdentifier>{01afe62d-a5cb-4710-b0e8-e24501877c36}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers sources\algorithms">
-      <UniqueIdentifier>{80bec4a7-d996-400a-95ca-32aea7c9c68a}</UniqueIdentifier>
+    <Filter Include="Raycast">
+      <UniqueIdentifier>{6f081d64-f631-4eb5-8e79-276fc3c74a06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vec3">
+      <UniqueIdentifier>{f484fc04-1a3e-4590-8a57-fb130dcb1c1c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="logger.hpp">
-      <Filter>Fichiers sources\Logger</Filter>
+      <Filter>Logger</Filter>
     </ClInclude>
     <ClInclude Include="mc_vcg_algorithms.hpp">
-      <Filter>Fichiers sources\algorithms</Filter>
+      <Filter>algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="mc_raycast.hpp">
+      <Filter>Raycast</Filter>
+    </ClInclude>
+    <ClInclude Include="mc_vec3.hpp">
+      <Filter>Vec3</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="logger.cpp">
-      <Filter>Fichiers sources\Logger</Filter>
+      <Filter>Logger</Filter>
     </ClCompile>
     <ClCompile Include="mc_vcg_surface.cpp">
-      <Filter>Fichiers sources\algorithms</Filter>
+      <Filter>algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="mc_raycast.cpp">
+      <Filter>Raycast</Filter>
+    </ClCompile>
+    <ClCompile Include="mc_vec3.cpp">
+      <Filter>Vec3</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
