@@ -20,11 +20,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="logger.hpp" />
+    <ClInclude Include="mc_raycast.hpp" />
     <ClInclude Include="mc_vcg_algorithms.hpp" />
+    <ClInclude Include="mc_vec3.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="logger.cpp" />
+    <ClCompile Include="mc_raycast.cpp" />
     <ClCompile Include="mc_vcg_surface.cpp" />
+    <ClCompile Include="mc_vec3.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{01342707-1CA4-4C07-A938-B465874E2F1A}</ProjectGuid>
