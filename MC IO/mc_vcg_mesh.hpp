@@ -6,6 +6,7 @@
 #include <wrap\io_trimesh\import_obj.h>
 #include <wrap\io_trimesh\import_stl.h>
 #include <wrap/callback.h>
+#include <vcg/simplex/face/component_ep.h>
 
 class MyVertex; class MyEdge; class MyFace;
 
@@ -14,7 +15,7 @@ struct MyUsedTypes : public vcg::UsedTypes<vcg::Use<MyVertex>::AsVertexType,
 	vcg::Use<MyFace>::AsFaceType> {};
 
 class MyVertex : public vcg::Vertex<MyUsedTypes, vcg::vertex::Coord3f, vcg::vertex::Normal3f, vcg::vertex::BitFlags, vcg::vertex::VFAdj, vcg::vertex::Qualityf> {};
-class MyFace : public vcg::Face<MyUsedTypes, vcg::face::FFAdj, vcg::face::VertexRef, vcg::face::BitFlags, vcg::face::VFAdj, vcg::face::Normal3f, vcg::face::Mark> {};
+class MyFace : public vcg::Face<MyUsedTypes, vcg::face::FFAdj, vcg::face::VertexRef, vcg::face::BitFlags, vcg::face::VFAdj, vcg::face::Normal3f, vcg::face::Mark, vcg::face::EdgePlane> {};
 class MyEdge : public vcg::Edge < MyUsedTypes, vcg::edge::EEAdj > {};
 
 class MyEdgeMesh : public vcg::tri::TriMesh< std::vector<MyVertex>, std::vector<MyEdge> > {};

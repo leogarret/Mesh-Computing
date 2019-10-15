@@ -32,23 +32,23 @@
 #include <vcg/space/intersection3.h>
 #include <vcg/space/index/aabb_binary_tree/aabb_binary_tree.h>
 
-typedef float AScalarType;
+typedef float MScalarType;
 
 using namespace vcg;
 
-class AVertex;
-class AFace;
+class MyVertex;
+class MyFace;
 
 struct MyUsedTypes : public vcg::UsedTypes<	vcg::Use<AVertex>		::AsVertexType,
 											vcg::Use<AFace>			::AsFaceType>{};
 
-class AVertex     : public Vertex< MyUsedTypes, vertex::Normal3f, vertex::Coord3f,vertex::BitFlags >{};
-class AFace       : public Face<   MyUsedTypes, face::VertexRef, face::Normal3f, face::EdgePlane, face::BitFlags> {};
-class AMesh     : public vcg::tri::TriMesh< std::vector<AVertex>, std::vector<AFace> > { };
+class MyVertex     : public Vertex< MyUsedTypes, vertex::Normal3f, vertex::Coord3f,vertex::BitFlags >{};
+class MyFace       : public Face<   MyUsedTypes, face::VertexRef, face::Normal3f, face::EdgePlane, face::BitFlags> {};
+class Mesh     : public vcg::tri::TriMesh< std::vector<AVertex>, std::vector<AFace> > { };
 
-typedef vcg::AABBBinaryTreeIndex<AFace, AScalarType, vcg::EmptyClass> AIndex;
+typedef vcg::AABBBinaryTreeIndex<AFace, MScalarType, vcg::EmptyClass> AIndex;
 
-static AMesh gMesh;
+static Mesh gMesh;
 static AIndex gIndex;
 
 static void CreateMesh(void) {
