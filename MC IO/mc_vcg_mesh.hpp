@@ -18,7 +18,7 @@ class MyVertex : public vcg::Vertex<MyUsedTypes, vcg::vertex::Coord3f, vcg::vert
 class MyFace : public vcg::Face<MyUsedTypes, vcg::face::FFAdj, vcg::face::VertexRef, vcg::face::BitFlags, vcg::face::VFAdj, vcg::face::Normal3f, vcg::face::Mark, vcg::face::EdgePlane> {};
 class MyEdge : public vcg::Edge < MyUsedTypes, vcg::edge::EEAdj > {};
 
-class MyEdgeMesh : public vcg::tri::TriMesh< std::vector<MyVertex>, std::vector<MyEdge> > {};
+//class MyEdgeMesh : public vcg::tri::TriMesh< std::vector<MyVertex>, std::vector<MyEdge> > {};
 
 namespace mc::mvcg {
 
