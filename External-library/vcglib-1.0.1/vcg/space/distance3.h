@@ -25,6 +25,7 @@
 #ifndef __VCG_DISTANCE3
 #define __VCG_DISTANCE3
 
+#undef min, max;
 #include <limits>
 #include <vcg/space/intersection3.h>
 

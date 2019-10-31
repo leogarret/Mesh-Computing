@@ -11,11 +11,8 @@
     <Filter Include="Logger">
       <UniqueIdentifier>{01afe62d-a5cb-4710-b0e8-e24501877c36}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Raycast">
-      <UniqueIdentifier>{6f081d64-f631-4eb5-8e79-276fc3c74a06}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Vec3">
-      <UniqueIdentifier>{f484fc04-1a3e-4590-8a57-fb130dcb1c1c}</UniqueIdentifier>
+    <Filter Include="Intersection">
+      <UniqueIdentifier>{ba8f8895-2dfa-46e2-8558-03469180d56c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -25,11 +22,8 @@
     <ClInclude Include="mc_vcg_algorithms.hpp">
       <Filter>algorithms</Filter>
     </ClInclude>
-    <ClInclude Include="mc_raycast.hpp">
-      <Filter>Raycast</Filter>
-    </ClInclude>
-    <ClInclude Include="mc_vec3.hpp">
-      <Filter>Vec3</Filter>
+    <ClInclude Include="mc_vcg_intersection.hpp">
+      <Filter>Intersection</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -39,11 +33,11 @@
     <ClCompile Include="mc_vcg_surface.cpp">
       <Filter>algorithms</Filter>
     </ClCompile>
-    <ClCompile Include="mc_raycast.cpp">
-      <Filter>Raycast</Filter>
+    <ClCompile Include="mc_vcg_intersection.cpp">
+      <Filter>Intersection</Filter>
     </ClCompile>
-    <ClCompile Include="mc_vec3.cpp">
-      <Filter>Vec3</Filter>
+    <ClCompile Include="utils.cpp">
+      <Filter>Intersection</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

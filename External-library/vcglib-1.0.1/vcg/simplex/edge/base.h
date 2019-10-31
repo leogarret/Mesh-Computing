@@ -87,7 +87,6 @@ class EdgeArityMax: public Arity10<edge::EmptyCore<UserTypes>, A, B, C, D, E, F,
 // ----- Flags stuff -----
 public:
   
-
  	enum { 
 		
 		DELETED    = 0x0001,		// This bit indicate that the edge is deleted from the mesh

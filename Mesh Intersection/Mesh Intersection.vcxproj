@@ -19,16 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="mc_vcg_intersection.hpp" />
     <ClInclude Include="logger.hpp" />
-    <ClInclude Include="mc_raycast.hpp" />
     <ClInclude Include="mc_vcg_algorithms.hpp" />
-    <ClInclude Include="mc_vec3.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="mc_vcg_intersection.cpp" />
     <ClCompile Include="logger.cpp" />
-    <ClCompile Include="mc_raycast.cpp" />
     <ClCompile Include="mc_vcg_surface.cpp" />
-    <ClCompile Include="mc_vec3.cpp" />
+    <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{01342707-1CA4-4C07-A938-B465874E2F1A}</ProjectGuid>
@@ -87,7 +86,7 @@
     <LibraryPath>F:\Mesh-Intersection\External-library\Assimp\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>F:\Mesh Intersection\External library;F:\Mesh Intersection\External library\vcglib-1.0.1;$(GTKDIR)\lib\gtk-2.0\include;F:\Mesh Intersection\External library\glew-2.1.0\include;$(GTKDIR)\include;$(GTKDIR)\lib\glib-2.0\include;$(IncludePath)</IncludePath>
+    <IncludePath>F:\Mesh-Intersection\MC IO;F:\Mesh Intersection\External library;F:\Mesh Intersection\External library\vcglib-1.0.1;$(GTKDIR)\lib\gtk-2.0\include;F:\Mesh Intersection\External library\glew-2.1.0\include;$(GTKDIR)\include;$(GTKDIR)\lib\glib-2.0\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
