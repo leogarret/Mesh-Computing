@@ -36,7 +36,7 @@
     <ClCompile Include="mc_vcg_intersection.cpp">
       <Filter>Intersection</Filter>
     </ClCompile>
-    <ClCompile Include="utils.cpp">
+    <ClCompile Include="intersections_utils.cpp">
       <Filter>Intersection</Filter>
     </ClCompile>
   </ItemGroup>

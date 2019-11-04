@@ -7,6 +7,11 @@
 
 #endif // MC_EXTENSION_C
 
+/*
+** Cette fonction compare deux chaînes de caractères sans prendre en compte la casse.
+** Exemple:
+** "Bonjour" et "bonjour" sont identiques.
+*/
 int strcicmp(char const *a, char const *b)
 {
 	for (;; a++, b++) {
@@ -16,6 +21,9 @@ int strcicmp(char const *a, char const *b)
 	}
 }
 
+/*
+** Cette fonction vérifie si un nom de fichier contient une extension.
+*/
 bool mc::utils::haveExtension(const char *fileName)
 {
 	int len = strlen(fileName);
@@ -28,6 +36,13 @@ bool mc::utils::haveExtension(const char *fileName)
 	return false;
 }
 
+
+/*
+** Cette fonction compare une extension avec l'extension d'un fichier.
+** Exemple:
+** extensionCompare("mon-fichier.txt", "txt") retourne 'true', car l'extension de
+** 'mon-fichier.txt' est bien 'txt'.
+*/
 bool mc::utils::extensionCompare(const char *fileName, char *extension)
 {
 	int len = std::strlen(fileName);

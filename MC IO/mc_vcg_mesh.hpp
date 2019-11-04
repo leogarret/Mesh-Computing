@@ -27,13 +27,15 @@ namespace mc::mvcg {
 	{
 	public:
 		Mesh() {};
-		inline void TreeMake() { tree.Set(face.begin(), face.end()); treeIsMake = true; };
+		inline void TreeMake() { tree.Set(face.begin(), face.end()); this->_treeIsMake = true; };
 
 		mc::mvcg::MeshInfo *infos;
 		vcg::tri::io::ImporterOBJ<Mesh>::Info mesh_info_buff;
 
+		inline bool treeIsMake() { return this->_treeIsMake; };
+
 		vcg::AABBBinaryTreeIndex<MyFace, double, vcg::EmptyClass> tree;
-		bool treeIsMake = false;
+	private: bool _treeIsMake = false;
 	};
 
 	class MeshInfo
