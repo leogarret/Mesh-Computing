@@ -17,11 +17,11 @@ typedef enum OBJTYPE {
 };
 
 #undef max;
-typedef vcg::AABBBinaryTreeIndex<MyFace, double, vcg::EmptyClass> MIndex;
+typedef vcg::AABBBinaryTreeIndex<MCFace, double, vcg::EmptyClass> MIndex;
 
 void debug_intesections();
 
-int Intersect(std::vector<MyFace> mf, MIndex &tree, std::vector<MyFace*> &faces, std::vector<MIndex::CoordType> &points, vcg::Point3d origin, vcg::Point3d direction);
+int Intersect(std::vector<MCFace> mf, MIndex &tree, std::vector<MCFace*> &faces, std::vector<MIndex::CoordType> &points, vcg::Point3d origin, vcg::Point3d direction);
 MIndex::CoordType getPositionWithDistAndDir(MIndex::CoordType origin, MIndex::CoordType dir, MIndex::ScalarType dist);
 
 #endif //!MC_VCG_INTERSECTION_HPP

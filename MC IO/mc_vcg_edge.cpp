@@ -7,7 +7,7 @@ using namespace mc::mvcg::edge;
 
 #endif // !MC_VCG_EDGE_C
 
-Edge_t *mc::mvcg::edge::getEdges(MyFace face)
+Edge_t *mc::mvcg::edge::getEdges(MCFace face)
 {
 	Edge_t *edges = new Edge_t[3];
 
@@ -35,7 +35,7 @@ Edge_t *mc::mvcg::edge::getEdges(MyFace face)
 	return edges;
 }
 
-void mc::mvcg::edge::printFaceEdgeInfos(MyFace face)
+void mc::mvcg::edge::printFaceEdgeInfos(MCFace face)
 {
 	Edge_t *edges = getEdges(face);
 

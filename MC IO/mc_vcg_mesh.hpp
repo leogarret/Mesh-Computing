@@ -9,21 +9,24 @@
 #include <vcg/simplex/face/component_ep.h>
 #include <vcg/space/index/aabb_binary_tree/aabb_binary_tree.h>
 
-class MyVertex; class MyEdge; class MyFace;
+class MCVertex; class MCEdge; class MCFace;
 
-struct MyUsedTypes : public vcg::UsedTypes<vcg::Use<MyVertex>::AsVertexType,
-	vcg::Use<MyEdge>::AsEdgeType,
-	vcg::Use<MyFace>::AsFaceType> {};
+struct MyUsedTypes : public vcg::UsedTypes<vcg::Use<MCVertex>::AsVertexType,
+	vcg::Use<MCEdge>::AsEdgeType,
+	vcg::Use<MCFace>::AsFaceType> {};
 
-class MyVertex : public vcg::Vertex<MyUsedTypes, vcg::vertex::Coord3d, vcg::vertex::Normal3d, vcg::vertex::BitFlags, vcg::vertex::VFAdj, vcg::vertex::Qualityf> {};
-class MyFace : public vcg::Face<MyUsedTypes, vcg::face::FFAdj, vcg::face::VertexRef, vcg::face::BitFlags, vcg::face::VFAdj, vcg::face::Normal3f, vcg::face::Mark, vcg::face::EdgePlane, vcg::face::EFAdj> {};
-class MyEdge : public vcg::Edge < MyUsedTypes, vcg::edge::EEAdj, vcg::edge::VertexRef, vcg::face::EdgePlane, vcg::edge::BitFlags > {};
+class MCVertex : public vcg::Vertex<MyUsedTypes, vcg::vertex::Coord3d, vcg::vertex::Normal3d, vcg::vertex::BitFlags, vcg::vertex::VFAdj, vcg::vertex::Qualityf> {};
+class MCFace : public vcg::Face<MyUsedTypes, vcg::face::FFAdj, vcg::face::VertexRef, vcg::face::BitFlags, vcg::face::VFAdj, vcg::face::Normal3f, vcg::face::Mark, vcg::face::EdgePlane, vcg::face::EFAdj>
+{
+public:int id = 0;
+};
+class MCEdge : public vcg::Edge < MyUsedTypes, vcg::edge::EEAdj, vcg::edge::VertexRef, vcg::face::EdgePlane, vcg::edge::BitFlags > {};
 
 namespace mc::mvcg {
 
 	class MeshInfo;
 
-	class Mesh : public vcg::tri::TriMesh<std::vector<MyVertex>, std::vector<MyFace>, std::vector<MyEdge>>
+	class Mesh : public vcg::tri::TriMesh<std::vector<MCVertex>, std::vector<MCFace>, std::vector<MCEdge>>
 	{
 	public:
 		Mesh() {};
@@ -34,7 +37,7 @@ namespace mc::mvcg {
 
 		inline bool treeIsMake() { return this->_treeIsMake; };
 
-		vcg::AABBBinaryTreeIndex<MyFace, double, vcg::EmptyClass> tree;
+		vcg::AABBBinaryTreeIndex<MCFace, double, vcg::EmptyClass> tree;
 	private: bool _treeIsMake = false;
 	};
 

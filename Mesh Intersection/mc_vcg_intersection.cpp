@@ -16,7 +16,7 @@ MIndex::CoordType getPositionWithDistAndDir(MIndex::CoordType origin, MIndex::Co
 	return intersectionPos;
 }
 
-bool faceCompare(MyFace a, MyFace b)
+bool faceCompare(MCFace a, MCFace b)
 {
 	int cnt = 0;
 
@@ -34,7 +34,7 @@ bool faceCompare(MyFace a, MyFace b)
 	return false;
 }
 
-int Intersect(std::vector<MyFace> mf, MIndex &tree, std::vector<MyFace*> &faces, std::vector<MIndex::CoordType> &points, vcg::Point3d origin, vcg::Point3d direction)
+int Intersect(std::vector<MCFace> mf, MIndex &tree, std::vector<MCFace*> &faces, std::vector<MIndex::CoordType> &points, vcg::Point3d origin, vcg::Point3d direction)
 {
 	// Déclaration des variables
 	vcg::RayTriangleIntersectionFunctor<true> rayIntersector;

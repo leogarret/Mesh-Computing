@@ -42,7 +42,7 @@ double getPointEdgeDistance(vcg::Point3d edge[2], vcg::Point3d p)
 ** T_POINT s'il se trouve sur un sommet
 ** T_EDGE s'il se trouve sur une arête
 */
-OBJTYPE onObjectType(MyFace face, vcg::Point3d points)
+OBJTYPE onObjectType(MCFace face, vcg::Point3d points)
 {
 	/* Calcule des distances entre les points */
 	double dist1 = getPointsDistance(face.P(0), points);
