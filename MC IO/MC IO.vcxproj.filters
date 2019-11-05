@@ -25,9 +25,6 @@
     <Filter Include="CGAL">
       <UniqueIdentifier>{4fbd2855-4351-44d5-86be-792ed383fabe}</UniqueIdentifier>
     </Filter>
-    <Filter Include="GTS">
-      <UniqueIdentifier>{43067ca7-6442-4d32-897c-9d958e719a35}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Utils">
       <UniqueIdentifier>{9c7ca04d-cb7a-4ea9-b79b-e458ba184892}</UniqueIdentifier>
     </Filter>

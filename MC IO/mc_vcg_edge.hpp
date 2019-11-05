@@ -12,8 +12,8 @@ namespace mc::mvcg::edge {
 		vcg::Point3f p2 = { 0, 0, 0 };
 	};
 
-	Edge_t *getEdges(MyFace face);
-	void printFaceEdgeInfos(MyFace face);
+	Edge_t *getEdges(MCFace face);
+	void printFaceEdgeInfos(MCFace face);
 }
 
 #endif // !MC_VCG_EDGE_H
