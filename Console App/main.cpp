@@ -66,10 +66,19 @@ void TestRay(mc::mvcg::Mesh &m)
 	vcg::tri::io::ExporterOBJ<mc::mvcg::Mesh>::Save(m, "OUTOBJ.obj", 0);
 }
 
+typedef struct BuffIntersect {
+	int nbIntersections;
+	std::vector<MCFace*> facesIntersections;
+	std::vector<MIndex::CoordType> pointsIntersections;
+	vcg::Point3d origin;
+	vcg::Point3d direction;
+	std::clock_t time;
+} BuffIntersect;
+
 int main()
 {
 	debugIntersection();
-	
+
 	std::getchar();
 	return 0;
 }
