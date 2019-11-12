@@ -1176,33 +1176,34 @@ static void FastFitMesh(MeshType &m,
        //SimpleTempData<typename MeshType::FaceContainer, PDFaceInfo> &TDF,
              bool OnlySelected=false)
 {
-    //vcg::face::Pos<FaceType> ep;
+	//vcg::face::Pos<FaceType> ep;
     vcg::face::VFIterator<FaceType> ep;
     VertexIterator vi;
-
+	
     for(vi=m.vert.begin();vi!=m.vert.end();++vi)
     {
-   CoordType Sum(0,0,0);
-   ScalarType cnt=0;
-   VFLocalIterator ep(&*vi);
-     for (;!ep.End();++ep)
+		vcg::Point3d Sum(0,0,0);
+		ScalarType cnt=0;
+
+		VFLocalIterator ep(&*vi);
+
+		for (;!ep.End();++ep)
         {
-      CoordType bc=Barycenter<FaceType>(*ep.F());
-      Sum += ep.F()->N()*(ep.F()->N().dot(bc - (*vi).P()));
-      ++cnt;
+			CoordType bc=Barycenter<FaceType>(*ep.F());
+			Sum += ep.F()->N()*(ep.F()->N().dot(bc - (*vi).P()));
+			++cnt;
         }
         TDV[*vi].np=(*vi).P()+ Sum*(1.0/cnt);
     }
-
     if(OnlySelected)
     {
         for(vi=m.vert.begin();vi!=m.vert.end();++vi)
-                if((*vi).IsS()) (*vi).P()=TDV[*vi].np;
+			if((*vi).IsS()) (*vi).P()=TDV[*vi].np;
     }
     else
     {
         for(vi=m.vert.begin();vi!=m.vert.end();++vi)
-        (*vi).P()=TDV[*vi].np;
+			(*vi).P()=TDV[*vi].np;
     }
 }
 
@@ -1225,8 +1226,8 @@ static void VertexCoordPasoDoble(MeshType &m, int NormalSmoothStep, typename Mes
   for(int j=0;j<NormalSmoothStep;++j)
     FaceNormalAngleThreshold(m,TDF,Sigma);
 
-  for(int j=0;j<FitStep;++j)
-    FastFitMesh(m,TDV,SmoothSelected);
+  for (int j = 0; j < FitStep; ++j)
+	  FastFitMesh(m, TDV, SmoothSelected);
 }
 
 

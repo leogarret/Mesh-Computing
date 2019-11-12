@@ -16,15 +16,6 @@
     <Filter Include="VCG">
       <UniqueIdentifier>{61fd5c8e-565b-48f6-9bd2-d977aae12ffe}</UniqueIdentifier>
     </Filter>
-    <Filter Include="OpenMesh">
-      <UniqueIdentifier>{474118ef-db95-4d61-ba4d-693449fc55c3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ReMesh">
-      <UniqueIdentifier>{cb07cb2d-aefd-4dce-be7e-5ce63230b855}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CGAL">
-      <UniqueIdentifier>{4fbd2855-4351-44d5-86be-792ed383fabe}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Utils">
       <UniqueIdentifier>{9c7ca04d-cb7a-4ea9-b79b-e458ba184892}</UniqueIdentifier>
     </Filter>
@@ -33,32 +24,14 @@
     <ClInclude Include="mc_vcg_obj_importer.hpp">
       <Filter>VCG</Filter>
     </ClInclude>
-    <ClInclude Include="mc_cm2_obj_importer.hpp">
-      <Filter>ReMesh</Filter>
-    </ClInclude>
     <ClInclude Include="mc_vcg_primitives.hpp">
       <Filter>VCG</Filter>
-    </ClInclude>
-    <ClInclude Include="mc_om_primitives.hpp">
-      <Filter>OpenMesh</Filter>
     </ClInclude>
     <ClInclude Include="mc_vcg_mesh.hpp">
       <Filter>VCG</Filter>
     </ClInclude>
-    <ClInclude Include="mc_cm2_mesh.hpp">
-      <Filter>ReMesh</Filter>
-    </ClInclude>
-    <ClInclude Include="mc_om_mesh.hpp">
-      <Filter>OpenMesh</Filter>
-    </ClInclude>
-    <ClInclude Include="mc_cg_obj_importer.hpp">
-      <Filter>CGAL</Filter>
-    </ClInclude>
     <ClInclude Include="mc_vcg_stl_importer.hpp">
       <Filter>VCG</Filter>
-    </ClInclude>
-    <ClInclude Include="mc_om_importer.hpp">
-      <Filter>OpenMesh</Filter>
     </ClInclude>
     <ClInclude Include="mc_utils.hpp">
       <Filter>Utils</Filter>
@@ -74,20 +47,11 @@
     <ClCompile Include="mc_vcg_obj_importer.cpp">
       <Filter>VCG</Filter>
     </ClCompile>
-    <ClCompile Include="mc_cm2_obj_importer.cpp">
-      <Filter>ReMesh</Filter>
-    </ClCompile>
-    <ClCompile Include="mc_om_primitives.cpp">
-      <Filter>OpenMesh</Filter>
-    </ClCompile>
     <ClCompile Include="mc_vcg_stl_importer.cpp">
       <Filter>VCG</Filter>
     </ClCompile>
     <ClCompile Include="mc_vcg_mesh.cpp">
       <Filter>VCG</Filter>
-    </ClCompile>
-    <ClCompile Include="mc_om_importer.cpp">
-      <Filter>OpenMesh</Filter>
     </ClCompile>
     <ClCompile Include="mc_extension.cpp">
       <Filter>Utils</Filter>

@@ -16,7 +16,7 @@ struct MyUsedTypes : public vcg::UsedTypes<vcg::Use<MCVertex>::AsVertexType,
 	vcg::Use<MCFace>::AsFaceType> {};
 
 class MCVertex : public vcg::Vertex<MyUsedTypes, vcg::vertex::Coord3d, vcg::vertex::Normal3d, vcg::vertex::BitFlags, vcg::vertex::VFAdj, vcg::vertex::Qualityf> {};
-class MCFace : public vcg::Face<MyUsedTypes, vcg::face::FFAdj, vcg::face::VertexRef, vcg::face::BitFlags, vcg::face::VFAdj, vcg::face::Normal3f, vcg::face::Mark, vcg::face::EdgePlane, vcg::face::EFAdj>
+class MCFace : public vcg::Face<MyUsedTypes, vcg::face::FFAdj, vcg::face::VertexRef, vcg::face::BitFlags, vcg::face::VFAdj, vcg::face::Normal3d, vcg::face::Mark, vcg::face::EdgePlane, vcg::face::EFAdj>
 {
 public:int id = 0;
 };

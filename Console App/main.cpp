@@ -9,12 +9,16 @@
 // VCG
 #include <wrap\io_trimesh\export_obj.h>
 
+#include <signal.h>
+
 // LOGGER
 #include <logger.hpp>
 using namespace logger;
 
-void debugIntersection();
+//void debugIntersection();
 OBJTYPE onObjectType(MCFace face, vcg::Point3d points);
+
+#undef max
 
 #endif // !_MAIN_C
 
@@ -44,41 +48,43 @@ void TestRay(mc::mvcg::Mesh &m)
 	std::clock_t start = std::clock();
 	while ((isectFace = m.tree.DoRay(rayIntersector, vcg::EmptyClass(), ray, maxDist, intersectionDist)) != 0)
 	{
-		/*isectPt = getPositionWithDistAndDir(rayOrigin, rayDirection, intersectionDist);
+		isectPt = getPositionWithDistAndDir(rayOrigin, rayDirection, intersectionDist);
 		printf("\tAdresse de la face -> 0x%p\n", isectFace);
 		printf("\tDistance -> %f\n", intersectionDist);
 		printf("\tIntersection(%f, %f, %f)\n\n", MIndex::ScalarType(isectPt.X()), MIndex::ScalarType(isectPt.Y()), MIndex::ScalarType(isectPt.Z()));
-		
-		std::cout << "Interect on " << onObjectType(*isectFace, isectPt) << std::endl;*/
+	
+		std::cout << "Interect on " << onObjectType(*isectFace, isectPt) << std::endl;
 
 		faceBuff.push_back(m.face[isectFace->id]);
 		m.face.erase(m.face.begin() + isectFace->id);
 	}
 	
 	// On remet les faces
-	/*for (MCFace elem : faceBuff)
+	for (MCFace elem : faceBuff)
 	{
 		m.face.push_back(elem);
-	}*/
+	}
 	
 	std::clock_t end = std::clock();
 	std::cout << "Time = " << end - start << "ms." << std::endl;
 	vcg::tri::io::ExporterOBJ<mc::mvcg::Mesh>::Save(m, "OUTOBJ.obj", 0);
 }
 
-typedef struct BuffIntersect {
-	int nbIntersections;
-	std::vector<MCFace*> facesIntersections;
-	std::vector<MIndex::CoordType> pointsIntersections;
-	vcg::Point3d origin;
-	vcg::Point3d direction;
-	std::clock_t time;
-} BuffIntersect;
-
 int main()
 {
-	debugIntersection();
+	std::cout << "Hello World" << std::endl;
+	//mc::mvcg::Mesh m;
+	//mc::mvcg::obj::loader(m, "../../My Obj/ico_sphere.obj");
+	//typedef typename decltype(m) Mesh_t;
+	//
+	//vcg::tri::UpdateTopology<Mesh_t>::VertexFace(m);
+	//// Computing
+	//vcg::tri::Smooth<Mesh_t>::VertexCoordPasoDoble(m, 1);
+
+	//vcg::tri::io::ExporterOBJ<mc::mvcg::Mesh>::Save(m, "ico_sphere_smooth.obj", 0);
+
 
 	std::getchar();
 	return 0;
 }
+
