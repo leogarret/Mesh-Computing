@@ -1,5 +1,6 @@
 #include "mc_vcg_intersection.hpp"
 #include <math.h>
+using namespace mc;
 
 #define TOLERANCE 0.0001 // Tolérance de précision
 
