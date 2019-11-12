@@ -101,7 +101,7 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>OpenMeshCore.lib;OpenMeshCored.lib;OpenMeshTools.lib;OpenMeshToolsd.lib;cm2math1_win32_49.lib;cm2meshtools_win32_49.lib;cm2meshtools1d_win32_49.lib;cm2meshtools2d_win32_49.lib;cm2meshtools3d_win32_49.lib;cm2misc_win32_49.lib;cm2surf_remesh_t3_win32_49.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -124,9 +124,6 @@
   <ItemGroup>
     <ProjectReference Include="..\MC IO\MC IO.vcxproj">
       <Project>{d21c1eb8-892d-40c8-a45f-08c6f2a38a11}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\MC TEST\MC TEST.vcxproj">
-      <Project>{d79b94bd-c4d1-4ac0-b64f-621ae2dc8244}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Mesh Intersection\Mesh Intersection.vcxproj">
       <Project>{01342707-1ca4-4c07-a938-b465874e2f1a}</Project>

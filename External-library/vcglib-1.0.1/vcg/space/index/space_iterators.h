@@ -33,6 +33,9 @@
 #include <float.h>
 #include <limits>
 
+#undef max
+#undef min
+
 namespace vcg{
 	template <class Spatial_Idexing,class INTFUNCTOR,class TMARKER>
 	class RayIterator

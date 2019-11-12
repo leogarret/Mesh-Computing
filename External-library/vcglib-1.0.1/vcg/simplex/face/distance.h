@@ -29,7 +29,8 @@
 #include <vcg/space/segment3.h>
 #include <vcg/space/distance3.h>
 
-#undef min, max;
+#undef min
+#undef max
 
 namespace vcg {
     namespace face{
