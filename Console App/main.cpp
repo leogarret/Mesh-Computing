@@ -14,6 +14,7 @@
 // LOGGER
 #include <logger.hpp>
 using namespace logger;
+using namespace mc;
 
 //void debugIntersection();
 OBJTYPE onObjectType(MCFace face, vcg::Point3d points);
@@ -72,9 +73,10 @@ void TestRay(mc::mvcg::Mesh &m)
 
 int main()
 {
-	std::cout << "Hello World" << std::endl;
-	//mc::mvcg::Mesh m;
-	//mc::mvcg::obj::loader(m, "../../My Obj/ico_sphere.obj");
+	mc::mvcg::Mesh m;
+	mc::mvcg::obj::loader(m, "../../My Obj/ico_sphere.obj");
+	
+	mc::BuffIntersect buff;
 	//typedef typename decltype(m) Mesh_t;
 	//
 	//vcg::tri::UpdateTopology<Mesh_t>::VertexFace(m);
@@ -82,7 +84,6 @@ int main()
 	//vcg::tri::Smooth<Mesh_t>::VertexCoordPasoDoble(m, 1);
 
 	//vcg::tri::io::ExporterOBJ<mc::mvcg::Mesh>::Save(m, "ico_sphere_smooth.obj", 0);
-
 
 	std::getchar();
 	return 0;

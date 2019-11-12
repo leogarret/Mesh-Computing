@@ -7,23 +7,36 @@
 
 #include <mc_vcg_mesh.hpp>
 
+#include <ctime>
+
 /*
 ** Types d'objets utilisés pour déterminer les intersections.
 */
-enum OBJTYPE {
-	T_FACE = 0,
-	T_EDGE = 1,
-	T_POINT = 2
-};
 
 struct BuffIntersect;
 
-typedef vcg::AABBBinaryTreeIndex<MCFace, double, vcg::EmptyClass> MIndex;
+namespace mc
+{
+	enum OBJTYPE {
+		T_FACE = 0,
+		T_EDGE = 1,
+		T_POINT = 2
+	};
 
-//void debug_intesections();
+	typedef vcg::AABBBinaryTreeIndex<MCFace, double, vcg::EmptyClass> MIndex;
 
+	MIndex::CoordType getPositionWithDistAndDir(MIndex::CoordType origin, MIndex::CoordType dir, MIndex::ScalarType dist);
 
-int Intersect(mc::mvcg::Mesh &m, BuffIntersect it);
-MIndex::CoordType getPositionWithDistAndDir(MIndex::CoordType origin, MIndex::CoordType dir, MIndex::ScalarType dist);
+	struct BuffIntersect {
+		int nbIntersections;
+		std::vector<MCFace*> facesIntersections;
+		std::vector<MIndex::CoordType> pointsIntersections;
+		vcg::Point3d origin;
+		vcg::Point3d direction;
+		std::clock_t time;
+	};
+
+	int Intersect(mc::mvcg::Mesh &m, BuffIntersect it);
+}
 
 #endif //!MC_VCG_INTERSECTION_HPP
