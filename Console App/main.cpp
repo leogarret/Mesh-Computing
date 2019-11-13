@@ -11,9 +11,6 @@
 
 #include <signal.h>
 
-// LOGGER
-#include <logger.hpp>
-using namespace logger;
 using namespace mc;
 
 //void debugIntersection();
@@ -23,69 +20,31 @@ OBJTYPE onObjectType(MCFace face, vcg::Point3d points);
 
 #endif // !_MAIN_C
 
-void TestRay(mc::mvcg::Mesh &m)
-{
-	// Si l'octree n'est pas construit, on appelle la fonction de construction
-	if (!m.treeIsMake())
-		m.tree.Set(m.face.begin(), m.face.end());
-
-	std::vector<MCFace> faceBuff;
-
-	vcg::RayTriangleIntersectionFunctor<> rayIntersector;
-	const MIndex::ScalarType maxDist = std::numeric_limits<double>::max();
-
-	// Ray
-	const MIndex::CoordType rayOrigin(-40, -20, 100);
-	MIndex::CoordType rayDirection(0, 0, -100);
-
-	const vcg::Ray3<MIndex::ScalarType, true> ray(rayOrigin, rayDirection);
-
-	MIndex::ObjPtr isectFace;
-	MIndex::ScalarType intersectionDist;
-	MIndex::CoordType isectPt;
-
-	std::cout << "Resultats de l'intersection:\n" << std::endl;
-
-	std::clock_t start = std::clock();
-	while ((isectFace = m.tree.DoRay(rayIntersector, vcg::EmptyClass(), ray, maxDist, intersectionDist)) != 0)
-	{
-		isectPt = getPositionWithDistAndDir(rayOrigin, rayDirection, intersectionDist);
-		printf("\tAdresse de la face -> 0x%p\n", isectFace);
-		printf("\tDistance -> %f\n", intersectionDist);
-		printf("\tIntersection(%f, %f, %f)\n\n", MIndex::ScalarType(isectPt.X()), MIndex::ScalarType(isectPt.Y()), MIndex::ScalarType(isectPt.Z()));
-	
-		std::cout << "Interect on " << onObjectType(*isectFace, isectPt) << std::endl;
-
-		faceBuff.push_back(m.face[isectFace->id]);
-		m.face.erase(m.face.begin() + isectFace->id);
-	}
-	
-	// On remet les faces
-	for (MCFace elem : faceBuff)
-	{
-		m.face.push_back(elem);
-	}
-	
-	std::clock_t end = std::clock();
-	std::cout << "Time = " << end - start << "ms." << std::endl;
-	vcg::tri::io::ExporterOBJ<mc::mvcg::Mesh>::Save(m, "OUTOBJ.obj", 0);
-}
-
 int main()
 {
 	mc::mvcg::Mesh m;
-	mc::mvcg::obj::loader(m, "../../My Obj/ico_sphere.obj");
-	
-	mc::BuffIntersect buff;
-	//typedef typename decltype(m) Mesh_t;
-	//
-	//vcg::tri::UpdateTopology<Mesh_t>::VertexFace(m);
-	//// Computing
-	//vcg::tri::Smooth<Mesh_t>::VertexCoordPasoDoble(m, 1);
+	mc::mvcg::obj::loader(m, "../../obj/Mesh-20x20mm.obj");
+	m.TreeMake();
 
-	//vcg::tri::io::ExporterOBJ<mc::mvcg::Mesh>::Save(m, "ico_sphere_smooth.obj", 0);
+	int i = 0;
+	for (auto elem : m.face)
+		elem.id = i++;
+
+	std::cout << i << std::endl;
+	mc::BuffIntersect buff;
+	vcg::Ray3<MIndex::ScalarType, true> ray;
+	ray.SetOrigin(vcg::Point3d(0, 50, 10));
+	ray.SetDirection(vcg::Point3d(0, 0, -10));
+
+	mc::Intersect(m, buff, ray);
+
+	mt::log(stdout, "Nombre d'intersection(s): %i\n", buff.facesIntersections.size());
+
+	
 
 	std::getchar();
+
+	vcg::tri::io::ExporterOBJ<mc::mvcg::Mesh>::Save(m, "PLAN.obj", 0);
 	return 0;
 }
 

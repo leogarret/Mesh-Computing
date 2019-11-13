@@ -8,17 +8,11 @@
     <Filter Include="algorithms">
       <UniqueIdentifier>{80bec4a7-d996-400a-95ca-32aea7c9c68a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Logger">
-      <UniqueIdentifier>{01afe62d-a5cb-4710-b0e8-e24501877c36}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Intersection">
       <UniqueIdentifier>{ba8f8895-2dfa-46e2-8558-03469180d56c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="logger.hpp">
-      <Filter>Logger</Filter>
-    </ClInclude>
     <ClInclude Include="mc_vcg_algorithms.hpp">
       <Filter>algorithms</Filter>
     </ClInclude>
@@ -27,9 +21,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="logger.cpp">
-      <Filter>Logger</Filter>
-    </ClCompile>
     <ClCompile Include="mc_vcg_surface.cpp">
       <Filter>algorithms</Filter>
     </ClCompile>

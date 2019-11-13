@@ -20,12 +20,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mc_vcg_intersection.hpp" />
-    <ClInclude Include="logger.hpp" />
     <ClInclude Include="mc_vcg_algorithms.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mc_vcg_intersection.cpp" />
-    <ClCompile Include="logger.cpp" />
     <ClCompile Include="mc_vcg_surface.cpp" />
     <ClCompile Include="intersections_utils.cpp" />
   </ItemGroup>
