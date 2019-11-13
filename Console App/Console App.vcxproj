@@ -69,8 +69,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>F:\Mesh-Intersection\MC TEST;F:\Mesh-Intersection\External-library\CGAL\include;F:\Mesh-Intersection\MC IO;F:\Mesh-Intersection\External-library\MeshTools;F:\Mesh-Intersection\External-library\OpenMesh 8.0\include;F:\Mesh-Intersection\External-library\vcglib-1.0.1;F:\Mesh-Intersection\Mesh Intersection;F:\Mesh-Intersection\MC UI;$(IncludePath)</IncludePath>
-    <LibraryPath>F:\Mesh-Intersection\External-library\vcglib-1.0.1;F:\Mesh-Intersection\External-library\OpenMesh 8.0\lib;F:\Mesh-Intersection\External-library\MeshTools\libs\ReleaseWin32;F:\Mesh-Intersection\bin;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>F:\Mesh-Intersection\External-library\vcglib-1.0.1;F:\Mesh-Intersection\External-library\MTLogger-0.1.1;F:\Mesh-Intersection\bin;$(LibraryPath)</LibraryPath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
   </PropertyGroup>
@@ -97,11 +97,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_USE_MATH_DEFINES;__IN_TEST_MODE;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <AdditionalOptions>/std:c++latest %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>F:\Mesh-Intersection\MC Base;%(AdditionalIncludeDirectories);F:\Mesh-Intersection\MC IO;F:\Mesh-Intersection\External-library\vcglib-1.0.1;F:\Mesh-Intersection\Mesh Intersection;F:\Mesh-Intersection\External-library\MTLogger-0.1.1\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>MTLogger.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -122,11 +123,11 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MC Base\Mesh Intersection.vcxproj">
+      <Project>{01342707-1ca4-4c07-a938-b465874e2f1a}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\MC IO\MC IO.vcxproj">
       <Project>{d21c1eb8-892d-40c8-a45f-08c6f2a38a11}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Mesh Intersection\Mesh Intersection.vcxproj">
-      <Project>{01342707-1ca4-4c07-a938-b465874e2f1a}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -85,7 +85,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>F:\Mesh-Intersection\External-library\CGAL\include;F:\Mesh-Intersection\External-library\MeshTools;F:\Mesh-Intersection\External-library\OpenMesh 8.0\include;F:\Mesh-Intersection\External-library;F:\Mesh-Intersection\External-library\vcglib-1.0.1;F:\Mesh-Intersection\Mesh Intersection;$(IncludePath)</IncludePath>
+    <IncludePath>F:\Mesh-Intersection\External-library;F:\Mesh-Intersection\External-library\vcglib-1.0.1;F:\Mesh-Intersection\External-library\MTLogger-0.1.1;F:\Mesh-Intersection\Mesh Intersection;$(IncludePath)</IncludePath>
     <LibraryPath>$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)bin</OutDir>
     <ExecutablePath>F:\Mesh-Intersection\Mesh Intersection;$(ExecutablePath)</ExecutablePath>

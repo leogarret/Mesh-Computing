@@ -3,7 +3,7 @@
 
 #include "mc_utils.hpp"
 #include <string>
-#include <logger.hpp>
+#include <mtlogger\mtlogger.hpp>
 
 #endif // MC_EXTENSION_C
 
@@ -49,7 +49,7 @@ bool mc::utils::extensionCompare(const char *fileName, char *extension)
 
 	if (haveExtension(fileName) == false)
 	{
-		logger::mcLog(logger::errorStream, "%s doesn't have extension.\n");
+		mt::log(mt::mterror, "%s doesn't have extension.\n");
 		return false;
 	}
 

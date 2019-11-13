@@ -4,7 +4,7 @@
 #include "mc_vcg_mesh.hpp"
 #include <ctime>
 
-#include <logger.hpp>
+#include <mtlogger\mtlogger.hpp>
 
 namespace mc::mvcg::primitives {
 

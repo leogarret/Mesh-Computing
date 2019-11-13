@@ -36,7 +36,7 @@ namespace mc
 		std::clock_t time;
 	};
 
-	int Intersect(mc::mvcg::Mesh &m, BuffIntersect it);
+	int Intersect(mc::mvcg::Mesh &m, BuffIntersect &it, vcg::Ray3<MIndex::ScalarType, false> ray);
 }
 
 #endif //!MC_VCG_INTERSECTION_HPP

@@ -3,7 +3,6 @@
 
 #include "mc_vcg_primitives.hpp"
 
-using namespace logger;
 
 #endif //!MC_VCG_PRIMITIVES_C
 

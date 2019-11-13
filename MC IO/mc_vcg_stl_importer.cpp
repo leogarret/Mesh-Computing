@@ -2,13 +2,11 @@
 #define MC_VCG_STL_IMPORTER_C
 
 #include "mc_vcg_stl_importer.hpp"
-#include <logger.hpp>
+#include <mtlogger\mtlogger.hpp>
 
 #define WIN32_LEAN_AND_MEAN
 #define NOMINMAX
 #include <windows.h>
-
-using namespace logger;
 
 #endif //!MC_VCG_STL_IMPORTER_C
 

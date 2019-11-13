@@ -14,25 +14,24 @@ MIndex::CoordType mc::getPositionWithDistAndDir(MIndex::CoordType origin, MIndex
 	return intersectionPos;
 }
 
-int mc::Intersect(mc::mvcg::Mesh &m, BuffIntersect it)
+int mc::Intersect(mc::mvcg::Mesh &m, BuffIntersect &it, vcg::Ray3<MIndex::ScalarType, false> ray)
 {
 	int nombreIntersections = 0;
-	vcg::Ray3<MIndex::ScalarType, true> ray;
 
 	MIndex::ObjPtr isectFace;
 	MIndex::ScalarType intersectionDist;
 	vcg::RayTriangleIntersectionFunctor<> rayIntersector;
 	const MIndex::ScalarType maxDist = std::numeric_limits<double>::max();
 
+
 	std::vector<MCFace> faceBuff;
 
-	int buff = 0;
+	int buff = -1;
 	int cnt = 0;
 
 	while ((isectFace = m.tree.DoRay(rayIntersector, vcg::EmptyClass(), ray, maxDist, intersectionDist)) != 0)
 	{
 		if (isectFace->id == buff) break;
-
 		nombreIntersections++;
 		it.facesIntersections.push_back(*&isectFace);
 		it.pointsIntersections.push_back(getPositionWithDistAndDir(it.origin, it.direction, intersectionDist));
@@ -44,5 +43,9 @@ int mc::Intersect(mc::mvcg::Mesh &m, BuffIntersect it)
 		cnt++;
 	}
 
+	/*for (MCFace elem : faceBuff)
+		m.face.insert(m.face.begin() + elem.id, elem);*/
+
+	it.nbIntersections = nombreIntersections;
 	return nombreIntersections;
 }

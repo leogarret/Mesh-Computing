@@ -3,7 +3,7 @@
 
 #include "mc_vcg_obj_importer.hpp"
 #include "mc_utils.hpp"
-#include <logger.hpp>
+#include <mtlogger\mtlogger.hpp>
 
 #endif //!MC_VCG_OBJ_IMPORTER_C
 
@@ -11,7 +11,7 @@ int mc::mvcg::obj::loader(mc::mvcg::Mesh &mesh, const char *path)
 {
 	if (mc::utils::extensionCompare(path, "obj") == false)
 	{
-		logger::mcLog(logger::errorStream, "%s is not an obj file.\n", path);
+		mt::log(mt::mterror, "%s is not an obj file.\n", path);
 		return -1;
 	}
 
