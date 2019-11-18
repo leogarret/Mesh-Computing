@@ -21,8 +21,7 @@ using namespace mc;
 
 int main()
 {
-	//LaunchDebugIntersection("../../obj/Mesh-20x20mm.obj");
-	debugIntersection();
+	LaunchDebugIntersection("../../obj/Mesh-20x20mm.obj");
 
 	std::getchar();
 	return 0;
