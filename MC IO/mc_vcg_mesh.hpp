@@ -30,7 +30,7 @@ namespace mc::mvcg {
 	{
 	public:
 		Mesh() {};
-		inline void TreeMake() { tree.Set(face.begin(), face.end()); this->_treeIsMake = true; };
+		inline void TreeMake() { if (treeIsMake()) return;  tree.Set(face.begin(), face.end()); this->_treeIsMake = true; }; // Méthode pour créer l'OcTree d'un mesh
 
 		mc::mvcg::MeshInfo *infos;
 		vcg::tri::io::ImporterOBJ<Mesh>::Info mesh_info_buff;
