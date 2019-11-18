@@ -5,17 +5,9 @@ using namespace mc;
 #define TOLERANCE 0.0001 // Tolérance de précision
 
 /*
-** Cette fonction retourne la distance entre deux points à trois dimensions
+** Retourne la projection d'un point 'p' sur une droite 'edge'.
 */
-inline double getPointsDistance(vcg::Point3d p1, vcg::Point3d p2)
-{
-	return sqrt((p1.X() - p2.X())*(p1.X() - p2.X()) + (p1.Y() - p2.Y())*(p1.Y() - p1.Y()) + (p1.Z() - p2.Z())*(p1.Z() - p1.Z()));
-}
-
-/*
-** Cette fonction retourne la distance entre un point et une droite dans un espace à trois dimensions
-*/
-double getPointEdgeDistance(vcg::Point3d edge[2], vcg::Point3d p)
+vcg::Point3d getProjection(vcg::Point3d edge[2], vcg::Point3d p)
 {
 	double xa = edge[0].X();
 	double ya = edge[0].Y();
@@ -26,15 +18,53 @@ double getPointEdgeDistance(vcg::Point3d edge[2], vcg::Point3d p)
 	double zb = edge[1].Z();
 	/***************************/
 
-	vcg::Point3d d = { xb - xa, yb - ya, zb - za }; // Vecteur directeur de 'edge'
-	double dx = d.X();
-	double dy = d.Y();
-	double dz = d.Z();
-	
-	double dividende = (pow(dz*(p.Y() - ya) - dy*(p.Z() - za), 2) + pow(dx*(p.Z() - za) - dz*(p.X() - xa), 2) + pow(dy*(p.X() - xa) - dx*(p.Y() - ya), 2));
-	double diviseur = pow(dx, 2)+pow(dy, 2)+pow(dz, 2);
+	vcg::Point3d vDir = { xb - xa, yb - ya, zb - za }; // Vecteur directeur de 'edge'
+	double dx = vDir.X();
+	double dy = vDir.Y();
+	double dz = vDir.Z();
 
-	return dividende / diviseur; // distance
+	double den = dx*dx + dy*dy + dz*dz;
+	if (den == 0)
+		return NULL;
+
+	double d = -vDir.dot(p);
+	double rho = (dx * xa + dy * ya + dz * za + d) / den;
+
+	vcg::Point3d proj(xa - dx * rho, ya - dy * rho, za - dz * rho);
+
+	return proj;
+}
+
+/*
+** Cette fonction retourne la distance entre deux points à trois dimensions
+*/
+inline double getPointsDistance(vcg::Point3d p1, vcg::Point3d p2)
+{
+	return sqrt((p1.X() - p2.X())*(p1.X() - p2.X()) + (p1.Y() - p2.Y())*(p1.Y() - p2.Y()) + (p1.Z() - p2.Z())*(p1.Z() - p2.Z()));
+}
+
+/*
+** Cette fonction retourne la distance entre un point et une droite dans un espace à trois dimensions
+*/
+double mc::getPointEdgeDistance(vcg::Point3d edge[2], vcg::Point3d p)
+{
+	double xa = edge[0].X();
+	double ya = edge[0].Y();
+	double za = edge[0].Z();
+	/***************************/
+	double xb = edge[1].X();
+	double yb = edge[1].Y();
+	double zb = edge[1].Z();
+	/***************************/
+
+	vcg::Point3d vDir = { xb - xa, yb - ya, zb - za }; // Vecteur directeur de 'edge'
+	double dx = vDir.X();
+	double dy = vDir.Y();
+	double dz = vDir.Z();
+	
+	vcg::Point3d proj(getProjection(edge, p)); // On récupère la projection de 'p' sur 'edge'
+	
+	return getPointsDistance(p, proj);
 }
 
 /*
@@ -43,7 +73,7 @@ double getPointEdgeDistance(vcg::Point3d edge[2], vcg::Point3d p)
 ** T_POINT s'il se trouve sur un sommet
 ** T_EDGE s'il se trouve sur une arête
 */
-OBJTYPE onObjectType(MCFace face, vcg::Point3d points)
+OBJTYPE mc::onObjectType(MCFace face, vcg::Point3d points)
 {
 	/* Calcule des distances entre les points */
 	double dist1 = getPointsDistance(face.P(0), points);
