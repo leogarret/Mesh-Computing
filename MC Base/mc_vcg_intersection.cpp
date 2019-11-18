@@ -14,6 +14,9 @@ typedef vcg::AABBBinaryTreeIndex<MCFace, MScalarType, vcg::EmptyClass> MIndex;
 
 using namespace mc;
 
+/*
+** Cette fonction permet de récuperer les coordonnées d'un point d'intersection.
+*/
 mc::MIndex::CoordType mc::getPositionWithDistAndDir(MIndex::CoordType origin, MIndex::CoordType dir, MIndex::ScalarType dist)
 {
 	MIndex::CoordType intersectionPos;
@@ -25,6 +28,9 @@ mc::MIndex::CoordType mc::getPositionWithDistAndDir(MIndex::CoordType origin, MI
 	return intersectionPos;
 }
 
+/*
+** Cette fonction permet d'envoyer une ligne d'intersection sur un mesh.
+*/
 int mc::Intersect(mc::mvcg::Mesh &m, BuffIntersect &it, vcg::Ray3<MIndex::ScalarType> &ray)
 {
 	int nombreIntersections = 0;
@@ -38,18 +44,17 @@ int mc::Intersect(mc::mvcg::Mesh &m, BuffIntersect &it, vcg::Ray3<MIndex::Scalar
 
 	int buff = -1;
 	int cnt = 0;
+
 	while ((isectFace = m.tree.DoRay(rayIntersector, vcg::EmptyClass(), ray, maxDist, intersectionDist)) != 0)
 	{
-		if (isectFace->id == buff)
-		{
-			std::cout << "On sort" << std::endl;
-			break;
-		}
+		if (isectFace->id == buff) break;
 
+		// On récupère toutes les données de l'intersection
 		nombreIntersections++;
 		it.facesIntersections.push_back(*&isectFace);
 		it.pointsIntersections.push_back(getPositionWithDistAndDir(it.origin, it.direction, intersectionDist));
-		it.objectType = mc::onObjectType(*isectFace, it.pointsIntersections.at(it.pointsIntersections.size() - 1));
+		it.objectTypes.push_back(mc::onObjectType(*isectFace, it.pointsIntersections.at(it.pointsIntersections.size() - 1)));
+
 		// On enregistre la face supprimée
 		faceBuff.push_back(*isectFace);
 		buff = isectFace->id;
@@ -82,8 +87,14 @@ void mc::LaunchDebugIntersection(char *path)
 {
 	mc::mvcg::Mesh m;
 	mc::mvcg::obj::loader(m, path);
+
 	// Création de l'OcTree
 	m.TreeMake();
+
+	// On assigne une identifiant aux faces du mesh
+	int idIdx = 0;
+	for (auto& elem : m.face)
+		elem.id = idIdx++;
 
 	std::vector<mc::BuffIntersect> intersections;
 
@@ -95,6 +106,7 @@ void mc::LaunchDebugIntersection(char *path)
 		for (int j = -6; j <= 6; ++j)
 		{
 			mc::BuffIntersect it; // Pour récuperer les infos sur les intersections
+
 			// Position de la ligne d'intersection
 			it.origin = vcg::Point3d({ i * 10.0f, j * 10.0f, 200.0f });
 			it.direction = vcg::Point3d({ 0.0f, 0.0f, -10.0f });
@@ -139,7 +151,7 @@ void mc::LaunchDebugIntersection(char *path)
 
 		for (int iInt = 0; elem.nbIntersections > 0 && iInt < elem.nbIntersections; ++iInt)
 		{
-			mt::log(mt::mttrace, "[%i] Intersection = [%i] -> (%.7f, %.7f, %.7f)\n", iInt, elem.objectType, elem.pointsIntersections[iInt].X(), elem.pointsIntersections[iInt].Y(), elem.pointsIntersections[iInt].Z());
+			mt::log(mt::mttrace, "[%i] Intersection = [%i] -> (%.7f, %.7f, %.7f)\n", iInt, elem.objectTypes[iInt], elem.pointsIntersections[iInt].X(), elem.pointsIntersections[iInt].Y(), elem.pointsIntersections[iInt].Z());
 		}
 	}
 

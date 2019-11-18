@@ -33,7 +33,7 @@ namespace mc
 		vcg::Point3d origin;
 		vcg::Point3d direction;
 		std::clock_t time;
-		int objectType;
+		std::vector<int> objectTypes;
 	};
 
 	int Intersect(mc::mvcg::Mesh &m, BuffIntersect &it, vcg::Ray3<MIndex::ScalarType> &ray);
