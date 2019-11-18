@@ -9,14 +9,13 @@
 
 #include <ctime>
 
-/*
-** Types d'objets utilisés pour déterminer les intersections.
-*/
-
 struct BuffIntersect;
 
 namespace mc
 {
+	/*
+	** Type d'objet pour déterminer l'objet en intersection.
+	*/
 	enum OBJTYPE {
 		T_FACE = 0,
 		T_EDGE = 1,
@@ -40,9 +39,10 @@ namespace mc
 	int Intersect(mc::mvcg::Mesh &m, BuffIntersect &it, vcg::Ray3<MIndex::ScalarType> &ray);
 	OBJTYPE onObjectType(MCFace face, vcg::Point3d points);
 
+	/* UTILS */
 	double getPointEdgeDistance(vcg::Point3d edge[2], vcg::Point3d p);
 
-	void debugIntersection();
+	/* DEBUG */
 	void LaunchDebugIntersection(char *path);
 }
 
