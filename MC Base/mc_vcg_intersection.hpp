@@ -34,9 +34,16 @@ namespace mc
 		vcg::Point3d origin;
 		vcg::Point3d direction;
 		std::clock_t time;
+		int objectType;
 	};
 
-	int Intersect(mc::mvcg::Mesh &m, BuffIntersect &it, vcg::Ray3<MIndex::ScalarType, false> ray);
+	int Intersect(mc::mvcg::Mesh &m, BuffIntersect &it, vcg::Ray3<MIndex::ScalarType> &ray);
+	OBJTYPE onObjectType(MCFace face, vcg::Point3d points);
+
+	double getPointEdgeDistance(vcg::Point3d edge[2], vcg::Point3d p);
+
+	void debugIntersection();
+	void LaunchDebugIntersection(char *path);
 }
 
 #endif //!MC_VCG_INTERSECTION_HPP
