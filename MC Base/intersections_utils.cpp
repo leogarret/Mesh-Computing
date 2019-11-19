@@ -38,9 +38,13 @@ vcg::Point3d getProjection(vcg::Point3d edge[2], vcg::Point3d p)
 /*
 ** Cette fonction retourne la distance entre deux points à trois dimensions
 */
-inline double getPointsDistance(vcg::Point3d p1, vcg::Point3d p2)
+double getPointsDistance(vcg::Point3d p1, vcg::Point3d p2)
 {
-	return sqrt((p1.X() - p2.X())*(p1.X() - p2.X()) + (p1.Y() - p2.Y())*(p1.Y() - p2.Y()) + (p1.Z() - p2.Z())*(p1.Z() - p2.Z()));
+	double xDist = pow(p1.X() - p2.X(), 2);
+	double yDist = pow(p1.Y() - p2.Y(), 2);
+	double zDist = pow(p1.Z() - p2.Z(), 2);
+
+	return sqrt(xDist + yDist + zDist);
 }
 
 /*

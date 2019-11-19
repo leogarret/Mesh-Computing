@@ -43,7 +43,6 @@ int mc::Intersect(mc::mvcg::Mesh &m, BuffIntersect &it, vcg::Ray3<MIndex::Scalar
 	std::vector<MCFace> faceBuff;
 
 	int buff = -1;
-	int cnt = 0;
 
 	while ((isectFace = m.tree.DoRay(rayIntersector, vcg::EmptyClass(), ray, maxDist, intersectionDist)) != 0)
 	{

@@ -32,7 +32,10 @@ int main()
 	mc::mvcg::Mesh mesh;
 	mc::mvcg::obj::loader(mesh, "../../obj/Mesh-20x20mm.obj");
 
-	int idIdx = 0;
+	mesh.face.erase(mesh.face.begin() + 2);
+	vcg::tri::io::ExporterOBJ<mc::mvcg::Mesh>::Save(mesh, "OUTOBJ.obj", 1);
+
+	/*int idIdx = 0;
 	for (auto& elem : mesh.face)
 		elem.id = idIdx++;
 
@@ -46,8 +49,9 @@ int main()
 	int nb = mc::Intersect(mesh, buff, ray);
 
 	std::cout << "Nb. intersections: " << nb << std::endl;
-	std::cout << "Nb. faces: " << buff.facesIntersections.size() << std::endl;
+	std::cout << "Nb. faces: " << buff.facesIntersections.size() << std::endl;*/
 #endif
+
 	std::getchar();
 	return 0;
 }
