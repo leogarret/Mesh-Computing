@@ -19,7 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="mc_cgal_mesh.hpp" />
     <ClInclude Include="mc_utils.hpp" />
     <ClInclude Include="mc_vcg_edge.hpp" />
     <ClInclude Include="mc_vcg_mesh.hpp" />
@@ -28,7 +27,6 @@
     <ClInclude Include="mc_vcg_stl_io.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="mc_cgal_mesh.cpp" />
     <ClCompile Include="mc_extension.cpp" />
     <ClCompile Include="mc_trace.cpp" />
     <ClCompile Include="mc_vcg_edge.cpp" />
@@ -36,7 +34,6 @@
     <ClCompile Include="mc_vcg_obj_io.cpp" />
     <ClCompile Include="mc_vcg_primitives.cpp" />
     <ClCompile Include="mc_vcg_stl_io.cpp" />
-    <ClCompile Include="PolyhedronOBJ.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D21C1EB8-892D-40C8-A45F-08C6F2A38A11}</ProjectGuid>
