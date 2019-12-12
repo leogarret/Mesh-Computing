@@ -97,7 +97,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_USE_MATH_DEFINES;__IN_TEST_MODE;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <AdditionalOptions>/std:c++latest %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>F:\Mesh-Intersection\MC Base;%(AdditionalIncludeDirectories);F:\Mesh-Intersection\MC IO;F:\Mesh-Intersection\External-library\vcglib-1.0.1;F:\Mesh-Intersection\Mesh Intersection;F:\Mesh-Intersection\External-library\MTLogger-0.1.1\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\Mesh-Intersection\External-library\boost_1_70_0;F:\Mesh-Intersection\MC Base;%(AdditionalIncludeDirectories);F:\Mesh-Intersection\MC IO;F:\Mesh-Intersection\External-library\vcglib-1.0.1;F:\Mesh-Intersection\Mesh Intersection;F:\Mesh-Intersection\External-library\MTLogger-0.1.1\;F:\Mesh-Intersection\External-library\CGAL-5.0\auxiliary\gmp\include;F:\Mesh-Intersection\External-library\CGAL-5.0\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -112,6 +112,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>F:\Mesh-Intersection\External-library\CGAL-5.0\auxiliary\gmp\include;F:\Mesh-Intersection\External-library\CGAL-5.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -119,7 +120,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="debug_intersection.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>

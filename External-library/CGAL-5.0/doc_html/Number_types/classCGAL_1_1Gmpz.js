@@ -1,0 +1,27 @@
+var classCGAL_1_1Gmpz =
+[
+    [ "Gmpz", "classCGAL_1_1Gmpz.html#a45866af07ae72eb256d53941bdab41ef", null ],
+    [ "Gmpz", "classCGAL_1_1Gmpz.html#a3288535745329a40cdca5a400b7272f4", null ],
+    [ "Gmpz", "classCGAL_1_1Gmpz.html#a9c4b2a792a28f255257265711e29528f", null ],
+    [ "approximate_decimal_length", "classCGAL_1_1Gmpz.html#a3a092b7c1d0242ac93b0c6f379b4a8ce", null ],
+    [ "bit_size", "classCGAL_1_1Gmpz.html#ac1f5381b0ce0051ac1f99608a5b48689", null ],
+    [ "operator&=", "classCGAL_1_1Gmpz.html#af4f877d4fef22dca02b104bcdfe43a24", null ],
+    [ "operator++", "classCGAL_1_1Gmpz.html#af1cf1ec361179c9019e679d128e3f1f4", null ],
+    [ "operator++", "classCGAL_1_1Gmpz.html#abaeb01aee77dcd70a1ae263d8d6c3cd0", null ],
+    [ "operator--", "classCGAL_1_1Gmpz.html#a07c6c253ac8e92c2a8cbb76a6ab0551d", null ],
+    [ "operator--", "classCGAL_1_1Gmpz.html#ab88e368511e4ee2c0c8ff20478a13a89", null ],
+    [ "operator<<=", "classCGAL_1_1Gmpz.html#a1c931cee006b304cb2daa91f1028fb46", null ],
+    [ "operator>>=", "classCGAL_1_1Gmpz.html#a0c250202910a1b59a02a9e95b17ff22c", null ],
+    [ "operator^=", "classCGAL_1_1Gmpz.html#a132bbd362c99404122a166a0da644a37", null ],
+    [ "operator|=", "classCGAL_1_1Gmpz.html#acc68022a704269709e22d2035a920228", null ],
+    [ "sign", "classCGAL_1_1Gmpz.html#a7424f21b12cc6056de9edc85004d7010", null ],
+    [ "size", "classCGAL_1_1Gmpz.html#a144e204fa526a0c1665145693b84adbf", null ],
+    [ "to_double", "classCGAL_1_1Gmpz.html#a0b33c47e05e6b2478d0578d7cbbebfd6", null ],
+    [ "operator&", "classCGAL_1_1Gmpz.html#aa154fe8f077cb96c81755d537d5ed13c", null ],
+    [ "operator<<", "classCGAL_1_1Gmpz.html#ac6408e7b3925e253ac45782fde3cdd26", null ],
+    [ "operator<<", "classCGAL_1_1Gmpz.html#abe0569efb3f91f49f606971950df0216", null ],
+    [ "operator>>", "classCGAL_1_1Gmpz.html#aa268ab14b3f37e4aa95f41af2573a4a1", null ],
+    [ "operator>>", "classCGAL_1_1Gmpz.html#a684cac8c390b166265ea6fe17e74594a", null ],
+    [ "operator^", "classCGAL_1_1Gmpz.html#a328d7d3799767ae0492e3c35cfdbb21c", null ],
+    [ "operator|", "classCGAL_1_1Gmpz.html#ab0d581e5a0442ea2f7390e2646808068", null ]
+];

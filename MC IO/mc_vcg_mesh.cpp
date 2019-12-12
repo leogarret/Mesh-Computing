@@ -21,3 +21,19 @@ mc::mvcg::MeshInfo::MeshInfo(mc::mvcg::Mesh &mesh)
 	for (auto elem : mesh.face) { ++numFaces; }
 	for (auto elem : mesh.vert) { ++numVertices; }
 }
+
+/*
+** Cette méthode permet de construire l'arbre d'un maillage
+*/
+void mc::mvcg::Mesh::TreeMake()
+{
+	if (treeIsMake()) return;
+
+	tree.Set(face.begin(), face.end()); this->_treeIsMake = true;
+
+	int i = 0;
+	for (auto &elem : this->face)
+	{
+		elem.id = i++;
+	}
+};

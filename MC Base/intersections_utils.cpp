@@ -47,10 +47,7 @@ double getPointsDistance(vcg::Point3d p1, vcg::Point3d p2)
 	return sqrt(xDist + yDist + zDist);
 }
 
-/*
-** Cette fonction retourne la distance entre un point et une droite dans un espace à trois dimensions
-*/
-double mc::getPointEdgeDistance(vcg::Point3d edge[2], vcg::Point3d p)
+double geom::getPointEdgeDistance(vcg::Point3d edge[2], vcg::Point3d p)
 {
 	double xa = edge[0].X();
 	double ya = edge[0].Y();
@@ -77,7 +74,7 @@ double mc::getPointEdgeDistance(vcg::Point3d edge[2], vcg::Point3d p)
 ** T_POINT s'il se trouve sur un sommet
 ** T_EDGE s'il se trouve sur une arête
 */
-OBJTYPE mc::onObjectType(MCFace face, vcg::Point3d points)
+intersection::OBJTYPE intersection::onObjectType(MCFace face, vcg::Point3d points)
 {
 	/* Calcule des distances entre les points */
 	double dist1 = getPointsDistance(face.P(0), points);
@@ -97,13 +94,13 @@ OBJTYPE mc::onObjectType(MCFace face, vcg::Point3d points)
 	/* Calcule des distances entre les points et arêtes */
 	vcg::Point3d buff[2];
 	buff[0] = face.cP0(0); buff[1] = face.cP0(1);
-	dist1 = getPointEdgeDistance(buff, points);
+	dist1 = geom::getPointEdgeDistance(buff, points);
 
 	buff[0] = face.cP1(0); buff[1] = face.cP1(1);
-	dist2 = getPointEdgeDistance(buff, points);
+	dist2 = geom::getPointEdgeDistance(buff, points);
 
 	buff[0] = face.cP2(0); buff[1] = face.cP2(1);
-	dist3 = getPointEdgeDistance(buff, points);
+	dist3 = geom::getPointEdgeDistance(buff, points);
 
 	/* 'points' se trouve-il sur une arête ? */
 

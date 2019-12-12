@@ -2,11 +2,12 @@
 #define MC_VCG_PRIMITIVES_H
 
 #include "mc_vcg_mesh.hpp"
-#include <ctime>
 
+#include <ctime>
 #include <mtlogger\mtlogger.hpp>
 
-namespace mc::mvcg::primitives {
+namespace mc::mvcg::primitives
+{
 
 	int createCube(mc::mvcg::Mesh &mesh);
 

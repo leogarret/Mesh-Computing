@@ -19,18 +19,15 @@
     <Filter Include="Utils">
       <UniqueIdentifier>{9c7ca04d-cb7a-4ea9-b79b-e458ba184892}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CGAL">
+      <UniqueIdentifier>{dfd68db4-9cb0-4bff-a6b9-fd74ae8d06a4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="mc_vcg_obj_importer.hpp">
-      <Filter>VCG</Filter>
-    </ClInclude>
     <ClInclude Include="mc_vcg_primitives.hpp">
       <Filter>VCG</Filter>
     </ClInclude>
     <ClInclude Include="mc_vcg_mesh.hpp">
-      <Filter>VCG</Filter>
-    </ClInclude>
-    <ClInclude Include="mc_vcg_stl_importer.hpp">
       <Filter>VCG</Filter>
     </ClInclude>
     <ClInclude Include="mc_utils.hpp">
@@ -39,15 +36,18 @@
     <ClInclude Include="mc_vcg_edge.hpp">
       <Filter>VCG</Filter>
     </ClInclude>
+    <ClInclude Include="mc_cgal_mesh.hpp">
+      <Filter>CGAL</Filter>
+    </ClInclude>
+    <ClInclude Include="mc_vcg_obj_io.hpp">
+      <Filter>VCG</Filter>
+    </ClInclude>
+    <ClInclude Include="mc_vcg_stl_io.hpp">
+      <Filter>VCG</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mc_vcg_primitives.cpp">
-      <Filter>VCG</Filter>
-    </ClCompile>
-    <ClCompile Include="mc_vcg_obj_importer.cpp">
-      <Filter>VCG</Filter>
-    </ClCompile>
-    <ClCompile Include="mc_vcg_stl_importer.cpp">
       <Filter>VCG</Filter>
     </ClCompile>
     <ClCompile Include="mc_vcg_mesh.cpp">
@@ -57,6 +57,21 @@
       <Filter>Utils</Filter>
     </ClCompile>
     <ClCompile Include="mc_vcg_edge.cpp">
+      <Filter>VCG</Filter>
+    </ClCompile>
+    <ClCompile Include="mc_cgal_mesh.cpp">
+      <Filter>CGAL</Filter>
+    </ClCompile>
+    <ClCompile Include="PolyhedronOBJ.hpp">
+      <Filter>CGAL</Filter>
+    </ClCompile>
+    <ClCompile Include="mc_trace.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="mc_vcg_obj_io.cpp">
+      <Filter>VCG</Filter>
+    </ClCompile>
+    <ClCompile Include="mc_vcg_stl_io.cpp">
       <Filter>VCG</Filter>
     </ClCompile>
   </ItemGroup>

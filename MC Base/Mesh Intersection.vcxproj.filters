@@ -11,6 +11,9 @@
     <Filter Include="Intersection">
       <UniqueIdentifier>{ba8f8895-2dfa-46e2-8558-03469180d56c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Mesh Computing">
+      <UniqueIdentifier>{d235c399-5d6d-497c-9003-434c89f94c26}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mc_vcg_algorithms.hpp">
@@ -19,16 +22,22 @@
     <ClInclude Include="mc_vcg_intersection.hpp">
       <Filter>Intersection</Filter>
     </ClInclude>
+    <ClInclude Include="mc_vcg_intersectionData.hpp">
+      <Filter>Intersection</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mc_vcg_surface.cpp">
       <Filter>algorithms</Filter>
     </ClCompile>
+    <ClCompile Include="intersections_utils.cpp">
+      <Filter>Intersection</Filter>
+    </ClCompile>
     <ClCompile Include="mc_vcg_intersection.cpp">
       <Filter>Intersection</Filter>
     </ClCompile>
-    <ClCompile Include="intersections_utils.cpp">
-      <Filter>Intersection</Filter>
+    <ClCompile Include="mc_vcg_decimation.cpp">
+      <Filter>Mesh Computing</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

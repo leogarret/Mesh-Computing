@@ -1,0 +1,28 @@
+var classCGAL_1_1Polyhedron__3_1_1Vertex =
+[
+    [ "Facet", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#aab0c1a9a565f485307d54ab96e58a6d4", null ],
+    [ "Facet_const_handle", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#a957b6c2176991da4c30368ac22e45aaa", null ],
+    [ "Facet_handle", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#adb6c48e6fb5d5810ef8ee9018830d004", null ],
+    [ "Halfedge", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#a7b3df3e4cc2210e7fd127ca1b9ddb191", null ],
+    [ "Halfedge_around_vertex_circulator", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#a5ef88ef4da0d869b4d8061d33958e651", null ],
+    [ "Halfedge_around_vertex_const_circulator", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#a2bf0edd40abdf1dc0c09c455374a8e7c", null ],
+    [ "Halfedge_const_handle", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#a7e715091093462c64141898ec05e9825", null ],
+    [ "Halfedge_handle", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#a813fa84a317fc9a3752229042e255171", null ],
+    [ "Point_3", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#a74b39a969a5e8ee9698aa986f00dc6b6", null ],
+    [ "Supports_vertex_halfedge", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#af660c1187deebb1534e1ba2896baaa7a", null ],
+    [ "Supports_vertex_point", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#a9ff541fa0ab6d6b61e6adb026046b77b", null ],
+    [ "Vertex_const_handle", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#a4a065b3956d860b6bafd79a4c60d6e40", null ],
+    [ "Vertex_handle", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#a30b0d3a21da3da9db826cdc92bc17707", null ],
+    [ "Vertex", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#acd24bfdd4bf0f9924e2c19ed75ace4af", null ],
+    [ "Vertex", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#a9212dbb357fa64131f7245444ecc5879", null ],
+    [ "halfedge", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#a11688de09f785f7d16ff3c10443fbab0", null ],
+    [ "halfedge", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#a336389eabc5913e79fb7b686e3831c1e", null ],
+    [ "is_bivalent", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#a2db5fc17277535cbe6a280c5e7130a85", null ],
+    [ "is_trivalent", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#ac738e757cdd6b7d979ba51d9c7606f60", null ],
+    [ "point", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#a236f60d08e4d7b6d469e90efec67e7c3", null ],
+    [ "point", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#ab130d4d8841cd8baa500e165ddd5e21a", null ],
+    [ "set_halfedge", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#adad072dfd8e0a22a72cc74c4fbd9face", null ],
+    [ "vertex_begin", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#a62f1d7a7581953fa024f7a52543e53a8", null ],
+    [ "vertex_begin", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#aec7625634d25d6b1802937407a6f954c", null ],
+    [ "vertex_degree", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Vertex.html#ad7ff890543c017fbcb57d4f391fa606c", null ]
+];

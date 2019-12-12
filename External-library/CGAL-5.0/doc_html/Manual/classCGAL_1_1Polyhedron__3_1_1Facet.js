@@ -1,0 +1,27 @@
+var classCGAL_1_1Polyhedron__3_1_1Facet =
+[
+    [ "Facet_const_handle", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#a12108efd04c7db83ea7bf1c0b1ea6926", null ],
+    [ "Facet_handle", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#a6a810d0bf4dfaed87f96bcee2b6fd523", null ],
+    [ "Halfedge", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#ae13016a6bb809b9037c0ed1e696b3c89", null ],
+    [ "Halfedge_around_facet_circulator", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#af8ef93c699c1f35c6b1b9c9cddc91689", null ],
+    [ "Halfedge_around_facet_const_circulator", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#a6ed53a9b4af27d186fa9c306b6bd341a", null ],
+    [ "Halfedge_const_handle", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#a21258222601fd5c9828f1343f7d23c68", null ],
+    [ "Halfedge_handle", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#a03f7d1017366ad83bd94ab392811c063", null ],
+    [ "Plane_3", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#a159a10d39b86035154018f2bfdacfb75", null ],
+    [ "Supports_facet_halfedge", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#a9445ffcbaf964e7d2813eb1e9fda7b7c", null ],
+    [ "Supports_facet_plane", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#a8ad1c5b455bf34a885180e27af37ca1c", null ],
+    [ "Vertex", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#af336272fdb47e7583f0fa115051eea25", null ],
+    [ "Vertex_const_handle", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#a563bd890d3a76e7cb1fe546db1ee7bc7", null ],
+    [ "Vertex_handle", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#ae0b77c7a2fabee6f5d343c37c0fd6e4a", null ],
+    [ "Facet", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#a5ce0e814d298e5e1c6bc9ea91858c746", null ],
+    [ "facet_begin", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#a7e616a9768506bb444edea0ed44609d7", null ],
+    [ "facet_begin", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#a66cbc4f0c60dde227f20d3eb03bff0bd", null ],
+    [ "facet_degree", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#a115cad2e0776ac33e184edffd73d57c7", null ],
+    [ "halfedge", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#adeb2a50892d21dbc667fbe231f3b62b8", null ],
+    [ "halfedge", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#abf79f3b106f89f663d043c90597c20e2", null ],
+    [ "is_quad", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#af0a286f7378daf954cc4d5837e038d1e", null ],
+    [ "is_triangle", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#a925569ae6e3b74b36d72d2486dd7dcd3", null ],
+    [ "plane", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#a095412a5292a00f3cd2af6091e685b09", null ],
+    [ "plane", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#ab8b62e434a25a5c69c028bb11d134453", null ],
+    [ "set_halfedge", "../Polyhedron/classCGAL_1_1Polyhedron__3_1_1Facet.html#a64702da727fb51c2419b823d0b91ada6", null ]
+];
