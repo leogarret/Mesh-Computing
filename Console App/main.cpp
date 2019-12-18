@@ -1,57 +1,39 @@
-#ifndef _MAIN_C
-#define _MAIN_C
+#ifndef _MAIN_CPP_ENTRY
+#define _MAIN_CPP_ENTRY
 
-// MC (Mesh Computing)
-#include <mc_vcg_obj_importer.hpp>
-#include <mc_vcg_primitives.hpp>
-#include <mc_vcg_intersection.hpp>
+#include <iostream>
 
-// VCG
-#include <wrap\io_trimesh\export_obj.h>
+#include <mc_cgal_mesh.hpp>
+#include <mc_cgal_obj_io.hpp>
+#include <mc_cgal_intersection.hpp>
 
-#include <signal.h>
+#include "CGAL/Polyhedron_incremental_builder_3.h"
 
-#include <io.h>
-
-using namespace mc;
-
-#undef max
-
-#endif // !_MAIN_C
-
-#define DI
+#endif // !_MAIN_CPP_ENTRY
 
 int main()
 {
-#ifdef DI
-	LaunchDebugIntersection("../../obj/Mesh-20x20mm.obj");
-#elif defined(DT)
 
-	/**********************************************************/
+	mc::mcgal::Mesh m;
+	mc::mcgal::cgOpenObj(m, "../../obj/cube.obj");
 
-	mc::mvcg::Mesh mesh;
-	mc::mvcg::obj::loader(mesh, "../../obj/Mesh-20x20mm.obj");
+	//mc::mcgal::intersection::IntersectionData datas;
 
-	mesh.face.erase(mesh.face.begin() + 2);
-	vcg::tri::io::ExporterOBJ<mc::mvcg::Mesh>::Save(mesh, "OUTOBJ.obj", 1);
-
-	/*int idIdx = 0;
-	for (auto& elem : mesh.face)
-		elem.id = idIdx++;
-
-	mc::BuffIntersect buff;
-	buff.origin = vcg::Point3d(-60.000000, -60.000000, 200.000000);
-	buff.direction = vcg::Point3d(0.000000, 0.000000, -10.000000);
-
-	vcg::Ray3d ray;
-	ray.Set(buff.origin, buff.direction);
-
-	int nb = mc::Intersect(mesh, buff, ray);
-
-	std::cout << "Nb. intersections: " << nb << std::endl;
-	std::cout << "Nb. faces: " << buff.facesIntersections.size() << std::endl;*/
-#endif
-
+	//mc::mcgal::cgSaveObj(m, "OUTOBJ.obj");
 	std::getchar();
 	return 0;
 }
+
+/*mvcg::Mesh mesh;
+mvcg::open_obj(mesh, "../../obj/Mesh-20x20mm.obj");
+
+mvcg::intersection::IntersectionData datas;
+vcg::Ray3d ray;
+ray.SetOrigin(vcg::Point3d(-60, -60, -100));
+ray.SetDirection(vcg::Point3d(0, 0, 100));
+
+mvcg::intersection::Intersect(mesh, datas, ray);
+
+printf("nb. = %i\n(%.2f, %.2f, %.2f)\n", datas.facesIntersections.size() , datas.getPointAt(0).X(), datas.getPointAt(0).Y(), datas.getPointAt(0).Z());
+
+std::cout << datas.getObjectType(0) << std::endl;*/

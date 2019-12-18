@@ -12,6 +12,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MC IO", "MC IO\MC IO.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MC Base", "MC Base\Mesh Intersection.vcxproj", "{01342707-1CA4-4C07-A938-B465874E2F1A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MC Mesh", "MC Mesh\MC Mesh.vcxproj", "{EDE5200F-280F-4E7C-8B45-8FE8EBA944B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -44,6 +46,14 @@ Global
 		{01342707-1CA4-4C07-A938-B465874E2F1A}.Release|x64.Build.0 = Release|x64
 		{01342707-1CA4-4C07-A938-B465874E2F1A}.Release|x86.ActiveCfg = Release|Win32
 		{01342707-1CA4-4C07-A938-B465874E2F1A}.Release|x86.Build.0 = Release|Win32
+		{EDE5200F-280F-4E7C-8B45-8FE8EBA944B9}.Debug|x64.ActiveCfg = Debug|x64
+		{EDE5200F-280F-4E7C-8B45-8FE8EBA944B9}.Debug|x64.Build.0 = Debug|x64
+		{EDE5200F-280F-4E7C-8B45-8FE8EBA944B9}.Debug|x86.ActiveCfg = Debug|Win32
+		{EDE5200F-280F-4E7C-8B45-8FE8EBA944B9}.Debug|x86.Build.0 = Debug|Win32
+		{EDE5200F-280F-4E7C-8B45-8FE8EBA944B9}.Release|x64.ActiveCfg = Release|x64
+		{EDE5200F-280F-4E7C-8B45-8FE8EBA944B9}.Release|x64.Build.0 = Release|x64
+		{EDE5200F-280F-4E7C-8B45-8FE8EBA944B9}.Release|x86.ActiveCfg = Release|Win32
+		{EDE5200F-280F-4E7C-8B45-8FE8EBA944B9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

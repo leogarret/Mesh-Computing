@@ -1,0 +1,95 @@
+var group__PkgArrangement2ConceptsTraits =
+[
+    [ "ArrangementApproximateTraits_2", "classArrangementApproximateTraits__2.html", [
+      [ "Approximate_2", "classArrangementApproximateTraits__2.html#a3551846d630a43eeb909df416f363b5f", null ],
+      [ "Approximate_number_type", "classArrangementApproximateTraits__2.html#a1dc459028a208950c185d59504e06e31", null ],
+      [ "approximate_2_object", "classArrangementApproximateTraits__2.html#a2b84c04094319f3e42b29c132af51879", null ]
+    ] ],
+    [ "ArrangementBasicTraits_2", "classArrangementBasicTraits__2.html", [
+      [ "Bottom_side_category", "classArrangementBasicTraits__2.html#ad1c0c7aecbb67a46314b49271af64795", null ],
+      [ "Compare_x_2", "classArrangementBasicTraits__2.html#a50f0e201b051be81f31257feab0cdab7", null ],
+      [ "Compare_xy_2", "classArrangementBasicTraits__2.html#a293a8cbafe9449891fd1480f34d0c31c", null ],
+      [ "Compare_y_at_x_2", "classArrangementBasicTraits__2.html#ac87c7d7779ddf778dd8be68ad5a4fb37", null ],
+      [ "Compare_y_at_x_left_2", "classArrangementBasicTraits__2.html#a88da529dbddab3034e71ca82d414e7e1", null ],
+      [ "Compare_y_at_x_right_2", "classArrangementBasicTraits__2.html#a1eeadafe6fc9b9de597e61bdce250f23", null ],
+      [ "Construct_max_vertex_2", "classArrangementBasicTraits__2.html#a04f2fbd7da5f539f94fab902f9bcf37d", null ],
+      [ "Construct_min_vertex_2", "classArrangementBasicTraits__2.html#ac00c8a45688aeaa21496f4a21c8e22d5", null ],
+      [ "Equal_2", "classArrangementBasicTraits__2.html#aee2d448e95348f47d37aeb1d9d0f705c", null ],
+      [ "Has_left_category", "classArrangementBasicTraits__2.html#a928de1a5dac72286c1e2dd811dcb559f", null ],
+      [ "Is_vertical_2", "classArrangementBasicTraits__2.html#a64064c1508c2560a6bab217ad1b969f8", null ],
+      [ "Left_side_category", "classArrangementBasicTraits__2.html#a71e663e1e6e125a70aedf6ab2c82e95f", null ],
+      [ "Point_2", "classArrangementBasicTraits__2.html#a8cfc873dc62ce86f9479c4689845d4b3", null ],
+      [ "Right_side_category", "classArrangementBasicTraits__2.html#a51ec39783adcc206066f6075bee4ba77", null ],
+      [ "Top_side_category", "classArrangementBasicTraits__2.html#ad4077ad8b432735b265f25aa8aafa083", null ],
+      [ "X_monotone_curve_2", "classArrangementBasicTraits__2.html#a0fc1f7acfd69a5eae393294b6870a1d2", null ],
+      [ "compare_x_2_object", "classArrangementBasicTraits__2.html#a5cbaf71f01aa14e7dff0466473d128b4", null ],
+      [ "compare_xy_2_object", "classArrangementBasicTraits__2.html#a9887bcbdfab642f2cda056481d38c636", null ],
+      [ "compare_y_at_x_2_object", "classArrangementBasicTraits__2.html#a6a90e0a383cc9d6cf7504befa18e292f", null ],
+      [ "compare_y_at_x_left_2_object", "classArrangementBasicTraits__2.html#ae1ac868e5c93163c8cd16cbfc1b21194", null ],
+      [ "compare_y_at_x_right_2_object", "classArrangementBasicTraits__2.html#a91eed837a55348b09b0f5cc5620f9b6f", null ],
+      [ "construct_max_vertex_2_object", "classArrangementBasicTraits__2.html#a308328f04b5eca98efeafc326ddae22c", null ],
+      [ "construct_min_vertex_2_object", "classArrangementBasicTraits__2.html#a5c8e84722e62e8661a9614155d978e01", null ],
+      [ "equal_2_object", "classArrangementBasicTraits__2.html#ad43404fdbc8d251c031424efe86b0ddc", null ],
+      [ "is_vertical_2_object", "classArrangementBasicTraits__2.html#a245cea5ccbef988a158687fa294a3234", null ]
+    ] ],
+    [ "ArrangementConstructXMonotoneCurveTraits_2", "classArrangementConstructXMonotoneCurveTraits__2.html", [
+      [ "Point_2", "classArrangementConstructXMonotoneCurveTraits__2.html#ab8daafa67b2a8a1f2cc0833d5d5d2b37", null ],
+      [ "X_monotone_curve_2", "classArrangementConstructXMonotoneCurveTraits__2.html#ac6fb0a30cf9be1094ce2e51a177baea6", null ],
+      [ "operator()", "classArrangementConstructXMonotoneCurveTraits__2.html#afa912a389a932616146ed12eddb61872", null ]
+    ] ],
+    [ "ArrangementLandmarkTraits_2", "classArrangementLandmarkTraits__2.html", null ],
+    [ "ArrangementOpenBoundaryTraits_2", "classArrangementOpenBoundaryTraits__2.html", [
+      [ "Bottom_side_category", "classArrangementOpenBoundaryTraits__2.html#aa867efa5a19d46c7a9df1fd4d3093450", null ],
+      [ "Compare_x_at_limit_2", "classArrangementOpenBoundaryTraits__2.html#a4b58f955e826e444231ce4a51c49c843", null ],
+      [ "Compare_x_near_limit_2", "classArrangementOpenBoundaryTraits__2.html#a86f6712e65df65a28247131749bcba56", null ],
+      [ "Compare_y_near_boundary_2", "classArrangementOpenBoundaryTraits__2.html#a054f37192469035c26a2c53dab5aa6f0", null ],
+      [ "Left_side_category", "classArrangementOpenBoundaryTraits__2.html#a070573549123103cb8ec4f5697bdc018", null ],
+      [ "Parameter_space_in_x_2", "classArrangementOpenBoundaryTraits__2.html#ae6fe42818f2b3ec2f71f6332ff4bc47b", null ],
+      [ "Parameter_space_in_y_2", "classArrangementOpenBoundaryTraits__2.html#a317f8d20eb7efc7092fe0d74c971f1ed", null ],
+      [ "Right_side_category", "classArrangementOpenBoundaryTraits__2.html#a571340306c090b8d375db8f19a215eb4", null ],
+      [ "Top_side_category", "classArrangementOpenBoundaryTraits__2.html#a7ee20034a9cbfa734475c0751eb7d367", null ],
+      [ "compare_x_at_limit_2_object", "classArrangementOpenBoundaryTraits__2.html#a558240a5c41a240613ceb0fba70090df", null ],
+      [ "compare_x_near_limit_2_object", "classArrangementOpenBoundaryTraits__2.html#a6355f92d23e2778b23c91b6adf920387", null ],
+      [ "compare_y_near_boundary_2_object", "classArrangementOpenBoundaryTraits__2.html#a5f8eef0d57ac166b57660aa32e65a18d", null ],
+      [ "parameter_space_in_x_2_object", "classArrangementOpenBoundaryTraits__2.html#a072d42c5a5c4f87044daa76b3b924802", null ],
+      [ "parameter_space_in_y_2_object", "classArrangementOpenBoundaryTraits__2.html#a8647a263aab7bd4bc1eb36a820236ca9", null ]
+    ] ],
+    [ "ArrangementTraits_2", "classArrangementTraits__2.html", [
+      [ "Curve_2", "classArrangementTraits__2.html#a2cb306c890ab7d32f397b5d246e0271f", null ],
+      [ "Make_x_monotone_2", "classArrangementTraits__2.html#ae7fb20dc627766bd122192d6e5c1da57", null ],
+      [ "make_x_monotone_2_object", "classArrangementTraits__2.html#ae4c383703640f525201dcbe0c2640fb0", null ]
+    ] ],
+    [ "ArrangementXMonotoneTraits_2", "classArrangementXMonotoneTraits__2.html", [
+      [ "Are_mergeable_2", "classArrangementXMonotoneTraits__2.html#a3d7c4f0cb7c04aa4cf124c10e556b066", null ],
+      [ "Has_merge_category", "classArrangementXMonotoneTraits__2.html#a02971c1a638cb1a051c32ef70faef907", null ],
+      [ "Intersect_2", "classArrangementXMonotoneTraits__2.html#a52bad98a97d6c02f8ea18e4a8eb78c2a", null ],
+      [ "Merge_2", "classArrangementXMonotoneTraits__2.html#a5fe8859feff75f588bf2000d72087fc9", null ],
+      [ "Multiplicity", "classArrangementXMonotoneTraits__2.html#a797dac14c34f82bee82669633618f8e4", null ],
+      [ "Split_2", "classArrangementXMonotoneTraits__2.html#a2966f1d49ebda07d2de23a749259283f", null ],
+      [ "are_mergeable_2_object", "classArrangementXMonotoneTraits__2.html#a15f7ce904403133d3e2a49bcd85953da", null ],
+      [ "intersect_2_object", "classArrangementXMonotoneTraits__2.html#a81e42a5f3552b046be1e736345c11de5", null ],
+      [ "merge_2_object", "classArrangementXMonotoneTraits__2.html#af1fd637eaf3d0e4c64f1275ea9d37365", null ],
+      [ "split_2_object", "classArrangementXMonotoneTraits__2.html#a84c794e8aa11128d78ea833eea6c8290", null ]
+    ] ],
+    [ "OverlayTraits", "classOverlayTraits.html", [
+      [ "Face_handle_A", "classOverlayTraits.html#aeee0b388653d8434bb884f0a9a0f5d52", null ],
+      [ "Face_handle_B", "classOverlayTraits.html#affeba6407709a51771b9b66de1551e94", null ],
+      [ "Face_handle_R", "classOverlayTraits.html#a8ab679f5e84bb2ee44f02fdb781ac309", null ],
+      [ "Halfedge_handle_A", "classOverlayTraits.html#a58c151ed0c5542811462a7359d4d8929", null ],
+      [ "Halfedge_handle_B", "classOverlayTraits.html#a803eb93b3216ea31da9b1dfbfd37b146", null ],
+      [ "Halfedge_handle_R", "classOverlayTraits.html#a63585712d7a760305afe0d87e0262c2d", null ],
+      [ "Vertex_handle_A", "classOverlayTraits.html#ad782600fc0df8c4aacf54f6480b84a09", null ],
+      [ "Vertex_handle_B", "classOverlayTraits.html#ac27339bc53bf8c6a47ad32a17017f277", null ],
+      [ "Vertex_handle_R", "classOverlayTraits.html#a3f6c75f24389d54d52f17d0cd56fe90d", null ],
+      [ "create_edge", "classOverlayTraits.html#acf00a46e214519472deefbd20048bcc3", null ],
+      [ "create_edge", "classOverlayTraits.html#ac793b74371fe750954affe4fb5a408f3", null ],
+      [ "create_edge", "classOverlayTraits.html#ae4fca0aab73dab7687d7bf68bd61f1e9", null ],
+      [ "create_face", "classOverlayTraits.html#a2f2b8fb3a022e17119a25140b97545c3", null ],
+      [ "create_vertex", "classOverlayTraits.html#a36624758336f262d138239bf8d9ec2d9", null ],
+      [ "create_vertex", "classOverlayTraits.html#a687e6aeab2bc69f1aaad679523e60393", null ],
+      [ "create_vertex", "classOverlayTraits.html#a2ae5127c9a50da644b04de73e893d722", null ],
+      [ "create_vertex", "classOverlayTraits.html#a0fa9d05dc53508751013a59eaa2ea2bd", null ],
+      [ "create_vertex", "classOverlayTraits.html#a4f6020b8549e45dd1c175e83c7998a48", null ],
+      [ "create_vertex", "classOverlayTraits.html#a1d9fcd753a71781bbbd755083061ae4e", null ]
+    ] ]
+];

@@ -3,12 +3,13 @@
 
 #include "mc_vcg_primitives.hpp"
 
-
 #endif //!MC_VCG_PRIMITIVES_C
 
+/*
+** Cette fonction permet de créer un cube
+*/
 int mc::mvcg::primitives::createCube(mc::mvcg::Mesh &mesh)
 {
-	std::clock_t start = std::clock();
 	Mesh::VertexIterator vertexIt = vcg::tri::Allocator<Mesh>::AddVertices(mesh, 8);
 	Mesh::FaceIterator faceIt = vcg::tri::Allocator<Mesh>::AddFaces(mesh, 12);
 
@@ -97,8 +98,6 @@ int mc::mvcg::primitives::createCube(mc::mvcg::Mesh &mesh)
 		faceIt->V(1) = &mesh.vert[4];
 		faceIt->V(2) = &mesh.vert[0];
 	}
-
-	std::clock_t end = std::clock();
 
 	return 1;
 }

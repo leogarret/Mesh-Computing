@@ -1,0 +1,26 @@
+var classCGAL_1_1Aff__transformation__2 =
+[
+    [ "Aff_transformation_2", "classCGAL_1_1Aff__transformation__2.html#a47f305715cb75778048ea7329b5c02dc", null ],
+    [ "Aff_transformation_2", "classCGAL_1_1Aff__transformation__2.html#ab97331ea55f685c17b4447a4184835f0", null ],
+    [ "Aff_transformation_2", "classCGAL_1_1Aff__transformation__2.html#a5cc6631b0ed023470ccfc9e37e5272fb", null ],
+    [ "Aff_transformation_2", "classCGAL_1_1Aff__transformation__2.html#a56a137e059bc71662485093c1bcd04c8", null ],
+    [ "Aff_transformation_2", "classCGAL_1_1Aff__transformation__2.html#adcdac26dc822f15053218abd7f706c1d", null ],
+    [ "Aff_transformation_2", "classCGAL_1_1Aff__transformation__2.html#ad0a7c3e145a0f9e073c0fb5a1ee9973c", null ],
+    [ "Aff_transformation_2", "classCGAL_1_1Aff__transformation__2.html#a6381959cec20a2652bf8f7bdf8a29295", null ],
+    [ "cartesian", "classCGAL_1_1Aff__transformation__2.html#a71bc4cc34221e144f37973d6276b3233", null ],
+    [ "hm", "classCGAL_1_1Aff__transformation__2.html#a85a38ffe616367dc8fc7e4825eb69377", null ],
+    [ "homogeneous", "classCGAL_1_1Aff__transformation__2.html#a6aba5143d250beb2481b7470277e1ca0", null ],
+    [ "inverse", "classCGAL_1_1Aff__transformation__2.html#ae0bd80ca386d4bba6283c8139ef1c1b3", null ],
+    [ "is_even", "classCGAL_1_1Aff__transformation__2.html#a936b5aaf6cd6db16ead55563c9650f0f", null ],
+    [ "is_odd", "classCGAL_1_1Aff__transformation__2.html#a507849553cd1e5e7c5383246b30b5e43", null ],
+    [ "m", "classCGAL_1_1Aff__transformation__2.html#afefc0daa788464ca251d37c89a88ac54", null ],
+    [ "operator()", "classCGAL_1_1Aff__transformation__2.html#a8542e60600288bff017e20dbef2505c4", null ],
+    [ "operator()", "classCGAL_1_1Aff__transformation__2.html#a1734caaba0f743a206c3a729af132621", null ],
+    [ "operator()", "classCGAL_1_1Aff__transformation__2.html#a930a1703c6489cf09997936d2dec0b16", null ],
+    [ "operator()", "classCGAL_1_1Aff__transformation__2.html#a48a9686e0a21af3dcc5839de57e4db5d", null ],
+    [ "operator*", "classCGAL_1_1Aff__transformation__2.html#a92e96a6625975f85ccfe0d633354a421", null ],
+    [ "transform", "classCGAL_1_1Aff__transformation__2.html#a0f52b8977edaad840cfc5eedf93811df", null ],
+    [ "transform", "classCGAL_1_1Aff__transformation__2.html#a83f64d6949ad26ff548665907cb6297d", null ],
+    [ "transform", "classCGAL_1_1Aff__transformation__2.html#af95fd22046f9bf80c33d664736165150", null ],
+    [ "transform", "classCGAL_1_1Aff__transformation__2.html#ae3a9ec960ed615ec46595142369a1ef9", null ]
+];

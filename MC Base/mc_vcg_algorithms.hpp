@@ -7,6 +7,10 @@ namespace mc::mvcg::algorithms {
 
 	double surface(mc::mvcg::Mesh &mesh);
 
+	double totalEdgesLenght(mc::mvcg::Mesh &mesh);
+
+	vcg::Point3d barycenter(mc::mvcg::Mesh &mesh);
+
 }
 
 #endif //!MV_VCG_ALGORITHMS_H

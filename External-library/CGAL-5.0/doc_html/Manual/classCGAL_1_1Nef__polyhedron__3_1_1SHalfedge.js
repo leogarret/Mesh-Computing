@@ -1,0 +1,26 @@
+var classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge =
+[
+    [ "Halffacet_const_handle", "../Nef_3/classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge.html#a81e06b415e29c08a84a33b3c64e9a376", null ],
+    [ "Mark", "../Nef_3/classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge.html#a41083ed189a615c71938257652a0bd33", null ],
+    [ "SFace_const_handle", "../Nef_3/classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge.html#a1eb61f0b49b069c13db79a574596211b", null ],
+    [ "SHalfedge_const_handle", "../Nef_3/classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge.html#ae86f690fcc5271c1d129985911dc5b49", null ],
+    [ "Sphere_circle", "../Nef_3/classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge.html#a85d9956b020d0ad9a391d42bdeb5973d", null ],
+    [ "SVertex_const_handle", "../Nef_3/classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge.html#ad6c8fbb5eaf59742fdf602da1102fc1b", null ],
+    [ "circle", "../Nef_3/classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge.html#a875132bba9cc7217eac9fcbfef030124", null ],
+    [ "cyclic_adj_pred", "../Nef_3/classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge.html#a8bc02e07b79c30d1cd1559ee2c41b1ae", null ],
+    [ "cyclic_adj_succ", "../Nef_3/classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge.html#a0479d642ec1389b26a901d6bf4f828ea", null ],
+    [ "facet", "../Nef_3/classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge.html#aa321604da37ad1211ce3a2e5c1b473b5", null ],
+    [ "in_inner_facet_cycle", "../Nef_3/classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge.html#ab394536b304b6528de2ed4d06534b947", null ],
+    [ "in_inner_sface_cycle", "../Nef_3/classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge.html#ae3a8a1dfc4688304728991aa16c59a71", null ],
+    [ "in_outer_facet_cycle", "../Nef_3/classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge.html#a6649b84ba299da0d98119c6c692be648", null ],
+    [ "in_outer_sface_cycle", "../Nef_3/classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge.html#a34a5b918e2e59c964788a86340ccb4bb", null ],
+    [ "incident_sface", "../Nef_3/classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge.html#a495489c4473c2a097041baa917a42ebd", null ],
+    [ "mark", "../Nef_3/classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge.html#a6061d7125e4bd7e16a15a5c0d3efdd81", null ],
+    [ "next", "../Nef_3/classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge.html#a4801c1c3e1c482fdeec2116d28769127", null ],
+    [ "prev", "../Nef_3/classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge.html#aab8700a66b58fbf03a2015148982bd14", null ],
+    [ "snext", "../Nef_3/classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge.html#adbc5981edeec458561e3c64ca86c7f00", null ],
+    [ "source", "../Nef_3/classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge.html#a9ce2e4c70e96ed39a0c07379dd1ffa76", null ],
+    [ "sprev", "../Nef_3/classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge.html#a726a02f3737f0bde925461f089d039cb", null ],
+    [ "target", "../Nef_3/classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge.html#acab42b315b94ac9c64f87df4ae038b05", null ],
+    [ "twin", "../Nef_3/classCGAL_1_1Nef__polyhedron__3_1_1SHalfedge.html#a72e5de41fb4dd5c44df2fe3021cc7999", null ]
+];

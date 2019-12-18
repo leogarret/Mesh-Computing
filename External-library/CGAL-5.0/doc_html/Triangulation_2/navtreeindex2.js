@@ -1,0 +1,20 @@
+var NAVTREEINDEX2 =
+{
+"index.html#Triangulation_2TheGeometricTraits_2":[0,7,0],
+"index.html#Triangulation_2TheSetofFaces":[0,1,0],
+"index.html#Triangulation_2TheVertexTypeandFaceTypeof":[0,5,2],
+"index.html#Triangulation_2TheVertexofaTriangulation":[0,9,0],
+"index.html#Triangulation_2UsingCustomizedVerticesand":[0,10,0],
+"index.html#Triangulation_2UsinganIteratorOverPairs":[0,10,5],
+"index.html#Triangulation_2UsingtheBoostTransformIterator":[0,10,7],
+"index.html#Triangulation_2UsingtheBoostZipIterator":[0,10,6],
+"models.html":[4],
+"modules.html":[1],
+"pages.html":[],
+"refines.html":[2],
+"structCGAL_1_1Exact__intersections__tag.html":[1,0,1,2],
+"structCGAL_1_1Exact__predicates__tag.html":[1,0,1,3],
+"structCGAL_1_1No__intersection__tag.html":[1,0,1,1],
+"structCGAL_1_1Weighted__point__mapper__2.html":[1,0,5],
+"structCGAL_1_1Weighted__point__mapper__2.html#a85c4c3a76b183800bfacae10283796dc":[1,0,5,0]
+};

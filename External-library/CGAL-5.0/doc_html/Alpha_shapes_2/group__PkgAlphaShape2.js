@@ -1,0 +1,53 @@
+var group__PkgAlphaShape2 =
+[
+    [ "Concepts", "group__PkgAlphaShape2Concepts.html", "group__PkgAlphaShape2Concepts" ],
+    [ "Alpha_shape_2", "classCGAL_1_1Alpha__shape__2.html", [
+      [ "Alpha_iterator", "classCGAL_1_1Alpha__shape__2.html#a06ac11586ec6d90d59e0e76e465d074c", null ],
+      [ "Alpha_shape_edges_iterator", "classCGAL_1_1Alpha__shape__2.html#a652f355cc521b0aa248a874a3fb408cc", null ],
+      [ "Alpha_shape_vertices_iterator", "classCGAL_1_1Alpha__shape__2.html#a1f0efadb0576e2dfa5ba012325660755", null ],
+      [ "FT", "classCGAL_1_1Alpha__shape__2.html#aa8920f564e99cf8abb708fc4495d11a3", null ],
+      [ "Gt", "classCGAL_1_1Alpha__shape__2.html#a7a91ffcbeb467d1978a7cd6d4d262141", null ],
+      [ "size_type", "classCGAL_1_1Alpha__shape__2.html#a0a8ef3912c1c6e65c3ecdfd33ec7b7a3", null ],
+      [ "Classification_type", "classCGAL_1_1Alpha__shape__2.html#a910fdb5781b25ae73507d54bb73a63bf", [
+        [ "EXTERIOR", "classCGAL_1_1Alpha__shape__2.html#a910fdb5781b25ae73507d54bb73a63bfa3e492dc451d7dee78e36d423ecd5e659", null ],
+        [ "SINGULAR", "classCGAL_1_1Alpha__shape__2.html#a910fdb5781b25ae73507d54bb73a63bfa9cb3341f2648b9c7073ca058884a6738", null ],
+        [ "REGULAR", "classCGAL_1_1Alpha__shape__2.html#a910fdb5781b25ae73507d54bb73a63bfaa686e4d8d92d3f50a34ba8d7fd76045c", null ],
+        [ "INTERIOR", "classCGAL_1_1Alpha__shape__2.html#a910fdb5781b25ae73507d54bb73a63bfa1c70ff74073e4c7419bc5e013e964ade", null ]
+      ] ],
+      [ "Mode", "classCGAL_1_1Alpha__shape__2.html#ae1c8fee3b311d5417dd9c58c8a2b97f5", [
+        [ "GENERAL", "classCGAL_1_1Alpha__shape__2.html#ae1c8fee3b311d5417dd9c58c8a2b97f5a98f773aea96e5662d660bbf59e2d2bcc", null ],
+        [ "REGULARIZED", "classCGAL_1_1Alpha__shape__2.html#ae1c8fee3b311d5417dd9c58c8a2b97f5a7cf1156bb047b011ea73178e2cbc17d4", null ]
+      ] ],
+      [ "Alpha_shape_2", "classCGAL_1_1Alpha__shape__2.html#a06f5c57833229a92e8b67fcc29247880", null ],
+      [ "Alpha_shape_2", "classCGAL_1_1Alpha__shape__2.html#a9d026da2568aed80884a5053bae0039b", null ],
+      [ "Alpha_shape_2", "classCGAL_1_1Alpha__shape__2.html#a5524e49e27ef267165673d0a36bddb14", null ],
+      [ "alpha_begin", "classCGAL_1_1Alpha__shape__2.html#a7181c5ff72ac26d0f5871878dee86924", null ],
+      [ "alpha_end", "classCGAL_1_1Alpha__shape__2.html#a8e0853bc1314f2808d87488f5b7aa847", null ],
+      [ "alpha_find", "classCGAL_1_1Alpha__shape__2.html#a53ddf767b154db914884ea6b223376c8", null ],
+      [ "alpha_lower_bound", "classCGAL_1_1Alpha__shape__2.html#abf5e0cb227799f74a78f8096abfb8d90", null ],
+      [ "alpha_shape_edges_begin", "classCGAL_1_1Alpha__shape__2.html#aa6b07740a02dd18a7aa0cf6bf30699d5", null ],
+      [ "alpha_shape_edges_end", "classCGAL_1_1Alpha__shape__2.html#a2ac6405046c2becb35e876e446a56885", null ],
+      [ "alpha_shape_vertices_begin", "classCGAL_1_1Alpha__shape__2.html#a66e0477bd1ebd44bec1e50b8a7ebc4ef", null ],
+      [ "alpha_shape_vertices_end", "classCGAL_1_1Alpha__shape__2.html#a7c609024ff3d3ec5d862ca785c4717ac", null ],
+      [ "alpha_upper_bound", "classCGAL_1_1Alpha__shape__2.html#a6c17272855f29b99bc0a8df5010c6612", null ],
+      [ "classify", "classCGAL_1_1Alpha__shape__2.html#a2913647727fd3146a018ce96d5439d90", null ],
+      [ "classify", "classCGAL_1_1Alpha__shape__2.html#aa29aa6f1f80cee5622d672c51c2a817e", null ],
+      [ "classify", "classCGAL_1_1Alpha__shape__2.html#aa12e951fd08a17b478d59a7af44f0b35", null ],
+      [ "classify", "classCGAL_1_1Alpha__shape__2.html#a38a9cbbdade3585f9ac635de45ef022c", null ],
+      [ "classify", "classCGAL_1_1Alpha__shape__2.html#af1455344b58d26542a69392f4d0caee7", null ],
+      [ "clear", "classCGAL_1_1Alpha__shape__2.html#a9484322dab40466cfba38aa6eec47fc7", null ],
+      [ "find_optimal_alpha", "classCGAL_1_1Alpha__shape__2.html#afd047290bb8e9d12194eed582e82a9f1", null ],
+      [ "get_alpha", "classCGAL_1_1Alpha__shape__2.html#a6d90df87a9df96c396fa5b323f44aba1", null ],
+      [ "get_mode", "classCGAL_1_1Alpha__shape__2.html#a7ff9e4114d7bf5c20578ac6ddb31f463", null ],
+      [ "get_nth_alpha", "classCGAL_1_1Alpha__shape__2.html#abd5177d09a70c448b548be039ac187cd", null ],
+      [ "make_alpha_shape", "classCGAL_1_1Alpha__shape__2.html#a297b8abac45392eb96dff816f18cb2bf", null ],
+      [ "number_of_alphas", "classCGAL_1_1Alpha__shape__2.html#a978feeb93f1b269310e65aeb4b767930", null ],
+      [ "number_of_solid_components", "classCGAL_1_1Alpha__shape__2.html#a5b93ef0eb2b8d1c7ee3dfcbd102e814c", null ],
+      [ "set_alpha", "classCGAL_1_1Alpha__shape__2.html#a8c23339209bc738bc33a74bbc83a9641", null ],
+      [ "set_mode", "classCGAL_1_1Alpha__shape__2.html#a94639ef3e078140520552c350dc727be", null ],
+      [ "operator<<", "classCGAL_1_1Alpha__shape__2.html#abb1d116031c4587dcf06f6cb50d8cc65", null ]
+    ] ],
+    [ "Alpha_shape_face_base_2", "classCGAL_1_1Alpha__shape__face__base__2.html", null ],
+    [ "Alpha_shape_vertex_base_2", "classCGAL_1_1Alpha__shape__vertex__base__2.html", null ],
+    [ "Weighted_alpha_shape_euclidean_traits_2", "classCGAL_1_1Weighted__alpha__shape__euclidean__traits__2.html", null ]
+];

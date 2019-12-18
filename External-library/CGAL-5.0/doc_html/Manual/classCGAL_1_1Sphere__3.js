@@ -1,0 +1,27 @@
+var classCGAL_1_1Sphere__3 =
+[
+    [ "Sphere_3", "../Kernel_23/classCGAL_1_1Sphere__3.html#afaa9b613520cfde8fbd53c643c9cf921", null ],
+    [ "Sphere_3", "../Kernel_23/classCGAL_1_1Sphere__3.html#a258421fe590a1fc492e518657f936c3d", null ],
+    [ "Sphere_3", "../Kernel_23/classCGAL_1_1Sphere__3.html#a6306f35aef828d87342ce5f40fce086f", null ],
+    [ "Sphere_3", "../Kernel_23/classCGAL_1_1Sphere__3.html#a74ef3da6618b4c6d93ea59bff3db6291", null ],
+    [ "Sphere_3", "../Kernel_23/classCGAL_1_1Sphere__3.html#a9144992b5e0f92a500461b5ebed78e9b", null ],
+    [ "Sphere_3", "../Kernel_23/classCGAL_1_1Sphere__3.html#aa9b2577a2c9cb9bea94203c2864df711", null ],
+    [ "bbox", "../Kernel_23/classCGAL_1_1Sphere__3.html#a29f9b64f312fb2bd29fb41d49914566b", null ],
+    [ "bounded_side", "../Kernel_23/classCGAL_1_1Sphere__3.html#a5b73fdd7bf6fe7e7eaedda0b5a06b238", null ],
+    [ "center", "../Kernel_23/classCGAL_1_1Sphere__3.html#a602ff40facf30fcfe5af9be3ef343b96", null ],
+    [ "has_on", "../Kernel_23/classCGAL_1_1Sphere__3.html#a2b07712ce5c26b2f05a3eeb9ee9fc691", null ],
+    [ "has_on", "../Kernel_23/classCGAL_1_1Sphere__3.html#a856f8b3a1d9063e36ee79b40eec4e321", null ],
+    [ "has_on_boundary", "../Kernel_23/classCGAL_1_1Sphere__3.html#a7402de97bb3241630ccb8fbc4f6ea399", null ],
+    [ "has_on_bounded_side", "../Kernel_23/classCGAL_1_1Sphere__3.html#a4610099f29ca31457ff796e19e685a17", null ],
+    [ "has_on_negative_side", "../Kernel_23/classCGAL_1_1Sphere__3.html#af1832178a405b46c08e183f26379b1f0", null ],
+    [ "has_on_positive_side", "../Kernel_23/classCGAL_1_1Sphere__3.html#a7565a994e3b3cd36e1b099d549448433", null ],
+    [ "has_on_unbounded_side", "../Kernel_23/classCGAL_1_1Sphere__3.html#a3f5e9c749551c8622df7d0925fcd4910", null ],
+    [ "is_degenerate", "../Kernel_23/classCGAL_1_1Sphere__3.html#ad231c72370857c6eccf289572c0b1a41", null ],
+    [ "operator!=", "../Kernel_23/classCGAL_1_1Sphere__3.html#ab89afdda6f1bac74d5290918dbaa3f1e", null ],
+    [ "operator==", "../Kernel_23/classCGAL_1_1Sphere__3.html#ae98c7210dd279abf77bce36376343148", null ],
+    [ "opposite", "../Kernel_23/classCGAL_1_1Sphere__3.html#a8d2fdafc7da2705a6711e81479b9f1ab", null ],
+    [ "orientation", "../Kernel_23/classCGAL_1_1Sphere__3.html#ace944176f9c8ac012bd72f3d07f074cd", null ],
+    [ "oriented_side", "../Kernel_23/classCGAL_1_1Sphere__3.html#ae13a105bd050e8b8aead491d9a8720d6", null ],
+    [ "orthogonal_transform", "../Kernel_23/classCGAL_1_1Sphere__3.html#a4fce20a5d9c400267fa8c38644dee218", null ],
+    [ "squared_radius", "../Kernel_23/classCGAL_1_1Sphere__3.html#a12bf1a11187b923a35dc13c364514be3", null ]
+];

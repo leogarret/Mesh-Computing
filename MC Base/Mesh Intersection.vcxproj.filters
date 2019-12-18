@@ -5,30 +5,66 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="algorithms">
+    <Filter Include="VCG">
+      <UniqueIdentifier>{fe2cb81d-98b3-4e66-9615-e5b98d588d2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VCG\algorithms">
       <UniqueIdentifier>{80bec4a7-d996-400a-95ca-32aea7c9c68a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Intersection">
+    <Filter Include="VCG\Intersection">
       <UniqueIdentifier>{ba8f8895-2dfa-46e2-8558-03469180d56c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VCG\Mesh Computing">
+      <UniqueIdentifier>{d235c399-5d6d-497c-9003-434c89f94c26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="geom">
+      <UniqueIdentifier>{2d110fcd-309e-4cbb-99d9-ac5122e494ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CGAL">
+      <UniqueIdentifier>{c59c530e-3ad7-4cc5-850b-dfd34c3244e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CGAL\Intersection">
+      <UniqueIdentifier>{06be6d9a-77df-4a6d-a3e8-bc9395c0f006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALL">
+      <UniqueIdentifier>{de2cb82d-4a11-4bde-880f-ec0418a2e8bf}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mc_vcg_algorithms.hpp">
-      <Filter>algorithms</Filter>
+      <Filter>VCG\algorithms</Filter>
     </ClInclude>
     <ClInclude Include="mc_vcg_intersection.hpp">
-      <Filter>Intersection</Filter>
+      <Filter>VCG\Intersection</Filter>
+    </ClInclude>
+    <ClInclude Include="mc_vcg_intersectionData.hpp">
+      <Filter>VCG\Intersection</Filter>
+    </ClInclude>
+    <ClInclude Include="mc_cgal_intersection.hpp">
+      <Filter>CGAL\Intersection</Filter>
+    </ClInclude>
+    <ClInclude Include="mc_cgal_intersectionData.hpp">
+      <Filter>CGAL\Intersection</Filter>
+    </ClInclude>
+    <ClInclude Include="mc_all_intersection.hpp">
+      <Filter>ALL</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="mc_vcg_surface.cpp">
-      <Filter>algorithms</Filter>
-    </ClCompile>
     <ClCompile Include="mc_vcg_intersection.cpp">
-      <Filter>Intersection</Filter>
+      <Filter>VCG\Intersection</Filter>
+    </ClCompile>
+    <ClCompile Include="mc_vcg_decimation.cpp">
+      <Filter>VCG\Mesh Computing</Filter>
+    </ClCompile>
+    <ClCompile Include="mc_vcg_algorithms.cpp">
+      <Filter>VCG\algorithms</Filter>
     </ClCompile>
     <ClCompile Include="intersections_utils.cpp">
-      <Filter>Intersection</Filter>
+      <Filter>geom</Filter>
+    </ClCompile>
+    <ClCompile Include="mc_cgal_intersection.cpp">
+      <Filter>CGAL\Intersection</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,0 +1,115 @@
+var group__PkgStraightSkeleton2Concepts =
+[
+    [ "PolygonOffsetBuilderTraits_2", "classPolygonOffsetBuilderTraits__2.html", [
+      [ "Compare_offset_against_event_time_2", "classPolygonOffsetBuilderTraits__2.html#a59daaff90826eabcdb9ef76527c07ff6", null ],
+      [ "Construct_offset_point_2", "classPolygonOffsetBuilderTraits__2.html#a53d59ea2961533032eb748fb061c4740", null ],
+      [ "Construct_ss_edge_2", "classPolygonOffsetBuilderTraits__2.html#aef54bae77d982763ec4c7db1943534f2", null ],
+      [ "Construct_ss_triedge_2", "classPolygonOffsetBuilderTraits__2.html#acf27fa71b3bd7e974f17d11e83e14730", null ],
+      [ "Construct_ss_vertex_2", "classPolygonOffsetBuilderTraits__2.html#a7934cf913646de928e842f1fde8226f8", null ],
+      [ "FT", "classPolygonOffsetBuilderTraits__2.html#a65539c4b79e9aa1fa98fb8ffc24b2f5a", null ],
+      [ "Kernel", "classPolygonOffsetBuilderTraits__2.html#af6d93b3c10c48c2a17515a6bab3e0ddf", null ],
+      [ "Point_2", "classPolygonOffsetBuilderTraits__2.html#aa785c64d940e328b0bb460c9be80b7da", null ],
+      [ "Edge", "classPolygonOffsetBuilderTraits__2.html#af0a696dd6d71d5a7ca0db6b536f324ed", null ],
+      [ "EdgeTriple", "classPolygonOffsetBuilderTraits__2.html#ac3c3d8e25e62608aea09fff47d55d64d", null ],
+      [ "Vertex", "classPolygonOffsetBuilderTraits__2.html#a8d502be62d20e09678cb8f84a1cf4a25", null ]
+    ] ],
+    [ "StraightSkeleton_2", "classStraightSkeleton__2.html", [
+      [ "Face", "classStraightSkeleton__2.html#a67076c8583c3d12b7ec436db7e83d8b2", null ],
+      [ "Halfedge", "classStraightSkeleton__2.html#a47b5ac9f2c3ee6340f2e11abb1ca7777", null ],
+      [ "Vertex", "classStraightSkeleton__2.html#ad0a9b9d28e3a4f92468f83d013a4a760", null ]
+    ] ],
+    [ "StraightSkeletonBuilder_2_Visitor", "classStraightSkeletonBuilder__2__Visitor.html", [
+      [ "Halfedge_const_handle", "classStraightSkeletonBuilder__2__Visitor.html#accc2de200d15374079bd04110cb9a35f", null ],
+      [ "Vertex_const_handle", "classStraightSkeletonBuilder__2__Visitor.html#a0eb98806f2eacd004d3922dabcc20bd2", null ],
+      [ "on_algorithm_finished", "classStraightSkeletonBuilder__2__Visitor.html#a0aea4f49fafe0ee6cf6de518b686ae04", null ],
+      [ "on_anihiliation_event_processed", "classStraightSkeletonBuilder__2__Visitor.html#a5b207b17df56fea4d47da17a39901f2c", null ],
+      [ "on_cleanup_finished", "classStraightSkeletonBuilder__2__Visitor.html#ad5488167af0e40758aa95294e9c2b693", null ],
+      [ "on_cleanup_started", "classStraightSkeletonBuilder__2__Visitor.html#a7a9dd9f9364b834d20cfd03cdfe55bc9", null ],
+      [ "on_contour_edge_entered", "classStraightSkeletonBuilder__2__Visitor.html#adcb629ab42cb00c77dc439be42c2fa69", null ],
+      [ "on_contour_vertex_processed", "classStraightSkeletonBuilder__2__Visitor.html#a88592811e171c5aad67bf00ac717024b", null ],
+      [ "on_edge_event_created", "classStraightSkeletonBuilder__2__Visitor.html#a90d84e84b890d142d1fcde379c0a0b92", null ],
+      [ "on_edge_event_processed", "classStraightSkeletonBuilder__2__Visitor.html#a32c29fe163267aa0ec7311e8640771ec", null ],
+      [ "on_error", "classStraightSkeletonBuilder__2__Visitor.html#a54642f0ac547970e2a25691e7392f887", null ],
+      [ "on_initialization_finished", "classStraightSkeletonBuilder__2__Visitor.html#aa27d708218c6d163e529aaff28a3751f", null ],
+      [ "on_initialization_started", "classStraightSkeletonBuilder__2__Visitor.html#ad04b5c646542d848b6021888b8c85c70", null ],
+      [ "on_propagation_finished", "classStraightSkeletonBuilder__2__Visitor.html#a7bc2edb79493225c91f12f0cbae47739", null ],
+      [ "on_propagation_started", "classStraightSkeletonBuilder__2__Visitor.html#a037e519ee3c5975b268755c4de2e8483", null ],
+      [ "on_pseudo_split_event_created", "classStraightSkeletonBuilder__2__Visitor.html#a48a88b01214fdea5abcb0c74e4996a85", null ],
+      [ "on_pseudo_split_event_processed", "classStraightSkeletonBuilder__2__Visitor.html#ad7a199cf3f6925d965ffb2e833b22016", null ],
+      [ "on_split_event_created", "classStraightSkeletonBuilder__2__Visitor.html#ab4d68c48624c8f8e14041d43d43bb2af", null ],
+      [ "on_split_event_processed", "classStraightSkeletonBuilder__2__Visitor.html#a92df29c7ca653a0f7a0b04d4d957aafc", null ],
+      [ "on_vertex_processed", "classStraightSkeletonBuilder__2__Visitor.html#a9db6f8e3936feb40b4054abee0f1b409", null ]
+    ] ],
+    [ "StraightSkeletonBuilderTraits_2", "classStraightSkeletonBuilderTraits__2.html", [
+      [ "Are_ss_events_simultaneous_2", "classStraightSkeletonBuilderTraits__2.html#aa8ca7256fb18b7c29d47c8ac3883f178", null ],
+      [ "Collinear_2", "classStraightSkeletonBuilderTraits__2.html#a73f73028717c764309835e3b3ed0c7c7", null ],
+      [ "Compare_ss_event_distance_to_seed_2", "classStraightSkeletonBuilderTraits__2.html#acaaa3c0c868d4ef2a56590ad68a54747", null ],
+      [ "Compare_ss_event_times_2", "classStraightSkeletonBuilderTraits__2.html#a374da26a54254d4289630fa92f8d4099", null ],
+      [ "Construct_ss_edge_2", "classStraightSkeletonBuilderTraits__2.html#aa3b37ae0ce967cc798469e7a9c383123", null ],
+      [ "Construct_ss_event_time_and_point_2", "classStraightSkeletonBuilderTraits__2.html#adff13bdf02d9763e58ac40d956705411", null ],
+      [ "Construct_ss_triedge_2", "classStraightSkeletonBuilderTraits__2.html#ad206ae73950f599e1244c10d9b82b33d", null ],
+      [ "Construct_ss_vertex_2", "classStraightSkeletonBuilderTraits__2.html#a7f581e1d200f0c705917876790d47428", null ],
+      [ "Do_ss_event_exist_2", "classStraightSkeletonBuilderTraits__2.html#a64c5c563501341254bfc84f4e80698c5", null ],
+      [ "Equal_2", "classStraightSkeletonBuilderTraits__2.html#addd855114db4d7d07a92a87ba2437c64", null ],
+      [ "FT", "classStraightSkeletonBuilderTraits__2.html#a7ab1a3df76eb88cc9cc6ec843f9e6509", null ],
+      [ "Is_ss_event_inside_offset_zone_2", "classStraightSkeletonBuilderTraits__2.html#a6ec47ca22cbb816018446932a3d7050a", null ],
+      [ "Kernel", "classStraightSkeletonBuilderTraits__2.html#ab31c6ebea8ac7dc22e76e4289583029f", null ],
+      [ "Left_turn_2", "classStraightSkeletonBuilderTraits__2.html#a71810aa1b9f9ce93f6afa0ee6ee8c8e8", null ],
+      [ "Edge", "classStraightSkeletonBuilderTraits__2.html#ac663dcace975059c69306acad58a4af9", null ],
+      [ "EdgeTriple", "classStraightSkeletonBuilderTraits__2.html#a77c9b0e14b61d073341ca6a5390e246f", null ],
+      [ "Vertex", "classStraightSkeletonBuilderTraits__2.html#a5af367afbe7ae3dd26b615d52ce81f59", null ]
+    ] ],
+    [ "StraightSkeletonFace_2", "classStraightSkeletonFace__2.html", [
+      [ "StraightSkeletonFace_2", "classStraightSkeletonFace__2.html#ab740ca0580f6710048a2d5f23f2176cc", null ],
+      [ "StraightSkeletonFace_2", "classStraightSkeletonFace__2.html#a282465074aafa4ce9859a90736fd3b0d", null ],
+      [ "id", "classStraightSkeletonFace__2.html#a46b212c3c6c73da1e06295699c37ee17", null ]
+    ] ],
+    [ "StraightSkeletonHalfedge_2", "classStraightSkeletonHalfedge__2.html", [
+      [ "StraightSkeletonHalfedge_2", "classStraightSkeletonHalfedge__2.html#ad6ebd7fdad372cdaea33ab002733b3e7", null ],
+      [ "StraightSkeletonHalfedge_2", "classStraightSkeletonHalfedge__2.html#aeca5335bd44cf5995a6ef4b2fc78edc6", null ],
+      [ "defining_contour_edge", "classStraightSkeletonHalfedge__2.html#a4c9a851ef058cef13595255d884330da", null ],
+      [ "defining_contour_edge", "classStraightSkeletonHalfedge__2.html#a70157ccd15d1d7d86f657bb751e97933", null ],
+      [ "is_bisector", "classStraightSkeletonHalfedge__2.html#a12d6f9631d9a4701e2a1b13056ef32a3", null ],
+      [ "is_inner_bisector", "classStraightSkeletonHalfedge__2.html#a93a9a9ca2a9b7b0d3ad6d562ddef65db", null ]
+    ] ],
+    [ "StraightSkeletonItemsConverter_2", "classStraightSkeletonItemsConverter__2.html", [
+      [ "Source_face_const_handle", "classStraightSkeletonItemsConverter__2.html#ab2fd981b7c0bfe859fe3fdbc97934fd9", null ],
+      [ "Source_halfedge_const_handle", "classStraightSkeletonItemsConverter__2.html#a2354f89ad7b40735f6018a33bcc8220f", null ],
+      [ "Source_vertex_const_handle", "classStraightSkeletonItemsConverter__2.html#ad0846841e9700e7584d96614eb5f0b67", null ],
+      [ "Target_face", "classStraightSkeletonItemsConverter__2.html#aefdf14cc0dab80f87140798c06725730", null ],
+      [ "Target_halfedge", "classStraightSkeletonItemsConverter__2.html#ad473ca0013992274eef60a599c53508b", null ],
+      [ "Tarvet_vertex", "classStraightSkeletonItemsConverter__2.html#a96dc1510ac71925e74b4779dd342c000", null ],
+      [ "operator()", "classStraightSkeletonItemsConverter__2.html#a6903eb5e9f42597e993ac34a3c1b9f12", null ],
+      [ "operator()", "classStraightSkeletonItemsConverter__2.html#aaac7894408f23cf3c9ba28b0aca29c0f", null ],
+      [ "operator()", "classStraightSkeletonItemsConverter__2.html#a38545f3f23c6b8e42bb93302039b4fa6", null ]
+    ] ],
+    [ "StraightSkeletonVertex_2", "classStraightSkeletonVertex__2.html", [
+      [ "Defining_contour_halfedge_circulator", "classStraightSkeletonVertex__2.html#a92a9f94f89123b6aaa3bbc2759d8d914", null ],
+      [ "Defining_contour_halfedge_const_circulator", "classStraightSkeletonVertex__2.html#ab762ba3b62c52778ccd9aea71744b855", null ],
+      [ "FT", "classStraightSkeletonVertex__2.html#a5836dec88ace917fae60a0741c3961a1", null ],
+      [ "Halfedge_around_vertex_circulator", "classStraightSkeletonVertex__2.html#a50ac0cbb14775a23da321daa98b20612", null ],
+      [ "Halfedge_around_vertex_const_circulator", "classStraightSkeletonVertex__2.html#abfaf0fc130bf1b0003b905527a479812", null ],
+      [ "Point_2", "classStraightSkeletonVertex__2.html#acfa7dff7274ba4a30b713c9f32b6e0c7", null ],
+      [ "StraightSkeletonVertex_2", "classStraightSkeletonVertex__2.html#a905ba9e82e9b6c6a6c4b0bf2d71e1cf5", null ],
+      [ "StraightSkeletonVertex_2", "classStraightSkeletonVertex__2.html#a5a85821fa14e993175ce0ede916733d3", null ],
+      [ "StraightSkeletonVertex_2", "classStraightSkeletonVertex__2.html#a8e2464a869d075d06b26f0d645369f81", null ],
+      [ "defining_contour_halfedges_begin", "classStraightSkeletonVertex__2.html#a2a8dc167a2ef64559e2d409b30534278", null ],
+      [ "defining_contour_halfedges_begin", "classStraightSkeletonVertex__2.html#a9082868df649014b331c631a0612929f", null ],
+      [ "halfedge_around_vertex_begin", "classStraightSkeletonVertex__2.html#a579d7224c8b55c50a02a53ac165df18f", null ],
+      [ "halfedge_around_vertex_begin", "classStraightSkeletonVertex__2.html#ac937f4f02842965d0f8b2bead9c8de4f", null ],
+      [ "id", "classStraightSkeletonVertex__2.html#a47b48e831b3ba4d1aa4b7f04690282e3", null ],
+      [ "is_contour", "classStraightSkeletonVertex__2.html#a81099225161547164ae681c78e78a761", null ],
+      [ "is_skeleton", "classStraightSkeletonVertex__2.html#a2436a0946319c2c1af8c5bbac03a69f7", null ],
+      [ "point", "classStraightSkeletonVertex__2.html#a61f4e80ad749909b539e2899dc5ab45a", null ],
+      [ "primary_bisector", "classStraightSkeletonVertex__2.html#a4d48abde89a2f95992cf42936e3798bd", null ],
+      [ "primary_bisector", "classStraightSkeletonVertex__2.html#a23c040ed81cbf937ed2f582f8b2be5ef", null ],
+      [ "time", "classStraightSkeletonVertex__2.html#a0296dd694280ff7b1e097908e9e9f0fa", null ]
+    ] ],
+    [ "VertexContainer_2", "classVertexContainer__2.html", [
+      [ "Point_2", "classVertexContainer__2.html#ad68d8e6c8331d3077279ed7ae93e9a46", null ],
+      [ "size_type", "classVertexContainer__2.html#aeacdbbca06503214afd5a91dcb53e1cd", null ],
+      [ "VertexContainer_2", "classVertexContainer__2.html#a64c4cb634999bda90ecbaf46fe1eee20", null ],
+      [ "push_back", "classVertexContainer__2.html#ab97ce46a2c5a18e9d765c292d82d78e1", null ],
+      [ "size", "classVertexContainer__2.html#ab3c6165feb2a4994b00d02939b07ae86", null ]
+    ] ]
+];

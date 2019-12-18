@@ -19,45 +19,45 @@
     <Filter Include="Utils">
       <UniqueIdentifier>{9c7ca04d-cb7a-4ea9-b79b-e458ba184892}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CGAL">
+      <UniqueIdentifier>{97c87849-9a45-47fd-b783-49ad794a1cce}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="mc_vcg_obj_importer.hpp">
-      <Filter>VCG</Filter>
-    </ClInclude>
-    <ClInclude Include="mc_vcg_primitives.hpp">
-      <Filter>VCG</Filter>
-    </ClInclude>
-    <ClInclude Include="mc_vcg_mesh.hpp">
-      <Filter>VCG</Filter>
-    </ClInclude>
-    <ClInclude Include="mc_vcg_stl_importer.hpp">
-      <Filter>VCG</Filter>
-    </ClInclude>
     <ClInclude Include="mc_utils.hpp">
       <Filter>Utils</Filter>
     </ClInclude>
     <ClInclude Include="mc_vcg_edge.hpp">
       <Filter>VCG</Filter>
     </ClInclude>
+    <ClInclude Include="mc_vcg_obj_io.hpp">
+      <Filter>VCG</Filter>
+    </ClInclude>
+    <ClInclude Include="mc_vcg_stl_io.hpp">
+      <Filter>VCG</Filter>
+    </ClInclude>
+    <ClInclude Include="mc_cgal_obj_io.hpp">
+      <Filter>CGAL</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="mc_vcg_primitives.cpp">
-      <Filter>VCG</Filter>
-    </ClCompile>
-    <ClCompile Include="mc_vcg_obj_importer.cpp">
-      <Filter>VCG</Filter>
-    </ClCompile>
-    <ClCompile Include="mc_vcg_stl_importer.cpp">
-      <Filter>VCG</Filter>
-    </ClCompile>
-    <ClCompile Include="mc_vcg_mesh.cpp">
-      <Filter>VCG</Filter>
-    </ClCompile>
     <ClCompile Include="mc_extension.cpp">
       <Filter>Utils</Filter>
     </ClCompile>
     <ClCompile Include="mc_vcg_edge.cpp">
       <Filter>VCG</Filter>
+    </ClCompile>
+    <ClCompile Include="mc_trace.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="mc_vcg_obj_io.cpp">
+      <Filter>VCG</Filter>
+    </ClCompile>
+    <ClCompile Include="mc_vcg_stl_io.cpp">
+      <Filter>VCG</Filter>
+    </ClCompile>
+    <ClCompile Include="mc_cgal_obj_io.cpp">
+      <Filter>CGAL</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
