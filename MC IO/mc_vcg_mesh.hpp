@@ -46,7 +46,6 @@ class MCFace :
 	vcg::face::VFAdj,
 	vcg::face::Normal3d,
 	vcg::face::Mark,
-	vcg::face::EdgePlane,
 	vcg::face::EFAdj>
 {
 public:
@@ -58,60 +57,62 @@ class MCEdge :
 	public vcg::Edge <MyUsedTypes,
 	vcg::edge::EEAdj,
 	vcg::edge::VertexRef,
-	vcg::face::EdgePlane,
-	vcg::edge::BitFlags> {};
+	vcg::edge::BitFlags,
+	vcg::edge::Mark,
+	vcg::edge::Qualityf> {};
 
-namespace mc::mvcg {
+namespace mc {
+	namespace mvcg {
 
-	class MeshInfo;
+		class MeshInfo;
 
-	/*
-	** Cette class est stock toutes les données d'un maillage
-	*/
-	class Mesh : public vcg::tri::TriMesh<std::vector<MCVertex>, std::vector<MCFace>, std::vector<MCEdge>>
-	{
-	public:
-		Mesh() {};
+		/*
+		** Cette class est stock toutes les données d'un maillage
+		*/
+		class Mesh : public vcg::tri::TriMesh<std::vector<MCVertex>, std::vector<MCFace>, std::vector<MCEdge>>
+		{
+		public:
+			Mesh() {};
 
-		void TreeMake();
+			void TreeMake();
 
-		mc::mvcg::MeshInfo *infos;
+			mc::mvcg::MeshInfo *infos;
 
-		vcg::tri::io::ImporterOBJ<Mesh>::Info mesh_info_buff;
+			vcg::tri::io::ImporterOBJ<Mesh>::Info mesh_info_buff;
 
-		inline bool treeIsMake() { return this->_treeIsMake; };
+			inline bool treeIsMake() { return this->_treeIsMake; };
 
-		void decimate(int targetFaces, bool preserveBoundary);
+			void decimate(int targetFaces, bool preserveBoundary);
 
-		vcg::AABBBinaryTreeIndex<MCFace, double, vcg::EmptyClass> tree;
+			vcg::AABBBinaryTreeIndex<MCFace, double, vcg::EmptyClass> tree;
 
-	private:
-		bool _treeIsMake = false;
+		private:
+			bool _treeIsMake = false;
+		};
+
+		/*
+		** Cette class permet de stocker quelques informations sur un maillage
+		*/
+		class MeshInfo
+		{
+		public:
+			/***** OBJ *****/
+			MeshInfo(vcg::tri::io::ImporterOBJ<mc::mvcg::Mesh>::Info info);
+
+			/***** STL *****/
+			MeshInfo(mc::mvcg::Mesh &mesh);
+
+			/***** GENERAL *****/
+			int mask = 0;
+			vcg::CallBackPos *cb;
+			int numVertices = 0;
+			int numEdges = 0;
+			int numFaces = 0;
+			int numTexCoords = 0;
+			int numNormals = 0;
+
+		};
 	};
-
-	/*
-	** Cette class permet de stocker quelques informations sur un maillage
-	*/
-	class MeshInfo
-	{
-	public:
-		/***** OBJ *****/
-		MeshInfo(vcg::tri::io::ImporterOBJ<mc::mvcg::Mesh>::Info info);
-
-		/***** STL *****/
-		MeshInfo(mc::mvcg::Mesh &mesh);
-
-		/***** GENERAL *****/
-		int mask = 0;
-		vcg::CallBackPos *cb;
-		int numVertices = 0;
-		int numEdges = 0;
-		int numFaces = 0;
-		int numTexCoords = 0;
-		int numNormals = 0;
-
-	};
-
 };
 
 #endif // !MC_VCG_MESH_H

@@ -14,50 +14,32 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="VCG">
-      <UniqueIdentifier>{61fd5c8e-565b-48f6-9bd2-d977aae12ffe}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Utils">
-      <UniqueIdentifier>{9c7ca04d-cb7a-4ea9-b79b-e458ba184892}</UniqueIdentifier>
+      <UniqueIdentifier>{f423b416-bbbf-466d-ac96-aae6bf22eae5}</UniqueIdentifier>
     </Filter>
     <Filter Include="CGAL">
-      <UniqueIdentifier>{97c87849-9a45-47fd-b783-49ad794a1cce}</UniqueIdentifier>
+      <UniqueIdentifier>{18c9c767-c73d-44c3-8c39-f6393ef8b3e6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="mc_utils.hpp">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="mc_vcg_edge.hpp">
+    <ClCompile Include="..\MC IO\mc_vcg_mesh.cpp">
       <Filter>VCG</Filter>
-    </ClInclude>
-    <ClInclude Include="mc_vcg_obj_io.hpp">
+    </ClCompile>
+    <ClCompile Include="..\MC IO\mc_vcg_primitives.cpp">
       <Filter>VCG</Filter>
-    </ClInclude>
-    <ClInclude Include="mc_vcg_stl_io.hpp">
-      <Filter>VCG</Filter>
-    </ClInclude>
-    <ClInclude Include="mc_cgal_obj_io.hpp">
+    </ClCompile>
+    <ClCompile Include="mc_cgal_mesh.cpp">
       <Filter>CGAL</Filter>
-    </ClInclude>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="mc_extension.cpp">
-      <Filter>Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="mc_vcg_edge.cpp">
+    <ClInclude Include="..\MC IO\mc_vcg_mesh.hpp">
       <Filter>VCG</Filter>
-    </ClCompile>
-    <ClCompile Include="mc_trace.cpp">
-      <Filter>Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="mc_vcg_obj_io.cpp">
+    </ClInclude>
+    <ClInclude Include="..\MC IO\mc_vcg_primitives.hpp">
       <Filter>VCG</Filter>
-    </ClCompile>
-    <ClCompile Include="mc_vcg_stl_io.cpp">
-      <Filter>VCG</Filter>
-    </ClCompile>
-    <ClCompile Include="mc_cgal_obj_io.cpp">
+    </ClInclude>
+    <ClInclude Include="mc_cgal_mesh.hpp">
       <Filter>CGAL</Filter>
-    </ClCompile>
+    </ClInclude>
   </ItemGroup>
 </Project>

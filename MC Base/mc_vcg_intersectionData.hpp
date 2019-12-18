@@ -12,6 +12,7 @@
 
 namespace mc::mvcg::intersection
 {
+
 	/*
 	** Cette class permet de stocker toutes les données d'une droite d'intersection.
 	*/
@@ -28,6 +29,7 @@ namespace mc::mvcg::intersection
 		std::vector<TreeType::CoordType> pointsIntersections;
 		std::vector<int> objectTypes;
 	};
+
 }
 
 #endif // !_INTERSECTION_DATA_HPP

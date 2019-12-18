@@ -78,77 +78,77 @@ int intersection::Intersect(mc::mvcg::Mesh &m, IntersectionData &it, vcg::Ray3<T
 
 /* DEBUG */
 
-//void LaunchDebugIntersection(char *path)
-//{
-//	mvcg::Mesh m;
-//	mvcg::open_obj(m, path);
-//
-//	// Création de l'OcTree
-//	m.TreeMake();
-//
-//	// On assigne une identifiant aux faces du mesh
-//	int idIdx = 0;
-//	for (auto& elem : m.face)
-//		elem.id = idIdx++;
-//
-//	std::vector<intersection::IntersectionData> intersections;
-//
-//	vcg::Ray3<TreeType::ScalarType> ray;
-//
-//	std::clock_t start = std::clock();
-//	for (int i = -6; i <= 6; ++i)
-//	{
-//		for (int j = -6; j <= 6; ++j)
-//		{
-//			intersection::IntersectionData it; // Pour récuperer les infos sur les intersections
-//
-//			// Position de la ligne d'intersection
-//			it.origin = vcg::Point3d({ i * 10.0f - 1, j * 10.0f + 1, 200.0f });
-//			it.direction = vcg::Point3d({ 0.0f, 0.0f, -10.0f });
-//			ray.Set(it.origin, it.direction);
-//			it.nbIntersections = 0;
-//
-//			std::clock_t iStart = std::clock();
-//			it.nbIntersections = intersection::Intersect(m, it, ray);
-//			std::clock_t iEnd = std::clock();
-//			it.time = iEnd - iStart;
-//
-//			// On ajoute les résultats de la ligne d'intersections à la liste
-//			intersections.push_back(it);
-//		}
-//	}
-//	std::clock_t end = std::clock();
-//
-//	/************************ LOG DES RESULTATS *********************************/
-//
-//	std::cout << "All intersections in " << end - start << "ms." << std::endl;
-//
-//	int i = 0;
-//	for (auto elem : intersections)
-//	{
-//		mt::log(mt::mttrace, "Ligne\t%i ", i++);
-//		mt::log(mt::mttrace, "Origine(%f, %f, %f) - Direction(%f, %f, %f)\n",
-//			elem.origin[0], elem.origin[1], elem.origin[2], elem.direction[0], elem.direction[1], elem.direction[2]);
-//		mt::log(mt::mttrace, "\n");
-//	}
-//
-//	mt::log(mt::mttrace, "\n==================================================================================================\n\n");
-//	mt::log(mt::mttrace, "Durée des %i intersections = %ims.\n\n", intersections.size(), end - start);
-//	mt::log(mt::mttrace, "==================================================================================================\n\n\n");
-//
-//	i = 0;
-//	for (auto elem : intersections)
-//	{
-//		mt::log(mt::mttrace, "\n\nLigne\t%i Origine(%f, %f, %f) - Direction(%f, %f, %f)\n", i++,
-//			elem.origin[0], elem.origin[1], elem.origin[2], elem.direction[0], elem.direction[1], elem.direction[2]);
-//		mt::log(mt::mttrace, "--------------------------------------------------------------------------------------------------\n");
-//		mt::log(mt::mttrace, "Nb. Int = %i -> %ims\n\n", elem.nbIntersections, elem.time);
-//
-//		for (int iInt = 0; elem.nbIntersections > 0 && iInt < elem.nbIntersections; ++iInt)
-//		{
-//			mt::log(mt::mttrace, "[%i] Intersection = [%i] -> (%.7f, %.7f, %.7f)\n", iInt, elem.objectTypes[iInt], elem.pointsIntersections[iInt].X(), elem.pointsIntersections[iInt].Y(), elem.pointsIntersections[iInt].Z());
-//		}
-//	}
-//
-//	mvcg::save_obj(m, "OUTOBJ.obj");
-//}
+void LaunchDebugIntersection(char *path)
+{
+	mvcg::Mesh m;
+	mvcg::open_obj(m, path);
+
+	// Création de l'OcTree
+	m.TreeMake();
+
+	// On assigne une identifiant aux faces du mesh
+	int idIdx = 0;
+	for (auto& elem : m.face)
+		elem.id = idIdx++;
+
+	std::vector<intersection::IntersectionData> intersections;
+
+	vcg::Ray3<TreeType::ScalarType> ray;
+	std::vector<vcg::Ray3<TreeType::ScalarType>> rayList;
+
+	std::clock_t start = std::clock();
+	for (int i = -6; i <= 6; ++i)
+	{
+		for (int j = -6; j <= 6; ++j)
+		{
+			intersection::IntersectionData it; // Pour récuperer les infos sur les intersections
+
+			// Position de la ligne d'intersection
+			ray.SetOrigin(vcg::Point3d({ i * 10.0f - 1, j * 10.0f + 1, 200.0f }));
+			ray.SetDirection(vcg::Point3d({ 0.0f, 0.0f, -10.0f }));
+			rayList.push_back(ray);
+
+			std::clock_t iStart = std::clock();
+			intersection::Intersect(m, it, ray);
+			std::clock_t iEnd = std::clock();
+
+			// On ajoute les résultats de la ligne d'intersections à la liste
+			intersections.push_back(it);
+		}
+	}
+	std::clock_t end = std::clock();
+
+	/************************ LOG DES RESULTATS *********************************/
+
+	std::cout << "All intersections in " << end - start << "ms." << std::endl;
+
+	int i = 0;
+	for (auto elem : rayList)
+	{
+		mt::log(mt::mttrace, "Ligne\t%i ", i++);
+		mt::log(mt::mttrace, "Origine(%f, %f, %f) - Direction(%f, %f, %f)\n",
+			elem.Origin().X(), elem.Origin().Y(), elem.Origin().Z(), elem.Direction().X(), elem.Direction().Y(), elem.Direction().Z());
+		mt::log(mt::mttrace, "\n");
+	}
+
+	mt::log(mt::mttrace, "\n==================================================================================================\n\n");
+	mt::log(mt::mttrace, "Durée des %i intersections = %ims.\n\n", intersections.size(), end - start);
+	mt::log(mt::mttrace, "==================================================================================================\n\n\n");
+
+	i = 0;
+	for (auto elem : intersections)
+	{
+		mt::log(mt::mttrace, "\n\nLigne\t%i Origine(%f, %f, %f) - Direction(%f, %f, %f)\n", i++,
+			rayList[i].Origin().X(), rayList[i].Origin().Y(), rayList[i].Origin().Z(), rayList[i].Direction().X(), rayList[i].Direction().Y(), rayList[i].Direction().Z());
+		mt::log(mt::mttrace, "--------------------------------------------------------------------------------------------------\n");
+
+		int iInt = 0;
+		for (auto item : elem.facesIntersections)
+		{
+			mt::log(mt::mttrace, "[%i] Intersection = [%i] -> (%.7f, %.7f, %.7f)\n", iInt, elem.objectTypes[iInt], elem.pointsIntersections[iInt].X(), elem.pointsIntersections[iInt].Y(), elem.pointsIntersections[iInt].Z());
+			iInt++;
+		}
+	}
+
+	mvcg::save_obj(m, "OUTOBJ.obj");
+}

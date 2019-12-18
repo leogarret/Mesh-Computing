@@ -7,7 +7,7 @@ using namespace mc;
 /*
 ** Retourne la projection d'un point 'p' sur une droite 'edge'.
 */
-vcg::Point3d getProjection(vcg::Point3d edge[2], vcg::Point3d p)
+vcg::Point3d geom::getProjection(vcg::Point3d edge[2], vcg::Point3d p)
 {
 	double xa = edge[0].X();
 	double ya = edge[0].Y();
@@ -38,7 +38,7 @@ vcg::Point3d getProjection(vcg::Point3d edge[2], vcg::Point3d p)
 /*
 ** Cette fonction retourne la distance entre deux points à trois dimensions
 */
-double getPointsDistance(vcg::Point3d p1, vcg::Point3d p2)
+double geom::getPointsDistance(vcg::Point3d p1, vcg::Point3d p2)
 {
 	double xDist = pow(p1.X() - p2.X(), 2);
 	double yDist = pow(p1.Y() - p2.Y(), 2);
@@ -74,14 +74,14 @@ double geom::getPointEdgeDistance(vcg::Point3d edge[2], vcg::Point3d p)
 ** T_POINT s'il se trouve sur un sommet
 ** T_EDGE s'il se trouve sur une arête
 */
-intersection::OBJTYPE intersection::onObjectType(MCFace face, vcg::Point3d points)
+OBJTYPE intersection::onObjectType(MCFace face, vcg::Point3d points)
 {
 	/* Calcule des distances entre les points */
-	double dist1 = getPointsDistance(face.P(0), points);
+	double dist1 = geom::getPointsDistance(face.P(0), points);
 
-	double dist2 = getPointsDistance(face.P(1), points);
+	double dist2 = geom::getPointsDistance(face.P(1), points);
 
-	double dist3 = getPointsDistance(face.P(2), points);
+	double dist3 = geom::getPointsDistance(face.P(2), points);
 
 	/* 'points' se trouve-il sur un point ? */
 
@@ -106,7 +106,7 @@ intersection::OBJTYPE intersection::onObjectType(MCFace face, vcg::Point3d point
 
 	if (dist1 < TOLERANCE || dist2 < TOLERANCE || dist3 < TOLERANCE)
 	{
-		// 'points' se trouve sur un point (+/- TOLERANCE)
+		// 'points' se trouve sur une arête ? (+/- TOLERANCE)
 		return T_EDGE;
 	}
 

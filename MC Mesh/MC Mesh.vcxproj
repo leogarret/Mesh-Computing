@@ -18,24 +18,9 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="mc_cgal_obj_io.hpp" />
-    <ClInclude Include="mc_utils.hpp" />
-    <ClInclude Include="mc_vcg_edge.hpp" />
-    <ClInclude Include="mc_vcg_obj_io.hpp" />
-    <ClInclude Include="mc_vcg_stl_io.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="mc_cgal_obj_io.cpp" />
-    <ClCompile Include="mc_extension.cpp" />
-    <ClCompile Include="mc_trace.cpp" />
-    <ClCompile Include="mc_vcg_edge.cpp" />
-    <ClCompile Include="mc_vcg_obj_io.cpp" />
-    <ClCompile Include="mc_vcg_stl_io.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D21C1EB8-892D-40C8-A45F-08C6F2A38A11}</ProjectGuid>
-    <RootNamespace>MCIO</RootNamespace>
+    <ProjectGuid>{EDE5200F-280F-4E7C-8B45-8FE8EBA944B9}</ProjectGuid>
+    <RootNamespace>MCMesh</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -84,10 +69,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>F:\Mesh-Intersection\External-library;F:\Mesh-Intersection\External-library\vcglib-1.0.1;F:\Mesh-Intersection\External-library\MTLogger-0.1.1;F:\Mesh-Intersection\Mesh Intersection;$(IncludePath)</IncludePath>
-    <LibraryPath>$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)bin</OutDir>
-    <ExecutablePath>F:\Mesh-Intersection\Mesh Intersection;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -110,9 +92,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\Mesh-Intersection\External-library\boost_1_70_0;F:\Mesh-Intersection\MC IO;F:\Mesh-Intersection\External-library;F:\Mesh-Intersection\External-library\vcglib-1.0.1;F:\Mesh-Intersection\External-library\MTLogger-0.1.1;F:\Mesh-Intersection\Mesh Intersection;F:\Mesh-Intersection\External-library\CGAL-5.0\auxiliary\gmp\include;F:\Mesh-Intersection\External-library\CGAL-5.0\include;%(AdditionalIncludeDirectories);$(IncludePath)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions);CGAL_USE_BASIC_VIEWER;</PreprocessorDefinitions>
       <AdditionalOptions>/std:c++latest /c %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>F:\Mesh-Intersection\MC Mesh;F:\Mesh-Intersection\External-library\CGAL-5.0\auxiliary\gmp\include;F:\Mesh-Intersection\External-library\CGAL-5.0\include;F:\Mesh-Intersection\External-library\boost_1_70_0</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -132,6 +114,16 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\MC IO\mc_vcg_mesh.cpp" />
+    <ClCompile Include="..\MC IO\mc_vcg_primitives.cpp" />
+    <ClCompile Include="mc_cgal_mesh.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\MC IO\mc_vcg_mesh.hpp" />
+    <ClInclude Include="..\MC IO\mc_vcg_primitives.hpp" />
+    <ClInclude Include="mc_cgal_mesh.hpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

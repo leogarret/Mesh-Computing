@@ -19,14 +19,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="mc_all_intersection.hpp" />
+    <ClInclude Include="mc_cgal_intersection.hpp" />
+    <ClInclude Include="mc_cgal_intersectionData.hpp" />
     <ClInclude Include="mc_vcg_intersectionData.hpp" />
     <ClInclude Include="mc_vcg_intersection.hpp" />
     <ClInclude Include="mc_vcg_algorithms.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="mc_cgal_intersection.cpp" />
     <ClCompile Include="mc_vcg_decimation.cpp" />
     <ClCompile Include="mc_vcg_intersection.cpp" />
-    <ClCompile Include="mc_vcg_surface.cpp" />
+    <ClCompile Include="mc_vcg_algorithms.cpp" />
     <ClCompile Include="intersections_utils.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -109,8 +113,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
-      <AdditionalOptions>/std:c++latest %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;</PreprocessorDefinitions>
+      <AdditionalOptions>/std:c++latest /c %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>F:\Mesh-Intersection\MC Mesh;F:\Mesh-Intersection\External-library\CGAL-5.0\auxiliary\gmp\include;F:\Mesh-Intersection\External-library\CGAL-5.0\include;F:\Mesh-Intersection\External-library\boost_1_70_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
