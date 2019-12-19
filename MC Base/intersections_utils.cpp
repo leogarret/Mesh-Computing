@@ -1,4 +1,5 @@
 #include "mc_vcg_intersection.hpp"
+#include "mc_geom.hpp"
 #include <math.h>
 using namespace mc;
 

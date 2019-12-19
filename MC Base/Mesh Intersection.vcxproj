@@ -22,12 +22,12 @@
     <ClInclude Include="mc_all_intersection.hpp" />
     <ClInclude Include="mc_cgal_intersection.hpp" />
     <ClInclude Include="mc_cgal_intersectionData.hpp" />
+    <ClInclude Include="mc_geom.hpp" />
     <ClInclude Include="mc_vcg_intersectionData.hpp" />
     <ClInclude Include="mc_vcg_intersection.hpp" />
     <ClInclude Include="mc_vcg_algorithms.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="mc_cgal_intersection.cpp" />
     <ClCompile Include="mc_vcg_decimation.cpp" />
     <ClCompile Include="mc_vcg_intersection.cpp" />
     <ClCompile Include="mc_vcg_algorithms.cpp" />

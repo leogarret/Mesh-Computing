@@ -26,16 +26,4 @@ namespace mc::mvcg::intersection
 	OBJTYPE onObjectType(MCFace face, vcg::Point3d points);
 
 }
-
-namespace mc::geom
-{
-	TreeType::CoordType getPositionWithDistAndDir(TreeType::CoordType origin, TreeType::CoordType dir, TreeType::ScalarType dist);
-
-	double getPointEdgeDistance(vcg::Point3d edge[2], vcg::Point3d p);
-
-	vcg::Point3d getProjection(vcg::Point3d edge[2], vcg::Point3d p);
-
-	double getPointsDistance(vcg::Point3d p1, vcg::Point3d p2);
-
-}
 #endif //!MC_VCG_INTERSECTION_HPP

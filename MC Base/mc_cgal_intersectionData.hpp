@@ -5,6 +5,8 @@
 #include "mc_all_intersection.hpp"
 #include "mc_cgal_mesh.hpp"
 
+typedef K::Point_3	Point;
+
 namespace mc::mcgal::intersection
 {
 

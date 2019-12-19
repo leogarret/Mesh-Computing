@@ -2,12 +2,13 @@
 #define MC_VCG_OBJ_IMPORTER_C
 
 #include "mc_vcg_obj_io.hpp"
-#include "mc_utils.hpp"
 #include <mtlogger\mtlogger.hpp>
 
 #define WIN32_LEAN_AND_MEAN
 #define NOMINMAX
 #include <windows.h>
+
+#include <mc_utils.hpp>
 
 #endif //!MC_VCG_OBJ_IMPORTER_C
 
@@ -15,7 +16,7 @@
 ** Cette fonction permet d'importer un maillage au format obj.
 ** Elle retourne 1 si tout c'est bien passé.
 */
-int mc::mvcg::open_obj(mc::mvcg::Mesh &mesh, const char *path)
+int mc::mvcg::OpenObj(mc::mvcg::Mesh &mesh, const char *path)
 {
 	if (mc::utils::extensionCompare(path, "obj") == false)
 	{
@@ -48,7 +49,7 @@ int mc::mvcg::open_obj(mc::mvcg::Mesh &mesh, const char *path)
 ** Cette fonction permet d'exporter un maillage au format obj.
 ** Elle retourne 1 si tout c'est bien passé.
 */
-int mc::mvcg::save_obj(mc::mvcg::Mesh & mesh, const char * path)
+int mc::mvcg::SaveObj(mc::mvcg::Mesh & mesh, const char * path)
 {
 	std::clock_t start = std::clock();
 	int errorCode = vcg::tri::io::ExporterOBJ<mc::mvcg::Mesh>::Save(mesh, path, 0);

@@ -49,6 +49,7 @@
     <ClInclude Include="mc_all_intersection.hpp">
       <Filter>ALL</Filter>
     </ClInclude>
+    <ClInclude Include="mc_geom.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mc_vcg_intersection.cpp">
@@ -62,9 +63,6 @@
     </ClCompile>
     <ClCompile Include="intersections_utils.cpp">
       <Filter>geom</Filter>
-    </ClCompile>
-    <ClCompile Include="mc_cgal_intersection.cpp">
-      <Filter>CGAL\Intersection</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

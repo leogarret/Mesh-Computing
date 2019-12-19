@@ -5,6 +5,7 @@
 #include <wrap\io_trimesh\export_obj.h>
 #include <ctime>
 
+#include "mc_geom.hpp"
 #include <MTLogger-0.1.1\mtlogger\mtlogger.hpp>
 
 using namespace mc;
@@ -81,7 +82,7 @@ int intersection::Intersect(mc::mvcg::Mesh &m, IntersectionData &it, vcg::Ray3<T
 void LaunchDebugIntersection(char *path)
 {
 	mvcg::Mesh m;
-	mvcg::open_obj(m, path);
+	mvcg::OpenObj(m, path);
 
 	// Création de l'OcTree
 	m.TreeMake();
@@ -150,5 +151,5 @@ void LaunchDebugIntersection(char *path)
 		}
 	}
 
-	mvcg::save_obj(m, "OUTOBJ.obj");
+	mvcg::SaveObj(m, "OUTOBJ.obj");
 }

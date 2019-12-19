@@ -6,7 +6,7 @@
 namespace mc::mcgal
 {
 
-	void cgSaveObj(Mesh& mesh, const char* path);
+	void SaveObj(Mesh& mesh, const char* path);
 
 };
 
