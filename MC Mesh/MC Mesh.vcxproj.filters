@@ -19,27 +19,36 @@
     <Filter Include="CGAL">
       <UniqueIdentifier>{18c9c767-c73d-44c3-8c39-f6393ef8b3e6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{02937896-68d9-48ee-9e54-8cbdb6db460e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\MC IO\mc_vcg_mesh.cpp">
-      <Filter>VCG</Filter>
-    </ClCompile>
     <ClCompile Include="..\MC IO\mc_vcg_primitives.cpp">
       <Filter>VCG</Filter>
     </ClCompile>
     <ClCompile Include="mc_cgal_mesh.cpp">
       <Filter>CGAL</Filter>
     </ClCompile>
+    <ClCompile Include="mc_extension.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="mc_trace.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\MC IO\mc_vcg_mesh.hpp">
-      <Filter>VCG</Filter>
-    </ClInclude>
     <ClInclude Include="..\MC IO\mc_vcg_primitives.hpp">
       <Filter>VCG</Filter>
     </ClInclude>
+    <ClInclude Include="..\MC Base\mc_cgal_algorithms.hpp">
+      <Filter>CGAL</Filter>
+    </ClInclude>
     <ClInclude Include="mc_cgal_mesh.hpp">
       <Filter>CGAL</Filter>
+    </ClInclude>
+    <ClInclude Include="mc_utils.hpp">
+      <Filter>Utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

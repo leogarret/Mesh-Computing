@@ -1,10 +1,11 @@
-#ifndef MC_UTILS_H
-#define MC_UTILS_H
+#ifndef MC_TRACE_HPP
+#define MC_TRACE_HPP
 
 #include <ctime>
 #include <string>
 
-namespace mc::utils {
+namespace mc::utils
+{
 
 	bool haveExtension(const char *fileName);
 	bool extensionCompare(const char *fileName, char *extension);
@@ -14,4 +15,4 @@ namespace mc::utils {
 
 }
 
-#endif //!MC_UTILS_H
+#endif //!MC_TRACE_HPP

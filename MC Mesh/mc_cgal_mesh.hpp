@@ -11,11 +11,12 @@
 #include <CGAL/Point_3.h>
 #include <CGAL/IO/print_wavefront.h>
 
-#include <CGAL/intersection_3.h>
+#include <CGAL/Surface_mesh_simplification/edge_collapse.h>
+#include <CGAL/Surface_mesh_simplification/Policies/Edge_collapse/Count_stop_predicate.h>
+#include <CGAL/Surface_mesh_simplification/Policies/Edge_collapse/Count_ratio_stop_predicate.h>
+
 #include <CGAL/AABB_tree.h>
 #include <CGAL/AABB_traits.h>
-#include <CGAL/AABB_triangle_primitive.h>
-#include <CGAL/Simple_cartesian.h>
 
 /* STD */
 #include <iostream>
@@ -23,17 +24,13 @@
 #include <string>
 #include <exception>
 
+#include "mc_utils.hpp"
+
 typedef CGAL::Exact_predicates_inexact_constructions_kernel						Kernel;
 typedef CGAL::Simple_cartesian<double>											K;
-typedef K::Point_3																Point;
-typedef K::Plane_3																Plane;
-typedef K::Segment_3															Segment;
-typedef K::Ray_3																Ray;
-typedef CGAL::Polyhedron_3<K>													Polyhedron;
-typedef CGAL::AABB_face_graph_triangle_primitive<Polyhedron>					Primitive;
+typedef CGAL::AABB_face_graph_triangle_primitive<CGAL::Polyhedron_3<K>>			Primitive;
 typedef CGAL::AABB_traits<K, Primitive>											Traits;
 typedef CGAL::AABB_tree<Traits>													Tree;
-typedef boost::optional<Tree::Intersection_and_primitive_id<Segment>::Type>		Segment_intersection;
 
 namespace mc::mcgal
 {
@@ -44,10 +41,20 @@ namespace mc::mcgal
 		inline bool isLoading() { return _is_loading; };
 		inline bool treeIsMake() { return _tree_make; };
 
+		//void treeMake(); < TODO: créer la fonction treeMake
+
+		/*
+		** Cette méthode permet de décimer le maillage parent
+		*/
+		void decimate(double percentage)
+		{
+			CGAL::Surface_mesh_simplification::Count_ratio_stop_predicate<CGAL::Surface_mesh<K::Point_3>> stop(percentage);
+
+			CGAL::Surface_mesh_simplification::edge_collapse(CGAL::Surface_mesh<K::Point_3>(*this), stop);
+		}
+
 		std::vector<CGAL::Point_3<Kernel>> mvertices;
 		std::vector<std::vector<size_t>> mfaces;
-
-		Tree tree;
 		
 	private:
 		bool _is_loading = false;
@@ -147,11 +154,15 @@ namespace mc::mcgal
 	** Cette fonction permet d'importer un maillage au format OBJ avec CGAL
 	*/
 	template<class _Mesh>
-	void cgOpenObj(_Mesh& mesh, const char* path)
+	void OpenObj(_Mesh& mesh, const char* path)
 	{
+		std::clock_t start = std::clock();
 		BuildCgalPolyhedronFromObj<_Mesh::HalfedgeDS> _buildPolyhedron(path);
 
 		mesh.delegate(_buildPolyhedron);
+		std::clock_t end = std::clock();
+
+		mc::utils::traceWithTime(std::string(path) + std::string(" chargé avec succés"), end - start);
 	}
 
 };

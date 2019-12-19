@@ -1,3 +1,6 @@
+#ifndef MC_VCG_DECIMATION_CPP
+#define MC_VCG_DECIMATION_CPP
+
 #include <mc_vcg_mesh.hpp>
 #include <stdexcept>
 #include <vcg/complex/algorithms/local_optimization.h>
@@ -15,6 +18,7 @@ public:
 	inline MyTriEdgeCollapse(const VertexPair &p, int i, vcg::BaseParameterClass *pp) : TECQ(p, i, pp) {}
 };
 
+#endif // !MC_VCG_DECIMATION_CPP
 
 /*
 ** Cette méthode permet de décimer un maillage.

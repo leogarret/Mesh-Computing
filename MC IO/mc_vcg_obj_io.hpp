@@ -8,9 +8,9 @@
 namespace mc::mvcg
 {
 
-	int open_obj(mc::mvcg::Mesh &mesh, const char *path);
+	int OpenObj(mc::mvcg::Mesh &mesh, const char *path);
 
-	int save_obj(mc::mvcg::Mesh &mesh, const char *path);
+	int SaveObj(mc::mvcg::Mesh &mesh, const char *path);
 
 };
 

@@ -92,7 +92,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>F:\Mesh-Intersection\External-library\boost_1_70_0;F:\Mesh-Intersection\MC IO;F:\Mesh-Intersection\External-library;F:\Mesh-Intersection\External-library\vcglib-1.0.1;F:\Mesh-Intersection\External-library\MTLogger-0.1.1;F:\Mesh-Intersection\Mesh Intersection;F:\Mesh-Intersection\External-library\CGAL-5.0\auxiliary\gmp\include;F:\Mesh-Intersection\External-library\CGAL-5.0\include;%(AdditionalIncludeDirectories);$(IncludePath)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\Mesh-Intersection\External-library\boost_1_70_0;F:\Mesh-Intersection\MC IO\;F:\Mesh-Intersection\External-library;F:\Mesh-Intersection\External-library\vcglib-1.0.1;F:\Mesh-Intersection\External-library\MTLogger-0.1.1;F:\Mesh-Intersection\Mesh Intersection;F:\Mesh-Intersection\External-library\CGAL-5.0\auxiliary\gmp\include;F:\Mesh-Intersection\External-library\CGAL-5.0\include;%(AdditionalIncludeDirectories);$(IncludePath)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions);CGAL_USE_BASIC_VIEWER;</PreprocessorDefinitions>
       <AdditionalOptions>/std:c++latest /c %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
@@ -115,14 +115,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\MC IO\mc_vcg_mesh.cpp" />
     <ClCompile Include="..\MC IO\mc_vcg_primitives.cpp" />
     <ClCompile Include="mc_cgal_mesh.cpp" />
+    <ClCompile Include="mc_extension.cpp" />
+    <ClCompile Include="mc_trace.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\MC IO\mc_vcg_mesh.hpp" />
+    <ClInclude Include="..\MC Base\mc_cgal_algorithms.hpp" />
     <ClInclude Include="..\MC IO\mc_vcg_primitives.hpp" />
     <ClInclude Include="mc_cgal_mesh.hpp" />
+    <ClInclude Include="mc_utils.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MC IO\MC IO.vcxproj">
+      <Project>{d21c1eb8-892d-40c8-a45f-08c6f2a38a11}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

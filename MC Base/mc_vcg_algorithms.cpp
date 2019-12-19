@@ -26,22 +26,6 @@ double mc::mvcg::algorithms::surface(mc::mvcg::Mesh &mesh)
 }
 
 /*
-** Cette fonction permet de calculer la longueur totale des arêtes d'un maillage
-*/
-double mc::mvcg::algorithms::totalEdgesLenght(mc::mvcg::Mesh &mesh)
-{
-	if (mesh.IsEmpty()) return -1;
-
-	double totalLenght = 0;
-	for (auto elem : mesh.edge)
-	{
-		totalLenght += 1;
-	}
-
-	return totalLenght;
-}
-
-/*
 ** Cette fonction permet d'obtenir le barycentre d'un maillage
 */
 vcg::Point3d mc::mvcg::algorithms::barycenter(mc::mvcg::Mesh &mesh)

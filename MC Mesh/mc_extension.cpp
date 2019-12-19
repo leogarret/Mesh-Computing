@@ -1,9 +1,9 @@
 #ifndef MC_EXTENSION_C
 #define MC_EXTENSION_C
 
-#include "mc_utils.hpp"
 #include <string>
 #include <mtlogger\mtlogger.hpp>
+#include "mc_utils.hpp"
 
 #endif // MC_EXTENSION_C
 
