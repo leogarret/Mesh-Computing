@@ -1,28 +1,30 @@
 /*
-**	FICHIER: cgal-intersection.cpp
+**	FICHIER: vcg-intersection.cpp
 **
 **	DESCRIPTION: Ce fichier contient le code source pour permettre de récupérer des intersections avec une droite sur un maillage
 */
 
 
-#include <mc_cgal_intersection.hpp> // Pour accéder aux fonctions d'intersections
-#include <mc_cgal_intersectionData.hpp>
-#include <mc_cgal_mesh.hpp>
-#include <mc_cgal_obj_io.hpp>
+#include <mc_vcg_mesh.hpp>				// pour avoir accès à la structure de donnée d'un maillage
+#include <mc_vcg_obj_io.hpp>			
+#include <mc_vcg_intersection.hpp>
+#include <mc_vcg_intersectionData.hpp>
+#include <mc_all_intersection.hpp>
+
+using namespace mc;
 
 int main()
 {
-	mc::mcgal::Mesh mesh; // Création du maillage
-	mc::mcgal::OpenObj(mesh, "../../obj/Sphere-632586.obj"); // Chargement du maillage
+	mvcg::Mesh mesh;
+	mvcg::OpenObj(mesh, "../../obj/Mesh-20x20mm.obj");
 
-	mc::mcgal::intersection::IntersectionData datas; // Ici seront stokées les données de la droite d'intersection
-	Ray r(Point(0, 0, 50), Point(0, 0, -50)); // Paramètrage de la droite d'intersection
+	mvcg::intersection::IntersectionData datas;
+	vcg::Ray3d ray(vcg::Point3d(-60, -50, 50), vcg::Point3d(0, 0, -50));
 
-	mc::mcgal::intersection::Intersect(mesh, datas, r); // On récupère les intersections de la droite
+	mvcg::intersection::Intersect(mesh, datas, ray);
 
-	printf("Il y a eu %i intersections.\n", datas.getNumberIntersections()); // Affichage du nombre d'intersections
-
-	// Ne pas hésiter à afficher les autres informations (membres de datas)
+	printf("%i\n", datas.getNumberIntersections());
+	printf("%i\n", datas.getObjectType(0));
 
 	std::getchar();
 	return 0;

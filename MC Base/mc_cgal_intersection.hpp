@@ -19,8 +19,12 @@ namespace mc::mcgal::intersection
 	{
 		if (intersection)
 		{
-			it.points.push_back(boost::get<Point>(&(intersection->first)));
-			it.objectTypes.push_back(T_POINT);
+			auto buffP = boost::get<Point>(&(intersection->first));
+			if (buffP)
+			{
+				it.points.push_back(buffP);
+				it.objectTypes.push_back(T_POINT);
+			}
 		}
 	}
 
